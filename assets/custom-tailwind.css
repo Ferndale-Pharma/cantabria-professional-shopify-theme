@@ -13,3 +13,6 @@ h3.inline-richtext,
 .jdgm-rev-widg__title {
   @apply twcss-font-bold !important;
 }
+.test-class {
+  @apply twcss-mx-auto !important;
+}
