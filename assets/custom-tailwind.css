@@ -1,0 +1,15 @@
+/** Typography styles **/
+h1,
+h2,
+h3.inline-richtext,
+.h0,
+.h1,
+.h2,
+.h3,
+.h4,
+.hxl,
+.badge,
+.button,
+.jdgm-rev-widg__title {
+  @apply twcss-font-bold !important;
+}

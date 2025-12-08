@@ -268,6 +268,13 @@ h5,
   word-break: break-word;
 }
 
+p {
+  color: black;
+}
+.header__menu-item {
+  color: black !important;
+}
+
 .hxxl {
   font-size: clamp(
     calc(var(--font-heading-scale) * 5.6rem),
