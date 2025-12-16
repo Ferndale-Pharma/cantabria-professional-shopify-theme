@@ -273,6 +273,7 @@
                       >
                     </span>
                   </label> {% endcomment %}
+                  {%- render 'loading-spinner' -%}
                   <div class="price-per-item__container">
                     <quantity-input class="quantity" data-url="{{ product.url }}" data-section="{{ section.id }}">
                       <button class="quantity__button" name="minus" type="button">
