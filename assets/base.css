@@ -3697,3 +3697,10 @@ details-disclosure > details {
 		width: 100%;
 	}
 }
+@media only screen and (min-width: 1023px) {
+  .price-per-item__container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+}
