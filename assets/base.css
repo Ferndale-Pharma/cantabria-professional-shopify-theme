@@ -3691,3 +3691,9 @@ details-disclosure > details {
     transform: translateX(100%) scaleX(0);
   }
 }
+
+@media screen and (max-width: 1023px){
+	.price-per-item__container .quantity {
+		width: 100%;
+	}
+}
