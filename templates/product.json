@@ -61,7 +61,7 @@
           "settings": {
             "heading": "Key Ingredients & Technologies",
             "icon": "plant",
-            "content": "",
+            "content": "{{ product.metafields.custom.key_ingredients | metafield_tag }}",
             "page": ""
           }
         },
@@ -70,7 +70,7 @@
           "settings": {
             "heading": "How To Use",
             "icon": "question_mark",
-            "content": "",
+            "content": "{{ product.metafields.custom.how_to_use | metafield_tag }}",
             "page": ""
           }
         },
@@ -79,7 +79,7 @@
           "settings": {
             "heading": "Ingredients List",
             "icon": "clipboard",
-            "content": "",
+            "content": "<p>{{ product.metafields.custom.ingredients_list | metafield_tag }}</p>",
             "page": ""
           }
         }
