@@ -43,6 +43,7 @@
         "text",
         "button"
       ],
+      "disabled": true,
       "settings": {
         "image_overlay_opacity": 40,
         "image_height": "large",
@@ -62,8 +63,8 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
+            "heading": "Cantabria Labs Professional Shop",
+            "heading_size": "h0"
           }
         },
         "text": {
@@ -71,162 +72,201 @@
           "settings": {
             "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
           }
+        },
+        "button_MyxLz3": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop all products",
+            "button_link": "shopify://collections/products",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
         }
       },
       "block_order": [
         "heading",
-        "text"
+        "text",
+        "button_MyxLz3"
       ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "scheme-1",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
+        "padding_top": 32,
+        "padding_bottom": 64
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "collection": "all",
-        "products_to_show": 8,
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 4,
-        "enable_desktop_slider": false,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 28,
-        "padding_bottom": 36
-      }
-    },
-    "collage": {
-      "type": "collage",
+    "rich_text_3yTUgT": {
+      "type": "rich-text",
       "blocks": {
-        "collection-0": {
-          "type": "collection",
+        "heading_K3wkQD": {
+          "type": "heading",
           "settings": {
-            "collection": ""
-          }
-        },
-        "product": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "second_image": false
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
+            "heading": "Latest promotions",
+            "heading_size": "h1"
           }
         }
       },
       "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
+        "heading_K3wkQD"
       ],
+      "name": "t:sections.rich-text.presets.name",
       "settings": {
-        "heading": "Multimedia collage",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "card_styles": "product-card-wrapper",
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 64,
+        "padding_bottom": 32
       }
     },
-    "video": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "enable_video_looping": false,
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
+    "image_with_text_tGbCQg": {
+      "type": "image-with-text",
       "blocks": {
-        "column1": {
-          "type": "column",
+        "heading_wDjWAH": {
+          "type": "heading",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
+            "heading": "Image with text",
+            "heading_size": "h2"
           }
         },
-        "column2": {
-          "type": "column",
+        "text_haLd96": {
+          "type": "text",
           "settings": {
-            "title": "Column",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
+            "text_style": "body"
           }
         },
-        "column3": {
-          "type": "column",
+        "button_QJtBHU": {
+          "type": "button",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
           }
         }
       },
       "block_order": [
-        "column1",
-        "column2",
-        "column3"
+        "heading_wDjWAH",
+        "text_haLd96",
+        "button_QJtBHU"
       ],
+      "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "image_with_text_xNJjEm": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_et4kdk": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h2"
+          }
+        },
+        "text_mNpLtf": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_7QNWQH": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_et4kdk",
+        "text_mNpLtf",
+        "button_7QNWQH"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 32,
+        "padding_bottom": 96
+      }
+    },
+    "rich_text_aRibXg": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_KAWGEh": {
+          "type": "heading",
+          "settings": {
+            "heading": "Support for your in-store display",
+            "heading_size": "h1"
+          }
+        },
+        "text_zdzFmW": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Free printed marketing materials to support product education at the point of care.</p>"
+          }
+        },
+        "button_k74EzM": {
+          "type": "button",
+          "settings": {
+            "button_label": "Order now",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_KAWGEh",
+        "text_zdzFmW",
+        "button_k74EzM"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-c825638c-5bf0-4bb5-9234-31d13a5a56f2",
+        "full_width": false,
+        "padding_top": 64,
+        "padding_bottom": 64
       }
     }
   },
   "order": [
     "image_banner",
     "rich_text",
-    "featured_collection",
-    "collage",
-    "video",
-    "multicolumn"
+    "rich_text_3yTUgT",
+    "image_with_text_tGbCQg",
+    "image_with_text_xNJjEm",
+    "rich_text_aRibXg"
   ]
 }
