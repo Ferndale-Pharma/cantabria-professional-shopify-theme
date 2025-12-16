@@ -3249,6 +3249,9 @@ details-disclosure > details {
   margin: -0.5rem 0 -0.5rem 0;
 }
 
+.rte p {
+  margin-bottom: 1rem;
+}
 /* Image mask global styles */
 
 .shape--mask {
