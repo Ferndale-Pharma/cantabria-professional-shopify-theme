@@ -16,3 +16,9 @@ h3.inline-richtext,
 .test-class {
   @apply twcss-mx-auto !important;
 }
+.another-test-class {
+  @apply twcss-text-red-500 !important;
+}
+.yet-another-test-class {
+  @apply twcss-text-center !important;
+}

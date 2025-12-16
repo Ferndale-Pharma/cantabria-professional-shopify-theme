@@ -20,6 +20,15 @@ h3.inline-richtext,
   margin-right: auto !important;
 }
 
+.another-test-class {
+  --tw-text-opacity: 1 !important;
+  color: rgb(239 68 68 / var(--tw-text-opacity)) !important;
+}
+
+.yet-another-test-class {
+  text-align: center !important;
+}
+
 /*! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com*/
 
 /*
