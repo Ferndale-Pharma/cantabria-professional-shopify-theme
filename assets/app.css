@@ -15,18 +15,20 @@ h3.inline-richtext,
   font-weight: 700 !important;
 }
 
-.test-class {
-  margin-left: auto !important;
-  margin-right: auto !important;
+/** Navigation **/
+
+.header__inline-menu .link {
+  font-size: 1.6rem !important;
 }
 
-.another-test-class {
-  --tw-text-opacity: 1 !important;
-  color: rgb(239 68 68 / var(--tw-text-opacity)) !important;
+@media (min-width: 750px) {
+  .modal__content {
+    background-color: transparent !important;
+  }
 }
 
-.yet-another-test-class {
-  text-align: center !important;
+.header__icons svg path {
+  fill: #000 !important;
 }
 
 /*! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com*/

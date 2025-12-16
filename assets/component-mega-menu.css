@@ -41,8 +41,12 @@
   list-style: none;
 }
 
+.mega-menu__list.is-4 > *:first-child {
+  grid-column-start: 2;
+}
+
 .mega-menu__link {
-  color: rgba(var(--color-foreground), 0.75);
+  color: #000;
   display: block;
   line-height: calc(1 + 0.3 / var(--font-body-scale));
   padding-bottom: 0.6rem;
@@ -54,6 +58,7 @@
 
 .mega-menu__link--level-2 {
   font-weight: bold;
+  font-size: 1.1em;
 }
 
 .header--top-center .mega-menu__list {
