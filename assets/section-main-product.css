@@ -181,6 +181,7 @@ product-info {
 
 .product-form__input .form__label {
   padding-left: 0;
+  color: #666;
 }
 
 .product-form__input .select {
@@ -280,9 +281,9 @@ a.product__text {
   margin-bottom: 0.5rem;
 }
 
-.product .price__container {
+/* .product .price__container {
   margin-bottom: 0.5rem;
-}
+} */
 
 .product .price dl {
   margin-top: 0.5rem;
@@ -1542,13 +1543,55 @@ a.product__text {
     border: none;
   }
 }
-@media screen and (min-width: 1024px){ 
-  .buy-buttons {
-	  flex-grow: 1;
+
+/* Quantity and buy buttons container layout */
+.price-per-item__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Remove margins from form elements inside the container */
+.price-per-item__container .buy-buttons .product-form__submit {
+  margin-bottom: 0;
+}
+
+.price-per-item__container .buy-buttons .product-form__buttons {
+  max-width: none;
+}
+
+/* Mobile: stack vertically, full width */
+@media screen and (max-width: 749px) {
+  .price-per-item__container {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .price-per-item__container .quantity {
+    width: 100%;
+  }
+
+  .price-per-item__container .buy-buttons {
+    width: 100%;
   }
 }
-@media screen and (max-width: 1023px){ 
-  .buy-buttons {
-	  width: 100%;
+
+/* Desktop: side by side */
+@media screen and (min-width: 750px) {
+  .price-per-item__container {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .price-per-item__container .quantity {
+    flex-shrink: 0;
+  }
+
+  .price-per-item__container .buy-buttons {
+    flex-grow: 1;
+    min-width: 0;
   }
 }

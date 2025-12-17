@@ -29,3 +29,15 @@ h3.inline-richtext,
 .header__icons svg path {
   fill: #000 !important;
 }
+
+/** Accordion **/
+.h4.accordion__title {
+  font-size: 1.75rem;
+}
+
+.h4.accordion__title,
+.accordion__content {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+  padding: 0px !important;
+}

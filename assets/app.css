@@ -31,6 +31,19 @@ h3.inline-richtext,
   fill: #000 !important;
 }
 
+/** Accordion **/
+
+.h4.accordion__title {
+  font-size: 1.75rem;
+}
+
+.h4.accordion__title,
+.accordion__content {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+  padding: 0px !important;
+}
+
 /*! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com*/
 
 /*
@@ -641,4 +654,26 @@ ol {
   --tw-backdrop-opacity: ;
   --tw-backdrop-saturate: ;
   --tw-backdrop-sepia: ;
+}
+
+.twcss-flex {
+  display: flex;
+}
+
+.twcss-flex-1 {
+  flex: 1 1 0%;
+}
+
+.twcss-items-end {
+  align-items: flex-end;
+}
+
+.twcss-text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.twcss-text-\[\#666\] {
+  --tw-text-opacity: 1;
+  color: rgb(102 102 102 / var(--tw-text-opacity));
 }

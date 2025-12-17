@@ -3217,12 +3217,13 @@ details-disclosure > details {
 
 .rte ul,
 .rte ol {
-  list-style-position: inside;
+  list-style-position: outside;
   padding-left: 2rem;
 }
 
 .rte li {
   list-style: inherit;
+  margin-bottom: 1rem;
 }
 
 .rte li:last-child {
@@ -3690,17 +3691,4 @@ details-disclosure > details {
   100% {
     transform: translateX(100%) scaleX(0);
   }
-}
-
-@media screen and (max-width: 1023px){
-	.price-per-item__container .quantity {
-		width: 100%;
-	}
-}
-@media only screen and (min-width: 1023px) {
-  .price-per-item__container {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
 }
