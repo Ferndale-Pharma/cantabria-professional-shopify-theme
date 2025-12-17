@@ -14,6 +14,7 @@
       "blocks": {
         "vendor": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "{{ product.vendor }}",
             "text_style": "uppercase"
@@ -23,11 +24,10 @@
           "type": "title",
           "settings": {}
         },
-        "caption": {
-          "type": "text",
+        "custom_liquid_ckXVzi": {
+          "type": "custom_liquid",
           "settings": {
-            "text": "{{ product.metafields.descriptors.subtitle.value }}",
-            "text_style": "subtitle"
+            "custom_liquid": "<span style=\"color: #666; display: block; font-size: 0.9em;\">{{product.metafields.custom.size}} - SRP: {{product.metafields.custom.srp}} </span>"
           }
         },
         "price": {
@@ -87,7 +87,7 @@
       "block_order": [
         "vendor",
         "title",
-        "caption",
+        "custom_liquid_ckXVzi",
         "price",
         "variant_picker",
         "quantity_selector",
