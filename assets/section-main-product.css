@@ -1547,3 +1547,8 @@ a.product__text {
 	  flex-grow: 1;
   }
 }
+@media screen and (max-width: 1023px){ 
+  .buy-buttons {
+	  width: 100%;
+  }
+}
