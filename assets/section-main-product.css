@@ -175,7 +175,6 @@ product-info {
   flex: 0 0 100%;
   padding: 0;
   margin: 0 0 1.2rem 0;
-  max-width: 44rem;
   min-width: fit-content;
   border: none;
 }
@@ -1542,4 +1541,8 @@ a.product__text {
   .recipient-form > input[type='checkbox']:checked + label .icon-checkmark {
     border: none;
   }
+}
+
+.buy-buttons {
+	flex-grow: 1;
 }
