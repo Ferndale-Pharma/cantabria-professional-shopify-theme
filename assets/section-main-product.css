@@ -1542,7 +1542,7 @@ a.product__text {
     border: none;
   }
 }
-
+@media screen and (min-width: 1024px)
 .buy-buttons {
 	flex-grow: 1;
 }
