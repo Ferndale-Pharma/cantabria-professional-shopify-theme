@@ -137,6 +137,20 @@
       }
     },
     "content_for_index": [],
+    "blocks": {
+      "452670694314467728": {
+        "type": "shopify://apps/c-bulk-add-to-cart/blocks/app-embed-init/df84fb92-055e-436f-9186-6b5b6e5c1ddf",
+        "disabled": false,
+        "settings": {
+          "bulkcart_custom_css": ""
+        }
+      },
+      "4259983260067757965": {
+        "type": "shopify://apps/c-bulk-add-to-cart/blocks/app-embed-cart/df84fb92-055e-436f-9186-6b5b6e5c1ddf",
+        "disabled": false,
+        "settings": {}
+      }
+    },
     "color_schemes": {
       "scheme-1": {
         "settings": {
