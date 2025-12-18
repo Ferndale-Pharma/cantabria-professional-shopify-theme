@@ -1,0 +1,1009 @@
+{%- if shop.metafields.multicartapp.button_text == blank -%}
+{%- assign button_text = 'Add to Cart' -%}
+{%- else -%}
+{%- assign button_text = shop.metafields.multicartapp.button_text -%}
+{%- endif -%}
+
+{%- if shop.metafields.multicartapp.bar_position == blank -%}
+{%- assign bar_position = 'top_bottom' -%}
+{%- else -%}
+{%- assign bar_position = shop.metafields.multicartapp.bar_position -%}
+{%- endif -%}
+
+{%- if shop.metafields.multicartapp.multicart_text == blank -%}
+{%- assign multicart_text = '' -%}
+{%- else -%}
+{%- assign multicart_text = shop.metafields.multicartapp.multicart_text -%}
+{%- endif -%}
+
+{%- if shop.metafields.multicartapp.products_limit == blank -%}
+{%- assign products_limit = 10 -%}
+{%- else -%}
+{%- assign products_limit = shop.metafields.multicartapp.products_limit -%}
+{%- endif -%}
+
+{%- if shop.metafields.multicartapp.show_lbl_val == blank -%}
+{%- assign show_lbl_val = "yes" -%}
+{%- else -%}
+{%- assign show_lbl_val = shop.metafields.multicartapp.show_lbl_val -%}
+{%- endif -%}
+
+{%- if shop.metafields.multicartapp.new_label == blank -%}
+{%- assign new_label = "New" -%}
+{%- else -%}
+{%- assign new_label = shop.metafields.multicartapp.new_label -%}
+{%- endif -%}
+
+{%- if shop.metafields.multicartapp.new_label_days == blank -%}
+{%- assign new_label_days =  24 | times: 3600 | times: 1 -%}
+{%- else -%}
+{%- assign new_label_days = 24 | times: 3600 | times: shop.metafields.multicartapp.new_label_days -%}
+{%- endif -%}
+
+{%- if shop.metafields.multicartapp.sale_label == blank -%}
+{%- assign sale_label = "Sale" -%}
+{%- else -%}
+{%- assign sale_label = shop.metafields.multicartapp.sale_label -%}
+{%- endif -%}
+
+{%- if shop.metafields.multicartapp.soldout_label == blank -%}
+{%- assign soldout_label = "Soldout" -%}
+{%- else -%}
+{%- assign soldout_label = shop.metafields.multicartapp.soldout_label -%}
+{%- endif -%}
+
+{%- if shop.metafields.multicartapp.loadmoretext == blank -%}
+{%- assign loadmoretext = "Load More" -%}
+{%- else -%}
+{%- assign loadmoretext = shop.metafields.multicartapp.loadmoretext -%}
+{%- endif -%}
+
+{%- if shop.metafields.multicartapp.disableflipper == blank -%}
+{%- assign disableflipper = "no" -%}
+{%- else -%}
+{%- assign disableflipper = shop.metafields.multicartapp.disableflipper -%}
+{%- endif -%}
+
+{%- if shop.metafields.multicartapp.show_in_stock == blank -%}
+{%- assign show_in_stock = "yes" -%}
+{%- else -%}
+{%- assign show_in_stock = shop.metafields.multicartapp.show_in_stock -%}
+{%- endif -%}
+
+{%- if shop.metafields.multicartapp.show_prd_image == blank -%}
+{%- assign show_prd_image = "yes" -%}
+{%- else -%}
+{%- assign show_prd_image = shop.metafields.multicartapp.show_prd_image -%}
+{%- endif -%}
+
+{%- if shop.metafields.multicartapp.show_brand_sku == blank -%}
+{%- assign show_brand_sku = "yes" -%}
+{%- else -%}
+{%- assign show_brand_sku = shop.metafields.multicartapp.show_brand_sku -%}
+{%- endif -%}
+
+{%- if shop.metafields.multicartapp.show_categories_sidebar == blank -%}
+{%- assign show_categories_sidebar = "yes" -%}
+{%- else -%}
+{%- assign show_categories_sidebar = shop.metafields.multicartapp.show_categories_sidebar -%}
+{%- endif -%}
+
+{%- if shop.metafields.multicartapp.show_sort_by == blank -%}
+{%- assign show_sort_by = "yes" -%}
+{%- else -%}
+{%- assign show_sort_by = shop.metafields.multicartapp.show_sort_by -%}
+{%- endif -%}
+
+{%- if shop.metafields.multicartapp.show_multicart_bar == blank -%}
+{%- assign show_multicart_bar = "yes" -%}
+{%- else -%}
+{%- assign show_multicart_bar = shop.metafields.multicartapp.show_multicart_bar -%}
+{%- endif -%}
+
+{%- if shop.metafields.multicartapp.preset_qty_val == blank -%}
+{%- assign preset_qty_val = 0 | plus: 0 -%}
+{%- else -%}
+{%- assign preset_qty_val = shop.metafields.multicartapp.preset_qty_val | plus: 0 -%}
+{%- endif -%}
+
+{%- assign curr_coll = collection.handle -%}
+
+{%- liquid
+assign curr_locale_key = request.locale.iso_code | prepend: "lang_" 
+assign curr_lang_found = shop.metafields.multicartapp[curr_locale_key].value
+
+assign primary_lang = "lang_" | append: shop.locale
+   
+if localization.available_languages.size > 1
+   for lang in localization.available_languages
+     if lang.primary
+       assign primary_lang = "lang_" | append: lang.iso_code
+       break
+   endif
+  endfor
+endif
+-%}   
+
+
+{%- comment -%} Error Handling {%- endcomment -%}
+
+{%- if curr_lang_found != blank -%}
+  {% assign sort_by_label = curr_lang_found.sort_by | default: "Sort By" %}
+  {% assign featured_label = curr_lang_found.featured | default: "Featured" %}
+  {% assign price_low_to_high_label = curr_lang_found.price_low_to_high | default: "Price: Low to High" %}
+  {% assign price_high_to_low_label = curr_lang_found.price_high_to_low | default: "Price: High to Low" %}
+  {% assign alphabetically_a_to_z_label = curr_lang_found.alphabetically_a_to_z | default: "Alphabetically, A-Z" %}
+  {% assign alphabetically_z_to_a_label = curr_lang_found.alphabetically_z_to_a | default: "Alphabetically, Z-A" %}
+  {% assign date_new_to_old_label = curr_lang_found.date_new_to_old | default: "Newest to Oldest" %}
+  {% assign date_old_to_new_label = curr_lang_found.date_old_to_new | default: "Oldest to Newest" %}
+  {% assign best_selling_label = curr_lang_found.best_selling | default: "Best Selling" %}
+  {% assign products_text_label = curr_lang_found.products_text | default: "Products" %}
+  {% assign product_image_label = curr_lang_found.product_image | default: "Product Image" %}
+  {% assign product_name_label = curr_lang_found.product_name | default: "Product Name" %}
+  {% assign brand_text_label = curr_lang_found.brand_text | default: "Brand" %}
+  {% assign sku_text_label = curr_lang_found.sku_text | default: "SKU" %}
+  {% assign price_label = curr_lang_found.price | default: "Price" %}
+  {% assign quantity_label = curr_lang_found.quantity | default: "Quantity" %}
+  {% assign show_options_label = curr_lang_found.show_options | default: "Product Options" %}
+  {% assign single_add_to_cart_button_text_label = curr_lang_found.single_add_to_cart_button_text | default: "Add to Cart" %}
+  {% assign close_text_label = curr_lang_found.close_text | default: "Close" %}
+  {% assign item_text_label = curr_lang_found.item_text | default: "Item" %}
+  {% assign items_text_label = curr_lang_found.items_text | default: "Items" %}
+  {% assign all_collection_page_title_label = curr_lang_found.all_collection_page_title | default: "Products" %}
+  {% assign no_items_text_label = curr_lang_found.no_items_text | default: "Sorry, There are no Products in this Collection." %}
+  {% assign product_options_label = curr_lang_found.product_options | default: "Product Options" %}
+  {% assign categories_text_label = curr_lang_found.categories_text | default: "Categories" %}
+  {% assign soldout_text_label = curr_lang_found.soldout_text | default: "Soldout" %}
+  {% assign description_label = curr_lang_found.description | default: "Description" %}
+  {% assign from_label = curr_lang_found.from | default: "From" %}
+  {% assign save_text_label = curr_lang_found.save_text | default: "Save" %}
+  {% assign in_stock_text_label = curr_lang_found.in_stock_text | default: "In Stock" %}
+
+  <!-- error handling for ini -->
+  {% assign hide_options_label = curr_lang_found.hide_options | default: "Hide Options" %}
+  {% assign max_stock_alert_text_label = curr_lang_found.max_stock_alert_text | default: "We have maximum %s items in stock." %}
+  {% assign no_items_added_text_label = curr_lang_found.no_items_added_text | default: "Sorry! no items added to cart, please enter Qty." %}
+  {% assign add_more_text_label = curr_lang_found.add_more_text | default: "Add More..." %}
+  {% assign thank_you_text_label = curr_lang_found.thank_you_text | default: "Thank You..." %}
+  {% assign cart_popup_title_label = curr_lang_found.cart_popup_title | default: "YOUR CART HAS %s ITEMS" %}
+  {% assign add_to_cart_error_message_label = curr_lang_found.add_to_cart_error_message | default: "YOUR CART HAS %s ITEMS" %}
+  {% assign adding_text_label = curr_lang_found.adding_text | default: "Adding..." %}
+  {% assign only_n_items_available_label = curr_lang_found.only_n_items_available | default: "You can only add %count %product_name to the cart." %}
+  {% assign too_many_items_in_cart_label = curr_lang_found.too_many_items_in_cart | default: "You can't add more %product_name to the cart." %}
+  {% assign all_items_in_cart_label = curr_lang_found.all_items_in_cart | default: "All %count %product_name are in your cart." %}
+  {% assign view_more_categories_label = curr_lang_found.view_more_categories | default: "View More Category" %}
+  {% assign view_less_categories_label = curr_lang_found.view_less_categories | default: "View Less Category" %}
+  {% assign multicart_text = curr_lang_found.multicart_text | default: 'To add Multiple items to your cart, please fill "Qty" field and then click this >>>' %}
+  {% assign button_text = curr_lang_found.button_text | default: "Add to Cart" %}
+  {% assign new_label = curr_lang_found.new_label | default: "New" %}
+  {% assign sale_label = curr_lang_found.sale_label | default: "Sale" %}
+  {% assign loadmoretext = curr_lang_found.loadmoretext | default: "Load More" %}
+  
+  <!-- error handling for popup -->
+  {% assign view_cart_text_label = curr_lang_found.view_cart_text | default: "View Cart" %}
+  {% assign checkout_text_label = curr_lang_found.checkout_text | default: "Checkout" %}
+  {% assign continue_shopping_text_label = curr_lang_found.continue_shopping_text | default: "Continue shopping" %}
+  {% assign subtotal_text_label = curr_lang_found.subtotal_text | default: "Subtotal" %}
+{%- else -%}
+  {% assign default_lang_found = shop.metafields.multicartapp[primary_lang].value %}
+  {%- if default_lang_found != blank -%}      
+    {% assign sort_by_label = default_lang_found.sort_by | default: "Sort By" %}
+    {% assign featured_label = default_lang_found.featured | default: "Featured" %}
+    {% assign price_low_to_high_label = default_lang_found.price_low_to_high | default: "Price: Low to High" %}
+    {% assign price_high_to_low_label = default_lang_found.price_high_to_low | default: "Price: High to Low" %}
+    {% assign alphabetically_a_to_z_label = default_lang_found.alphabetically_a_to_z | default: "Alphabetically, A-Z" %}
+    {% assign alphabetically_z_to_a_label = default_lang_found.alphabetically_z_to_a | default: "Alphabetically, Z-A" %}
+    {% assign date_new_to_old_label = default_lang_found.date_new_to_old | default: "Newest to Oldest" %}
+    {% assign date_old_to_new_label = default_lang_found.date_old_to_new | default: "Oldest to Newest" %}
+    {% assign best_selling_label = default_lang_found.best_selling | default: "Best Selling" %}
+    {% assign products_text_label = default_lang_found.products_text | default: "Products" %}
+    {% assign product_image_label = default_lang_found.product_image | default: "Product Image" %}
+    {% assign product_name_label = default_lang_found.product_name | default: "Product Name" %}
+    {% assign brand_text_label = default_lang_found.brand_text | default: "Brand" %}
+    {% assign sku_text_label = default_lang_found.sku_text | default: "SKU" %}
+    {% assign price_label = default_lang_found.price | default: "Price" %}
+    {% assign quantity_label = default_lang_found.quantity | default: "Quantity" %}
+    {% assign show_options_label = default_lang_found.show_options | default: "Product Options" %}
+    {% assign single_add_to_cart_button_text_label = default_lang_found.single_add_to_cart_button_text | default: "Add to Cart" %}
+    {% assign close_text_label = default_lang_found.close_text | default: "Close" %}
+    {% assign item_text_label = default_lang_found.item_text | default: "Item" %}
+    {% assign items_text_label = default_lang_found.items_text | default: "Items" %}
+    {% assign all_collection_page_title_label = default_lang_found.all_collection_page_title | default: "Products" %}
+    {% assign no_items_text_label = default_lang_found.no_items_text | default: "Sorry, There are no Products in this Collection." %}
+    {% assign product_options_label = default_lang_found.product_options | default: "Product Options" %}
+    {% assign categories_text_label = default_lang_found.categories_text | default: "Categories" %}
+    {% assign soldout_text_label = default_lang_found.soldout_text | default: "Soldout" %}
+    {% assign description_label = default_lang_found.description | default: "Description" %}
+    {% assign from_label = default_lang_found.from | default: "From" %}
+    {% assign save_text_label = default_lang_found.save_text | default: "Save" %}
+    {% assign in_stock_text_label = default_lang_found.in_stock_text | default: "In Stock" %}
+
+    <!-- error handling for ini -->
+    {% assign hide_options_label = default_lang_found.hide_options | default: "Hide Options" %}
+    {% assign max_stock_alert_text_label = default_lang_found.max_stock_alert_text | default: "We have maximum %s items in stock." %}
+    {% assign no_items_added_text_label = default_lang_found.no_items_added_text | default: "Sorry! no items added to cart, please enter Qty." %}
+    {% assign add_more_text_label = default_lang_found.add_more_text | default: "Add More..." %}
+    {% assign thank_you_text_label = default_lang_found.thank_you_text | default: "Thank You..." %}
+    {% assign cart_popup_title_label = default_lang_found.cart_popup_title | default: "YOUR CART HAS %s ITEMS" %}
+    {% assign add_to_cart_error_message_label = default_lang_found.add_to_cart_error_message | default: "YOUR CART HAS %s ITEMS" %}
+    {% assign adding_text_label = default_lang_found.adding_text | default: "Adding..." %}
+    {% assign only_n_items_available_label = default_lang_found.only_n_items_available | default: "You can only add %count %product_name to the cart." %}
+    {% assign too_many_items_in_cart_label = default_lang_found.too_many_items_in_cart | default: "You can't add more %product_name to the cart." %}
+    {% assign all_items_in_cart_label = default_lang_found.all_items_in_cart | default: "All %count %product_name are in your cart." %}
+    {% assign view_more_categories_label = default_lang_found.view_more_categories | default: "View More Category" %}
+    {% assign view_less_categories_label = default_lang_found.view_less_categories | default: "View Less Category" %}
+    {% assign multicart_text = default_lang_found.multicart_text | default: 'To add Multiple items to your cart, please fill "Qty" field and then click this >>>' %}
+    {% assign button_text = default_lang_found.button_text | default: "Add to Cart" %}
+    {% assign new_label = default_lang_found.new_label | default: "New" %}
+    {% assign sale_label = default_lang_found.sale_label | default: "Sale" %}
+    {% assign loadmoretext = default_lang_found.loadmoretext | default: "Load More" %}
+    
+    <!-- error handling for popup -->
+    {% assign view_cart_text_label = default_lang_found.view_cart_text | default: "View Cart" %}
+    {% assign checkout_text_label = default_lang_found.checkout_text | default: "Checkout" %}
+    {% assign continue_shopping_text_label = default_lang_found.continue_shopping_text | default: "Continue shopping" %}
+    {% assign subtotal_text_label = default_lang_found.subtotal_text | default: "Subtotal" %}
+  {%- else -%}  
+    {%- capture sort_by_error -%}{{ 'translation missing:' | append:' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.sort_by' }}{%- endcapture -%}
+    {% assign sort_by_label = 'cws_bulk_add_to_cart.sort_by' | t | downcase | replace: sort_by_error, 'Sort By' | strip_newlines %}   
+
+    {%- capture featured_error -%}{{ 'translation missing:' | append:' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.featured' }}{%- endcapture -%}
+    {% assign featured_label = 'cws_bulk_add_to_cart.featured' | t | downcase | replace: featured_error, 'Featured' | strip_newlines %}
+
+    {%- capture price_low_to_high_error -%}{{ 'translation missing:' | append:' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.price_low_to_high' }}{%- endcapture -%}
+    {% assign price_low_to_high_label = 'cws_bulk_add_to_cart.price_low_to_high' | t | downcase | replace: price_low_to_high_error, 'Price: Low to High' | strip_newlines %}
+
+    {%- capture price_high_to_low_error -%}{{ 'translation missing:' | append:' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.price_high_to_low' }}{%- endcapture -%}
+    {% assign price_high_to_low_label = 'cws_bulk_add_to_cart.price_high_to_low' | t | downcase | replace: price_high_to_low_error, 'Price: High to Low' | strip_newlines %}
+
+    {%- capture alphabetically_a_to_z_error -%}{{ 'translation missing:' | append:' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.alphabetically_a_to_z' }}{%- endcapture -%}
+    {% assign alphabetically_a_to_z_label = 'cws_bulk_add_to_cart.alphabetically_a_to_z' | t | downcase | replace: alphabetically_a_to_z_error, 'Alphabetically, A-Z' | strip_newlines %}
+
+    {%- capture alphabetically_z_to_a_error -%}{{ 'translation missing:' | append:' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.alphabetically_z_to_a' }}{%- endcapture -%}
+    {% assign alphabetically_z_to_a_label = 'cws_bulk_add_to_cart.alphabetically_z_to_a' | t | downcase | replace: alphabetically_z_to_a_error, 'Alphabetically, Z-A' | strip_newlines %}
+
+    {%- capture date_new_to_old_error -%}{{ 'translation missing:' | append:' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.date_new_to_old' }}{%- endcapture -%}
+    {% assign date_new_to_old_label = 'cws_bulk_add_to_cart.date_new_to_old' | t | downcase | replace: date_new_to_old_error, 'Newest to Oldest' | strip_newlines %}
+
+    {%- capture date_old_to_new_error -%}{{ 'translation missing:' | append:' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.date_old_to_new' }}{%- endcapture -%}
+    {% assign date_old_to_new_label = 'cws_bulk_add_to_cart.date_old_to_new' | t | downcase | replace: date_old_to_new_error, 'Oldest to Newest' | strip_newlines %}
+
+    {%- capture best_selling_error -%}{{ 'translation missing:' | append:' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.best_selling' }}{%- endcapture -%}
+    {% assign best_selling_label = 'cws_bulk_add_to_cart.best_selling' | t | downcase | replace: best_selling_error, 'Best Selling' | strip_newlines %}
+
+    {%- capture products_text_error -%}{{ 'translation missing:' | append:' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.products_text' }}{%- endcapture -%}
+    {% assign products_text_label = 'cws_bulk_add_to_cart.products_text' | t | downcase | replace: products_text_error, 'Products' | strip_newlines %}
+
+    {%- capture product_image_error -%}{{ 'translation missing:' | append:' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.product_image' }}{%- endcapture -%}
+    {% assign product_image_label = 'cws_bulk_add_to_cart.product_image' | t | downcase | replace: product_image_error, 'Product Image' | strip_newlines %}
+
+    {%- capture product_name_error -%}{{ 'translation missing:' | append:' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.product_name' }}{%- endcapture -%}
+    {% assign product_name_label = 'cws_bulk_add_to_cart.product_name' | t | downcase | replace: product_name_error, 'Product Name' | strip_newlines %}
+
+    {%- capture brand_text_error -%}{{ 'translation missing:' | append:' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.brand_text' }}{%- endcapture -%}
+    {% assign brand_text_label = 'cws_bulk_add_to_cart.brand_text' | t | downcase | replace: brand_text_error, 'Brand' | strip_newlines %}
+
+    {%- capture sku_text_error -%}{{ 'translation missing:' | append:' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.sku_text' }}{%- endcapture -%}
+    {% assign sku_text_label = 'cws_bulk_add_to_cart.sku_text' | t | downcase | replace: sku_text_error, 'SKU' | strip_newlines %}
+
+    {%- capture price_error -%}{{ 'translation missing:' | append:' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.price' }}{%- endcapture -%}
+    {% assign price_label = 'cws_bulk_add_to_cart.price' | t | downcase | replace: price_error, 'Price' | strip_newlines %}
+
+    {%- capture quantity_error -%}{{ 'translation missing:' | append:' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.quantity' }}{%- endcapture -%}
+    {% assign quantity_label = 'cws_bulk_add_to_cart.quantity' | t | downcase | replace: quantity_error, 'Quantity' | strip_newlines %}
+
+    {%- capture show_options_error -%}{{ 'translation missing:' | append:' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.show_options' }}{%- endcapture -%}
+    {% assign show_options_label = 'cws_bulk_add_to_cart.show_options' | t | downcase | replace: show_options_error, 'Product Options' | strip_newlines %}
+
+    {%- capture single_add_to_cart_button_text_error -%}{{ 'translation missing:' | append:' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.single_add_to_cart_button_text' }}{%- endcapture -%}
+    {% assign single_add_to_cart_button_text_label = 'cws_bulk_add_to_cart.single_add_to_cart_button_text' | t | downcase | replace: single_add_to_cart_button_text_error, 'Add to Cart' | strip_newlines %}
+
+    {%- capture close_text_error -%}{{ 'translation missing:' | append:' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.close_text' }}{%- endcapture -%}
+    {% assign close_text_label = 'cws_bulk_add_to_cart.close_text' | t | downcase | replace: close_text_error, 'Close' | strip_newlines %}
+
+    {%- capture item_error -%}{{ 'translation missing:' | append:' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.item_text' }}{%- endcapture -%}
+    {% assign item_text_label = 'cws_bulk_add_to_cart.item_text' | t | downcase | replace: item_error, 'Item' | strip_newlines %}
+
+    {%- capture items_error -%}{{ 'translation missing:' | append:' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.items_text' }}{%- endcapture -%}
+    {% assign items_text_label = 'cws_bulk_add_to_cart.items_text' | t | downcase | replace: items_error, 'Items' | strip_newlines %}
+
+    {%- capture all_collection_page_title_error -%}{{ 'translation missing:' | append:' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.all_collection_page_title' }}{%- endcapture -%}
+    {% assign all_collection_page_title_label = 'cws_bulk_add_to_cart.all_collection_page_title' | t | downcase | replace: all_collection_page_title_error, 'Products' | strip_newlines %}
+
+    {%- capture no_items_text_error -%}{{ 'translation missing:' | append:' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.no_items_text' }}{%- endcapture -%}
+    {% assign no_items_text_label = 'cws_bulk_add_to_cart.no_items_text' | t | downcase | replace: no_items_text_error, 'Sorry, There are no Products in this Collection.' | strip_newlines %}
+
+    {%- capture product_options_error -%}{{ 'translation missing:' | append:' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.product_options' }}{%- endcapture -%}
+    {% assign product_options_label = 'cws_bulk_add_to_cart.product_options' | t | downcase | replace: product_options_error, 'Product Options' | strip_newlines %}
+
+    {%- capture categories_text_error -%}{{ 'translation missing:' | append:' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.categories_text' }}{%- endcapture -%}
+    {% assign categories_text_label = 'cws_bulk_add_to_cart.categories_text' | t | downcase | replace: categories_text_error, 'Categories' | strip_newlines %}
+
+    {%- capture soldout_error -%}{{ 'translation missing:' | append:' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.soldout_text' }}{%- endcapture -%}
+    {% assign soldout_text_label = 'cws_bulk_add_to_cart.soldout_text' | t | downcase | replace: soldout_error, 'Soldout' | strip_newlines %}
+
+    {%- capture description_error -%}{{ 'translation missing:' | append:' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.description' }}{%- endcapture -%}
+    {% assign description_label = 'cws_bulk_add_to_cart.description' | t | downcase | replace: description_error, 'Description' | strip_newlines %}
+
+    {%- capture from_error -%}{{ 'translation missing:' | append:' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.from' }}{%- endcapture -%}
+    {% assign from_label = 'cws_bulk_add_to_cart.from' | t | downcase | replace: from_error, 'From' | strip_newlines %}
+
+    {%- capture save_text_error -%}{{ 'translation missing:' | append:' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.save_text' }}{%- endcapture -%}
+    {% assign save_text_label = 'cws_bulk_add_to_cart.save_text' | t | downcase | replace: save_text_error, 'Save' | strip_newlines %}
+    
+    {%- capture in_stock_text_error -%}{{ 'translation missing:' | append:' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.in_stock_text' }}{%- endcapture -%}
+    {% assign in_stock_text_label = 'cws_bulk_add_to_cart.in_stock_text' | t | downcase | replace: in_stock_text_error, 'In Stock' | strip_newlines %}
+
+    <!-- error handling for ini -->
+    {%- capture hide_options_error -%}{{ 'translation missing:' | append: ' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.hide_options' }}{%- endcapture -%}
+    {% assign hide_options_label = 'cws_bulk_add_to_cart.hide_options' | t | downcase | replace: hide_options_error, 'Hide Options' | strip_newlines %}
+
+    {%- capture max_stock_alert_text_error -%}{{ 'translation missing:' | append: ' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.max_stock_alert_text' }}{%- endcapture -%}
+    {% assign max_stock_alert_text_label = 'cws_bulk_add_to_cart.max_stock_alert_text' | t | downcase | replace: max_stock_alert_text_error, 'We have maximum %s items in stock.' | strip_newlines %}
+
+    {%- capture no_items_added_text_error -%}{{ 'translation missing:' | append: ' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.no_items_added_text' }}{%- endcapture -%}
+    {% assign no_items_added_text_label = 'cws_bulk_add_to_cart.no_items_added_text' | t | downcase | replace: no_items_added_text_error, 'Sorry! no items added to cart, please enter Qty.' | strip_newlines %}
+
+    {%- capture add_more_text_error -%}{{ 'translation missing:' | append: ' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.add_more_text' }}{%- endcapture -%}
+    {% assign add_more_text_label = 'cws_bulk_add_to_cart.add_more_text' | t | downcase | replace: add_more_text_error, 'Add More...' | strip_newlines %}
+
+    {%- capture thank_you_text_error -%}{{ 'translation missing:' | append: ' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.thank_you_text' }}{%- endcapture -%}
+    {% assign thank_you_text_label = 'cws_bulk_add_to_cart.thank_you_text' | t | downcase | replace: thank_you_text_error, 'Thank You...' | strip_newlines %}
+
+    {%- capture cart_popup_title_error -%}{{ 'translation missing:' | append: ' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.cart_popup_title' }}{%- endcapture -%}
+    {% assign cart_popup_title_label = 'cws_bulk_add_to_cart.cart_popup_title' | t | downcase | replace: cart_popup_title_error, 'YOUR CART HAS %s ITEMS' | strip_newlines %}
+
+    {%- capture add_to_cart_error_message_error -%}{{ 'translation missing:' | append: ' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.add_to_cart_error_message' }}{%- endcapture -%}
+    {% assign add_to_cart_error_message_label = 'cws_bulk_add_to_cart.add_to_cart_error_message' | t | downcase | replace: add_to_cart_error_message_error, 'Below items, which were not successfully added to your Shopping Cart due to following errors.' | strip_newlines %}
+
+    {%- capture adding_text_error -%}{{ 'translation missing:' | append: ' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.adding_text' }}{%- endcapture -%}
+    {% assign adding_text_label = 'cws_bulk_add_to_cart.adding_text' | t | downcase | replace: adding_text_error, 'Adding...' | strip_newlines %}
+
+    {%- capture only_n_items_available_error -%}{{ 'translation missing:' | append: ' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.only_n_items_available' }}{%- endcapture -%}
+    {% assign only_n_items_available_label = 'cws_bulk_add_to_cart.only_n_items_available' | t | downcase | replace: only_n_items_available_error, 'You can only add %count %product_name to the cart.' | strip_newlines %}
+
+    {%- capture too_many_items_in_cart_error -%}{{ 'translation missing:' | append: ' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.too_many_items_in_cart' }}{%- endcapture -%}
+    {% assign too_many_items_in_cart_label = 'cws_bulk_add_to_cart.too_many_items_in_cart' | t | downcase | replace: too_many_items_in_cart_error, 'You can't add more %product_name to the cart.' | strip_newlines %}
+
+    {%- capture all_items_in_cart_error -%}{{ 'translation missing:' | append: ' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.all_items_in_cart' }}{%- endcapture -%}
+    {% assign all_items_in_cart_label = 'cws_bulk_add_to_cart.all_items_in_cart' | t | downcase | replace: all_items_in_cart_error, 'All %count %product_name are in your cart.' | strip_newlines %}
+
+    {%- capture view_more_categories_error -%}{{ 'translation missing:' | append: ' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.view_more_categories' }}{%- endcapture -%}
+    {% assign view_more_categories_label = 'cws_bulk_add_to_cart.view_more_categories' | t | downcase | replace: view_more_categories_error, 'View More Category' | strip_newlines %}
+
+    {%- capture view_less_categories_error -%}{{ 'translation missing:' | append: ' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.view_less_categories' }}{%- endcapture -%}
+    {% assign view_less_categories_label = 'cws_bulk_add_to_cart.view_less_categories' | t | downcase | replace: view_less_categories_error, 'View Less Category' | strip_newlines %}
+
+    <!-- error handling for popup -->
+    {%- capture view_cart_text_error -%}{{ 'translation missing:' | append: ' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.view_cart_text' }}{%- endcapture -%}
+    {% assign view_cart_text_label = 'cws_bulk_add_to_cart.view_cart_text' | t | downcase | replace: view_cart_text_error, 'View Cart' | strip_newlines %}
+
+    {%- capture checkout_text_error -%}{{ 'translation missing:' | append: ' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.checkout_text' }}{%- endcapture -%}
+    {% assign checkout_text_label = 'cws_bulk_add_to_cart.checkout_text' | t | downcase | replace: checkout_text_error, 'Checkout' | strip_newlines %}
+
+    {%- capture continue_shopping_text_error -%}{{ 'translation missing:' | append: ' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.continue_shopping_text' }}{%- endcapture -%}
+    {% assign continue_shopping_text_label = 'cws_bulk_add_to_cart.continue_shopping_text' | t | downcase | replace: continue_shopping_text_error, 'Continue shopping' | strip_newlines %}
+
+    {%- capture subtotal_text_error -%}{{ 'translation missing:' | append: ' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.subtotal_text' }}{%- endcapture -%}
+    {% assign subtotal_text_label = 'cws_bulk_add_to_cart.subtotal_text' | t | downcase | replace: subtotal_text_error, 'Subtotal' | strip_newlines %}
+  {%- endif -%}  
+{%- endif -%}
+
+{%- if default_lang_found.button_text == blank and curr_lang_found.button_text == blank-%}
+  {%- if shop.metafields.multicartapp.button_text == blank -%}
+  {%- assign button_text = 'Add to Cart' -%}
+  {%- else -%}
+  {%- assign button_text = shop.metafields.multicartapp.button_text -%}
+  {%- endif -%}
+{%- endif -%}  
+{%- if default_lang_found.loadmoretext == blank and curr_lang_found.loadmoretext == blank-%}
+  {%- if shop.metafields.multicartapp.loadmoretext == blank -%}
+  {%- assign loadmoretext = "Load More" -%}
+  {%- else -%}
+  {%- assign loadmoretext = shop.metafields.multicartapp.loadmoretext -%}
+  {%- endif -%}
+{%- endif -%}  
+
+{%- if default_lang_found.new_label == blank and curr_lang_found.new_label == blank-%}
+  {%- if shop.metafields.multicartapp.new_label == blank -%}
+  {%- assign new_label = "New" -%}
+  {%- else -%}
+  {%- assign new_label = shop.metafields.multicartapp.new_label -%}
+  {%- endif -%}
+{%- endif -%} 
+{%- if default_lang_found.sale_label == blank and curr_lang_found.sale_label == blank-%}
+  {%- if shop.metafields.multicartapp.sale_label == blank -%}
+  {%- assign sale_label = "Sale" -%}
+  {%- else -%}
+  {%- assign sale_label = shop.metafields.multicartapp.sale_label -%}
+  {%- endif -%}
+{%- endif -%}
+{%- if default_lang_found.soldout_label == blank and curr_lang_found.soldout_label == blank-%}
+  {%- if shop.metafields.multicartapp.soldout_label == blank -%}
+  {%- assign soldout_label = "Soldout" -%}
+  {%- else -%}
+  {%- assign soldout_label = shop.metafields.multicartapp.soldout_label -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- assign item_txt = item_text_label -%}
+{%- assign items_txt = items_text_label -%}
+
+<!-- CART POPUP LABEL -->
+<script type="text/javascript">
+   var cart_popup_title = "{{ cart_popup_title_label | replace: '&#39;', "'" | replace: '&#34;', '\"' }}";
+   window.cart_popup_title = cart_popup_title.toString().split("%s");
+   window.cart_popup_title1 = window.cart_popup_title[0];
+   window.cart_popup_title2 = window.cart_popup_title[1];
+   window.view_more_category_text = "{{ view_more_categories_label | replace: '&#39;', "'" | replace: '&#34;', '\"' }}";
+   window.view_less_category_text = "{{ view_less_categories_label | replace: '&#39;', "'" | replace: '&#34;', '\"' }}";
+   
+   window.show_options = "{{ show_options_label | replace: '&#39;', "'" | replace: '&#34;', '\"' }}";
+   window.hide_options = "{{ hide_options_label | replace: '&#39;', "'" | replace: '&#34;', '\"' }}";
+   var stock_max_alert = "{{ max_stock_alert_text_label | replace: '&#39;', "'" | replace: '&#34;', '\"' }}";
+
+    if (stock_max_alert.indexOf("%s") !== -1) {  
+      window.stock_max_alert = stock_max_alert.toString().split("%s");
+      window.stock_max_alert1 = window.stock_max_alert[0];
+      window.stock_max_alert2 = window.stock_max_alert[1];
+    }else{
+      window.stock_max_alert1 = stock_max_alert;
+      window.stock_max_alert2 = '';
+    }
+   
+   
+   window.no_items_added_text = "{{ no_items_added_text_label | replace: '&#39;', "'" | replace: '&#34;', '\"' }}";
+   window.single_atc_text = "{{ single_add_to_cart_button_text_label | replace: '&#39;', "'" | replace: '&#34;', '\"' }}";
+   window.add_more_text = "{{ add_more_text_label | replace: '&#39;', "'" | replace: '&#34;', '\"' }}";
+   window.thank_you_text = "{{ thank_you_text_label | replace: '&#39;', "'" | replace: '&#34;', '\"' }}";
+   
+   window.add_to_cart_error_message = "{{ add_to_cart_error_message_label | replace: '&#39;', "'" | replace: '&#34;', '\"' }}";
+  
+   //Set lang. specific cart response error messages - 786/ASK
+   window.only_n_items_available = "{{ only_n_items_available_label | replace: '&#39;', "'" | replace: '&#34;', '\"' }}";
+   window.too_many_items_in_cart = "{{ too_many_items_in_cart_label | replace: '&#39;', "'" | replace: '&#34;', '\"' }}";
+   window.all_items_in_cart = "{{ all_items_in_cart_label | replace: '&#39;', "'" | replace: '&#34;', '\"' }}";
+   var too_many_items_in_cart = window.too_many_items_in_cart.toString().split("%product_name");
+   var all_items_in_cart = window.all_items_in_cart.toString().split("%count %product_name");
+   var only_n_items_available = window.only_n_items_available.toString().split("%count %product_name");
+  
+   window.adding_text = "{{ adding_text_label | replace: '&#39;', "'" | replace: '&#34;', '\"' }}";
+   window.item_txt = "{{ item_txt | replace: '&#39;', "'" | replace: '&#34;', '\"' }}";
+   window.items_txt = "{{ items_txt | replace: '&#39;', "'" | replace: '&#34;', '\"' }}";
+   
+   window.prd_img_txt = "{{ product_image_label | replace: '&#39;', "'" | replace: '&#34;', '\"' }}";
+   window.prd_name_txt = "{{ product_name_label | replace: '&#39;', "'" | replace: '&#34;', '\"' }}";
+   window.prd_brand_sku_txt = "{{ brand_text_label | replace: '&#39;', "'" | replace: '&#34;', '\"' }}/{{ sku_text_label | replace: '&#39;', "'" | replace: '&#34;', '\"' }}";
+   window.price_txt = "{{ price_label | replace: '&#39;', "'" | replace: '&#34;', '\"' }}";
+   window.qty_txt = "{{ quantity_label | replace: '&#39;', "'" | replace: '&#34;', '\"' }}";
+   window.prd_options_txt = "{{ product_options_label | replace: '&#39;', "'" | replace: '&#34;', '\"' }}";
+   window.prd_img_txt = "{{ product_image_label | replace: '&#39;', "'" | replace: '&#34;', '\"' }}";
+   window.prd_name_txt = "{{ product_name_label | replace: '&#39;', "'" | replace: '&#34;', '\"' }}";
+   window.close_txt = "{{ close_text_label | replace: '&#39;', "'" | replace: '&#34;', '\"' }}";
+   window.view_cart_txt = "{{ view_cart_text_label | replace: '&#39;', "'" | replace: '&#34;', '\"' }}";
+   window.checkout_txt = "{{ checkout_text_label | replace: '&#39;', "'" | replace: '&#34;', '\"' }}";
+   window.continue_shopping_txt = "{{ continue_shopping_text_label | replace: '&#39;', "'" | replace: '&#34;', '\"' }}";
+   window.subtotal_txt = "{{ subtotal_text_label | replace: '&#39;', "'" | replace: '&#34;', '\"' }}";
+
+  var market_country_currency_code = '{{ routes.root_url }}';
+  if ( market_country_currency_code != '/') {
+    window.market_country_currency_code = market_country_currency_code.trim();
+  }else{
+    window.market_country_currency_code = '';
+  }
+</script> 
+
+
+{%- comment -%} Get Multiadd to cart Collections {%- endcomment -%} 
+{%- assign coll_count = 0 -%}
+{%- capture colls_list -%}
+{%- for col in collections -%}
+{%- if col.template_suffix == "multiple-addtocart" -%}
+{%- assign coll_count = coll_count | plus: 1 -%}
+{{ col.handle }}
+{%- unless forloop.last -%},{%- endunless -%}
+{%- endif -%}
+{%- endfor -%}
+{%- endcapture -%}
+  
+{%- if collection.products_count > 0 -%}
+{%- paginate collection.products by products_limit -%}
+<div class="multicart-container">
+   <div class="multicart-loader" style="display: none;"><span class="cwsloader"></span></div>
+   <div class="page-width" id="collection-multicart">
+      {%- comment -%} Categories Sidebar {%- endcomment -%}
+      <div class="coll-header page-title" >
+        {%- if collection.handle != "all" -%}
+        <center><h2>{{ collection.title }}</h2></center>
+        {%- else -%}
+        <center><h2>{{ all_collection_page_title_label }}</h2></center>
+        {%- endif -%}
+      </div>
+     
+      {%- if collection.image != blank or collection.description != blank -%}
+      <div class="image-description">
+         {%- if collection.image != blank -%}
+         <div class="coll-img" >
+            <img src="{{ collection.image | img_url: 'medium' }}" />
+         </div>
+         {%- endif -%}
+         {%- if collection.description != blank -%}
+         <div class="coll-desc" >{{ collection.description }}</div>
+         {%- endif -%}  
+     </div>
+     {%- endif -%}  
+     
+     {%- if coll_count > 1 and show_categories_sidebar == "yes" -%}
+     <div class="widget-filter sidebar collection-filters sidebar_left">
+         <div class="block multicart-categories">
+            <h3 class="sub-title">{{ categories_text_label }}</h3>
+            <div class="block-content" style="display:none;">
+               <ul class="sidebar-collections">
+                 {%- for collection in collections -%}
+                  {%- if colls_list contains collection.handle and collection.handle != curr_coll and collection.template_suffix == "multiple-addtocart" -%}
+                 <li><a href="{{ collection.url }}">{{ collection.title }}</a></li>
+                 {%- endif -%}
+                 {%- endfor -%}
+               </ul>
+            </div>
+         </div>
+      </div>
+     {%- endif -%}
+     
+     <div class="{%- if coll_count > 1 and show_categories_sidebar == "yes" -%}collection-multicart-template{%- else -%}collection-multicart-fullwidth{%- endif -%}">
+        <div class="multicart_err" style="display:none;">
+         <button class="err_close" onclick="this.parentElement.style.display='none';" title="{{ close_text_label }}">&times;</button>
+        </div>
+        <div class="product_list">
+         {%- if show_sort_by == "yes" -%}
+         <div class="multicart_sort filters-toolbar-wrapper">
+           <div class="cart_sort_by">
+            <span><strong>{{ sort_by_label }}:</strong></span>
+            <div class="sort_by_dropdown">
+            <select id="multicart_sort_by">
+               <option value="manual">{{ featured_label }}</option>
+               <option value="price-ascending">{{ price_low_to_high_label }}</option>
+               <option value="price-descending">{{ price_high_to_low_label }}</option>
+               <option value="title-ascending">{{ alphabetically_a_to_z_label }}</option>
+               <option value="title-descending">{{ alphabetically_z_to_a_label }}</option>
+               <option value="created-ascending">{{ date_old_to_new_label }}</option>
+               <option value="created-descending">{{ date_new_to_old_label }}</option>
+               <option value="best-selling">{{ best_selling_label }}</option>
+            </select>
+            </div>
+           </div>
+         </div>
+         {%- endif -%}
+         <div class="list-view-items">
+            <div id="list-view-items">
+               <div id="resp-table-caption">
+                  {%- comment -%} Multiple addtocart button is included here {%- endcomment -%}
+                  {%- if show_multicart_bar == "yes" and bar_position == 'top_bottom' or bar_position == 'top' -%}
+                  <div class="multiaddtocart">
+                     <h3 class="multicart-text">{{ multicart_text }}</h3>
+                     <button class="submit current_list-add-to-cart">
+                     <span>{{ button_text }}</span>
+                     </button>          
+                  </div>
+                  {%- endif -%}
+               </div>
+               <div class="multcart-container">
+                  <div class="multcart_total_cnt">
+                     <p><strong>{{ collection.all_products_count }} {{ products_text_label }}</strong></p>
+                  </div>
+                  <table id="multi-addToCart" class="collection-multiaddtocart">
+                     <thead id="resp-table-header">
+                        <tr>
+                           {%- if show_prd_image == "yes" -%}<th class="cws_prd_img">{{ product_image_label }}</th>{%- endif -%}
+                           <th class="cws_prd_name">{{ product_name_label }}</th>
+                           {%- if show_brand_sku == "yes" -%}<th class="cws_brand_sku">{{ brand_text_label }}/{{ sku_text_label }}</th>{%- endif -%}
+                           <th class="cws_price">{{ price_label }}</th>
+                           <th class="cws_prd_qty">{{ quantity_label }}</th>
+                           <th></th>
+                        </tr>
+                     </thead>
+                     <tbody id="resp-table-body">
+                        {%- for product in collection.products -%}
+                        {%- comment -%} Multiple Addtocart App - Product Card Snippet {%- endcomment -%}
+
+                        {%- comment -%} Error Handling {%- endcomment -%}
+                        
+                        
+                        
+                        
+
+                        {%- comment -%} On Sale - Badge {%- endcomment -%}
+                        {%- assign on_sale = false -%}
+                        {%- if product.compare_at_price_min > product.price_min -%}
+                        {%- assign on_sale = true -%}
+                        {%- endif -%}
+
+                        {%- comment -%} Soldout - Badge {%- endcomment -%}
+                        {%- assign sold_out = true -%}
+                        {%- if product.available  -%}
+                        {%- assign sold_out = false -%}
+                        {%- endif -%}
+
+                        {%- comment -%} New - Badge for 1 Day old Products {%- endcomment -%}
+                        {%- assign date_created = product.created_at | date:'%s' -%}
+                        {%- assign date_now = 'now' | date:'%s' -%}
+                        {%- assign difference = date_now | minus: date_created -%}
+
+                        {%- comment -%} Get Varaint Details {%- endcomment -%}
+                        {%- assign variant = product.variants.first -%}
+                        {%- assign variant_qty = product.variants.first.inventory_quantity -%}
+
+                        {%- if variant.inventory_management == 'shopify' and variant.inventory_policy != "continue" -%}
+                            {%- if variant_qty < 1 -%}
+                                {%- assign max = 0 -%}
+                                {%- assign stock_html = "" -%}
+                            {%- else -%}
+                                {%- assign max = variant_qty -%}
+                                {%- assign stock_html = in_stock_text_label | append:": " | append: max -%}
+                            {%- endif -%}    
+                        {%- else -%}
+                            {%- comment -%} When policy is "continue" then it wll allow to buy after out of stock {%- endcomment -%}
+                            {%- assign max = "" -%}
+              {%- assign stock_html = "" -%}
+                        {%- endif -%}
+
+                        <tr class="resp-table-row multicart product-{{ variant.id }}" data-product-id="{{ variant.id }}" id="product-{{ variant.id }}">
+                            {%- comment -%} 1. Product Image Column {%- endcomment -%}
+                            {%- if show_prd_image == "yes" -%}
+                            <td class="table-body-cell pro-imgcell cws_prd_img">
+                            <div class="list-view-item__image-column product-img"> 
+                            <div class="product-label"> 
+                                {%- if on_sale and show_lbl_val == "yes" -%}
+                                    <span class="badge-sale">{{ sale_label }}</span> 
+                                {%- else -%}
+                                    {%- if difference < new_label_days and sold_out == false and show_lbl_val == "yes" -%}
+                                    <span class="badge-new">{{ new_label }}</span>
+                                    {%- endif -%}
+                                {%- endif -%}
+                                {%- if sold_out and show_lbl_val == "yes" -%} 
+                                    <span class="badge-soldout">{{ soldout_text_label }}</span> 
+                                {%- endif -%} 
+                            </div>
+                            <a href="{{ product.url }}" class="list-view-item">
+                              
+                            {%- if product.images.size > 1 and disableflipper == "no" -%}
+                            <div class="reveal">        
+                                <img class="list-view-item__image" src="{{ product.featured_image.src | img_url: '90X90' }}" alt="{{ product.featured_image.alt | escape }}">
+                                <div class="hidden">
+                                <div class="caption">
+                                <div class="centered"><img class="hidden" src="{{ product.images[1] | img_url: '90X90' }}" alt="{{ product.images[1].alt | escape }}" /></div>
+                                </div>
+                                </div>
+                            </div>
+                            {%- else -%} 
+                              <img class="list-view-item__image" src="{{ product.featured_image.src | img_url: '90X90' }}" alt="{{ product.featured_image.alt | escape }}"> 
+                            {%- endif -%}  
+                            </a> 
+                            </div>
+                            </td>
+                            {%- endif -%}
+                          
+                            {%- comment -%} 2. Product Name Column {%- endcomment -%} 
+                            <td class="table-body-cell product-name cws_prd_name">
+                                <div class="pr_hndl" style="display:none;">{{ product.handle }}</div>
+                                <div class="list-view-item__title">
+                                  <a href="{{ product.url }}" class="var_title_{{ variant.id }}">{{ product.title }}</a>
+                                  <a href="{{ product.url }}" class="descBtn" data-toggle="tooltip" data-placement="left"><i class="icon" aria-hidden="true"></i> <span class="tooltip">{{ description_label }}</span></a>
+                                </div>
+                            </td>
+                          
+                            {%- comment -%} 3. Brand / SKU Column {%- endcomment -%}
+                            {%- if show_brand_sku == "yes" -%}
+                            <td class="table-body-cell product-vendor cws_brand_sku">
+                                {%- comment -%} Brand {%- endcomment -%}
+                                {%- if product.vendor != blank -%}
+                                <p><b>{{ brand_text_label }}:</b> {{ product.vendor }}</p>
+                                {%- endif -%}
+                             
+                                {%- comment -%} SKU {%- endcomment -%}
+                                {%- if product.selected_or_first_available_variant.sku != blank -%}
+                                <p><b>{{ sku_text_label }}:</b> {{ product.selected_or_first_available_variant.sku }}</p>
+                                {%- endif -%}
+                            </td>
+                            {%- endif -%}
+                          
+                            {%- comment -%} 4. Price Column {%- endcomment -%}
+                            <td class="table-body-cell product-price cws_price">
+                            {%- assign compare_at_price = product.compare_at_price -%}
+                            {%- assign price = product.price -%}
+                            {%- assign price_varies = product.price_varies -%}
+                            {%- assign money_price = price | money -%}
+                            {%- assign min_price = product.price_min -%}
+                            {%- assign money_price_min = min_price | money -%}
+                              
+                            {%- if price_varies -%}
+                                <p>
+                                <span class="product-price__price">{{ from_label }} </span>
+                                <span class="money min_price">{{ money_price_min }}</span>
+                                </p>
+                            {%- else -%}
+                                <p>
+                                <span class="product-price__price single-price money"><b>{{ money_price }}</b></span>
+                                </p>
+                                {%- if product.has_only_default_variant -%}
+                                {%- if product.compare_at_price and product.compare_at_price > product.price -%}
+                                <p>
+                                <span class="money compare_price" style="text-decoration:line-through;"><b>{{ compare_at_price | money }}</b></span>
+                                </p>
+                                <p>
+                                <span class="label savings">{{ save_text_label }} {{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round }}%</span>
+                                </p>
+                                {%- endif -%}
+                                {%- endif -%}
+                            {%- endif -%}
+                          </td>
+                          
+                          {%- if sold_out -%}
+                          {%- comment -%} 5. Qty Column {%- endcomment -%}
+                          <td class="table-body-cell product-qty cws_prd_qty"></td>
+                          
+                          {%- comment -%} 6. Action Column {%- endcomment -%}
+                          <td class="table-body-cell product-soldout">
+                          <span class="label soldout">{{ soldout_text_label }}</span>
+                          </td>
+                          {%- else -%}
+                          {%- if product.variants.size > 1 -%} 
+                            
+                            {%- comment -%} 5. Qty Column {%- endcomment -%}
+                            <td class="table-body-cell product-qty cws_prd_qty"></td>
+                          
+                            {%- comment -%} 6. Action Column {%- endcomment -%}
+                            <td class="table-body-cell product-btn">
+                            <div class="qty-form">
+                                <input data-variantproid="variantof-{{ product.id }}" type="button" value="{{ show_options_label }}" name="selectVariant" class="showhidevariant btn" style="cursor:pointer;"/>
+                            </div>
+                            </td>                              
+
+                            {%- comment -%} Product Variants Listing Inner Table {%- endcomment -%}
+                            <tr class="variantof-{{ product.id }}" style="display:none;">
+                            <td class="show-product" colspan="6">
+                            <table id="resp-table" class="prd_variants">
+                                {%- capture option_titles -%}
+                                {%- for product_option in product.options_with_values -%}
+                                {{ product_option.name }} 
+                                {%- if forloop.last == false -%},{%- endif-%}
+                                {%- endfor -%}{%- endcapture -%}
+                                {%- assign option_titles = option_titles | split: ','-%}    
+                                {%- assign total_options = option_titles | size -%}
+                                <thead id="resp-table-header">
+                                <tr>
+                                    {%- if show_prd_image == "yes" -%}<th class="table-header-cell cws_prd_img">{{ product_image_label }}</th>{%- endif -%}
+                                    {%- if total_options > 0 -%}<th class="table-header-cell cws_prd_options">{{ product_options_label }}</th>{%- endif -%}
+                                    {%- if show_brand_sku == "yes" -%}<th class="table-header-cell cws_brand_sku">{{ brand_text_label }}/{{ sku_text_label }}</th>{%- endif -%}
+                                    <th class="table-header-cell cws_price">{{ price_label }}</th>
+                                    <th class="table-header-cell cws_prd_qty">{{ quantity_label }}</th>
+                                    <th></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    {%- for variant in product.variants -%}
+                                    {%- assign variant_stock_html = "" -%}
+                                    {%- if variant.inventory_management == "shopify" -%}
+                                    {%- if variant.inventory_policy != "continue" -%}
+                                    {%- assign variant_max = variant.inventory_quantity -%}
+                                    {%- assign variant_stock_html = in_stock_text_label | append:": " | append: variant_max -%}
+                                    {%- else-%}
+                                    {%- assign variant_max = "" -%}
+                                    {%- endif -%}
+                                    {%- else -%}
+                                    {%- assign variant_max = "" -%}
+                                    {%- endif -%}
+                               
+                                    {%- comment -%} Product Variant Row {%- endcomment -%}
+                                    <tr class="resp-table-row prd_variant" data-variant-id="{{ variant.id }}" id="variant_{{ variant.id }}">
+                                      {%- comment -%} 1. Image Column {%- endcomment -%}
+                                      {%- if show_prd_image == "yes" -%}
+                                      <td class="table-body-cell product-img cws_prd_img">
+                                        <a href="{{ variant.url }}">
+                                        {%- if variant.image.src == blank -%}
+                                        <img src="{{ product.featured_image | img_url: '90X90' }}">
+                                        {%- else -%}
+                                        <img src="{{ variant.image.src | img_url: '90X90' }}">  
+                                        {%- endif -%}
+                                        </a>
+                                      </td>
+                                      {%- endif -%}
+                                      
+                                      {%- comment -%} 2. Variant Option-1,2,3 contains Column {%- endcomment -%}
+                                      {%- if total_options > 0 -%}
+                                      <td class="table-body-cell product-options cws_prd_options">
+                                      {%- if variant.option1 != blank -%}
+                                      <p class="product-option1">
+                                        <span class="option_title"><b>{{ option_titles[0] | strip | capitalize }}: </b></span> 
+                                        <span class="option_value">{{ variant.option1 | strip }}</span> 
+                                      </p>
+                                      {%- endif -%}
+                                    
+                                      {%- if variant.option2 != blank -%}
+                                      <p class="product-option2">
+                                        <span class="option_title"><b>{{option_titles[1] | strip | capitalize }}: </b></span> 
+                                        <span class="option_value">{{ variant.option2 | strip  }}</span> 
+                                      </p>
+                                      {%- endif -%}
+                                     
+                                      {%- if variant.option3 != blank -%} 
+                                      <p class="product-option3">
+                                        <span class="option_title"><b>{{ option_titles[2] | strip | capitalize }}: </b></span> 
+                                        <span class="option_value">{{ variant.option3 | strip }}</span> 
+                                      </p>
+                                      {%- endif -%}
+                                      </td>
+                                      {%- endif -%}
+                                     
+                                      {%- comment -%} 5. Brand/SKU Column {%- endcomment -%}
+                                      {%- if show_brand_sku == "yes" -%}
+                                      <td class="table-body-cell product-vendor cws_brand_sku">
+                                        {%- if product.vendor != blank -%}
+                                        <p><b>{{ brand_text_label }}:</b> {{ product.vendor }}</p>
+                                        {%- endif -%}
+                             
+                                        {%- if variant.sku != blank -%}
+                                        <p><b>{{ sku_text_label }}:</b> {{ variant.sku }}</p>
+                                        {%- endif -%}
+                                       </td>
+                                      {%- endif -%}
+                                      
+                                       {%- comment -%} 6.Price Column {%- endcomment -%}
+                                       <td class="table-body-cell product-price cws_price">
+                                        {%- if variant.compare_at_price > variant.price -%}
+                                        <p>
+                                          <span class="money price"><b>{{ variant.price | money }}</b></span>
+                                          <span style="text-decoration:line-through;" class="money compare_price"><b>{{ variant.compare_at_price | money }}</b></span>
+                                        </p>
+                                        <p><span class="label savings">{{ save_text_label }} {{ variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | round }}%</span></p>
+                                        {%- else -%}
+                                        <p><b><span class="money">{{ variant.price | money }}</span></b></p>
+                                        {%- endif -%}
+                                       </td>
+                                      
+                                       {%- comment -%} 7.Qty Column {%- endcomment -%}
+                                       {%- if variant.available -%}
+                                       <td class="table-body-cell product-qty cws_prd_qty">  
+                                       <div class="qty-box clearfix">
+                                            <input style="cursor:pointer;" id="qtyminus-{{ variant.id }}" class="qtyminus" type="button" value="-">
+                                            <input id="updates_{{ variant.id }}" class="list-product-qty currqty_{{ variant.id  }}" type="text" value="{{ preset_qty_val }}" name="updates[]" size="4" max="{{ variant_max }}" onkeyup="this.value = this.value.replace(/[^0-9]/g,&quot;&quot;)">
+                                            <input style="cursor:pointer;" id="qtyplus-{{ variant.id }}" class="qtyplus" type="button" value="+">
+                                        </div>
+                                        <div>{%- if show_in_stock == "yes" -%}{{ variant_stock_html }}{%- endif -%}</div>   
+                                        </td>
+                                       {%- else -%}
+                                       <td class="table-body-cell product-qty cws_prd_qty"></td>
+                                       {%- endif -%}
+                                      
+                                       {%- comment -%} 8.Action Column {%- endcomment -%}
+                                       {%- if variant.available -%}
+                                       <td class="table-body-cell product-btn">
+                                            <div class="qty-form">
+                                            <form method="post" action="/cart/add" class="AddToCart">           
+                                                <input type="hidden" name="id" value="{{ variant.id }}" />
+                                                <button type="button" value="Buy now" id="{{ variant.id }}" class="btn singleCart">
+                                                <span>{{ single_add_to_cart_button_text_label }}</span> 
+                                                </button>
+                                            </form>
+                                           </div>
+                                        </td>
+                                       {%- else -%}
+                                       <td class="table-body-cell product-soldout">
+                                        <span class="label soldout">{{ soldout_text_label }}</span>
+                                      </td>
+                                      {%- endif -%}
+                                    </tr>
+                                    {%- endfor -%}
+                              </tbody>
+                             </table>
+                             </td>
+                             </tr>
+                             {%- else -%}
+                             {%- comment -%} 5. Qty Column {%- endcomment -%}
+                             <td class="table-body-cell product-qty cws_prd_qty">
+                                <div class="qty-box clearfix">
+                                <input style="cursor:pointer;" id="qtyminus-{{ product.id }}" class="qtyminus" type="button" value="-">
+                                <input id="updates_{{ product.variants.first.id  }}" class="list-product-qty currqty_{{ product.variants.first.id  }}" type="text" value="{{ preset_qty_val }}" name="updates[]" size="4" max="{{ max }}" onkeyup="this.value = this.value.replace(/[^0-9]/g,&quot;&quot;)">
+                                <input style="cursor:pointer;" id="qtyplus-{{ product.id }}" class="qtyplus" type="button" value="+">
+                                </div>
+                                <div class="qty-stock">{%- if show_in_stock == "yes" -%}{{ stock_html }}{%- endif -%}</div>
+                             </td>
+                             {%- comment -%} 6. Action Column {%- endcomment -%}
+                             <td class="table-body-cell product-btn">
+                                <div class="qty-form">
+                                <form method="post" action="/cart/add" class="AddToCart">           
+                                    <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+                                    <button type="button" value="Buy now" id="{{ variant.id }}" class="btn singleCart">
+                                    <span>{{ single_add_to_cart_button_text_label }}</span> 
+                                    </button>
+                                </form>
+                               </div>
+                             </td>
+                          {%- endif -%}
+                          {%- endif -%}
+                        </tr>
+                        {%- endfor -%}
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+         </div>
+      </div>
+      {%- comment -%} Load More {%- endcomment -%}
+      {%- if paginate.next -%}
+      <div id="product-list-foot" align="center">
+         <div class="multcart_more">
+            {%- if autoloadmore == "yes" -%}
+            &darr; More <a href="{{ paginate.next.url }}" style="display:none;">More</a>
+            {%- else -%}
+            <a href="{{ paginate.next.url }}" class="btn">{{ loadmoretext }}</a>
+            {%- endif -%}
+         </div>
+      </div>
+      {%- endif -%}
+      {%- comment -%} Multiple addtocart button is included here {%- endcomment -%}
+      {%- if show_multicart_bar == "yes" and bar_position == 'top_bottom' or bar_position == 'bottom' -%}
+      <div class="multiaddtocart">
+         <h3 class="multicart-text">{{ multicart_text }}</h3>
+         <button class="submit current_list-add-to-cart">
+         <span>{{ button_text }}</span>
+         </button>       
+      </div>
+      {%- endif -%}
+      <a itle="Shopping Cart" id="flyToCart" class="cart_anchor" href="/cart">
+         <div id="multicartDiv" class="multi-items-cart">{{ cart.item_count }} {{ cart.item_count | pluralize: item_txt, items_txt | strip_newlines }}</div>
+      </a>
+     </div>
+   </div>
+</div>
+{%- endpaginate -%}
+{%- else -%}
+{%- comment -%} No Products Found {%- endcomment -%}
+<div class="multicart-container">
+   <div class="page-width" id="collection-multicart">
+      <div class="coll-header page-title" >
+        {%- if collection.handle != "all" -%}
+        <center><h2>{{ collection.title }}</h2></center>
+        {%- else -%}
+        <center><h2>{{ all_collection_page_title_label }}</h2></center>
+        {%- endif -%}
+      </div>
+     
+      {%- if collection.image != blank or collection.description != blank -%}
+      <div class="image-description">
+         {%- if collection.image != blank -%}
+         <div class="coll-img" >
+            <img src="{{ collection.image | img_url: 'medium' }}" />
+         </div>
+         {%- endif -%}
+         {%- if collection.description != blank -%}
+         <div class="coll-desc" >{{ collection.description }}</div>
+         {%- endif -%}  
+      </div>
+      {%- endif -%}
+    
+      {%- if coll_count > 1 and show_categories_sidebar == "yes" -%}
+      <div class="widget-filter sidebar collection-filters sidebar_left">
+         <div class="block multicart-categories">
+            <h3 class="sub-title">{{ categories_text_label }}</h3>
+            <div class="block-content" style="display:none;">
+               <ul class="sidebar-collections">
+                 {%- for collection in collections -%}
+                  {%- if colls_list contains collection.handle and collection.handle != curr_coll and collection.template_suffix == "multiple-addtocart" -%}
+                 <li><a href="{{ collection.url }}">{{ collection.title }}</a></li>
+                 {%- endif -%}
+                 {%- endfor -%}
+               </ul>
+            </div>
+         </div>
+      </div>
+     {%- endif -%}
+     
+     <div class="{%- if coll_count > 1 and show_categories_sidebar == "yes" -%}collection-multicart-template{%- else -%}collection-multicart-fullwidth{%- endif -%}">
+       <div class="grid__item small-text-center">
+         <p class="text-center no-products">{{ no_items_text_label }}</p>
+       </div>
+     </div>
+   </div>
+</div>
+{%- endif -%}
