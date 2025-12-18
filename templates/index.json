@@ -64,7 +64,7 @@
           "type": "heading",
           "settings": {
             "heading": "Welcome to the Cantabria Labs Professional Shop",
-            "heading_size": "h0"
+            "heading_size": "h1"
           }
         },
         "text": {
@@ -76,7 +76,7 @@
         "button_MyxLz3": {
           "type": "button",
           "settings": {
-            "button_label": "Shop all products",
+            "button_label": "Shop All Products",
             "button_link": "shopify://collections/products",
             "button_style_secondary": false,
             "button_label_2": "",
@@ -97,6 +97,50 @@
         "full_width": true,
         "padding_top": 32,
         "padding_bottom": 64
+      }
+    },
+    "multicolumn_jCEWW8": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_qygNt4": {
+          "type": "column",
+          "settings": {
+            "title": "Digital Marketing Toolkit",
+            "text": "<p>Promote Cantabria Labs easily with ready-made marketing materials.</p>",
+            "link_label": "View Marketing Toolkit",
+            "link": "#"
+          }
+        },
+        "column_iK7kwf": {
+          "type": "column",
+          "settings": {
+            "title": "Online Training",
+            "text": "<p>Boost your brand knowledge with downloadable clinical resources.</p>",
+            "link_label": "View Training Resources",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_qygNt4",
+        "column_iK7kwf"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "rich_text_3yTUgT": {
@@ -264,6 +308,7 @@
   "order": [
     "image_banner",
     "rich_text",
+    "multicolumn_jCEWW8",
     "rich_text_3yTUgT",
     "image_with_text_tGbCQg",
     "image_with_text_xNJjEm",
