@@ -41,3 +41,70 @@ h3.inline-richtext,
   color: rgb(0 0 0 / var(--tw-text-opacity));
   padding: 0px !important;
 }
+
+/** Product Card **/
+.card__text-black {
+  color: #000 !important;
+}
+
+/** Footer styles **/
+.footer-block.grid__item a,
+.footer__copyright {
+  @apply twcss-text-white !important;
+  @apply twcss-opacity-100 !important;
+}
+
+.footer__copyright,
+.footer__payment {
+  @apply md:twcss-mt-0 !important;
+}
+
+.footer__social,
+.footer__payment,
+.footer__copyright {
+  @apply md:twcss-flex md:twcss-h-full md:twcss-items-center;
+}
+
+.toggle-menu {
+  @apply twcss-bg-transparent twcss-border-none twcss-cursor-pointer;
+}
+
+.toggle-menu svg {
+  @apply twcss-text-gray-700;
+}
+
+.footer-block.grid__item {
+  @apply twcss-border-b md:twcss-border-0;
+}
+
+.footer__bottom {
+  @apply twcss-flex twcss-flex-col md:twcss-flex-row md:twcss-justify-between twcss-w-full md:twcss-items-center twcss-justify-start;
+}
+
+.footer__content-bottom {
+  @apply twcss-border-transparent !important;
+  @apply md:twcss-border-white !important;
+}
+
+.footer__content-top.page-width {
+  @apply twcss-pb-0 md:twcss-pb-[5rem] twcss-px-[32px] md:twcss-px-[5rem];
+}
+
+.footer__blocks-wrapper.grid {
+  @apply twcss-mb-0 md:twcss-mb-[2rem];
+}
+
+.footer-block.grid__item {
+  @apply twcss-my-[3rem] !important;
+}
+
+.banner__box.content-container--full-width-mobile {
+  @apply md:twcss-w-1/2;
+}
+
+.image-with-text__text-item.grid__item {
+  @apply twcss-my-auto;
+}
+.footer__copyright.caption {
+  @apply twcss-mt-4 !important;
+}
