@@ -14,7 +14,7 @@
     {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
       <link rel='preconnect' href='https://fonts.shopifycdn.com' crossorigin>
     {%- endunless -%}
-    <link rel='stylesheet' href='https://use.typekit.net/dwh5exi.css'>
+    <link rel='stylesheet' href='https://use.typekit.net/dwh5exi.css' media="print" onload="this.onload=null;this.removeAttribute('media');">
 
     <title>
       {{ page_title }}
