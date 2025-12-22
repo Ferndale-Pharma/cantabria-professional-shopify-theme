@@ -1550,6 +1550,7 @@ a.product__text {
   flex-wrap: wrap;
   align-items: center;
   gap: 1rem;
+  margin-top: 3rem;
 }
 
 /* Remove margins from form elements inside the container */
@@ -1594,4 +1595,7 @@ a.product__text {
     flex-grow: 1;
     min-width: 0;
   }
+}
+.product__info-container .product-form {
+	margin: 0
 }
