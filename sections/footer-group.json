@@ -17,8 +17,15 @@
         "footer-0": {
           "type": "link_list",
           "settings": {
-            "heading": "Our Ranges",
+            "heading": "Shop by Range",
             "menu": "our-ranges"
+          }
+        },
+        "link_list_wQ9Hw4": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Shop by Concern",
+            "menu": "shop-by-concern"
           }
         },
         "footer-1": {
@@ -38,6 +45,7 @@
       },
       "block_order": [
         "footer-0",
+        "link_list_wQ9Hw4",
         "footer-1",
         "link_list_GcyCL7"
       ],
