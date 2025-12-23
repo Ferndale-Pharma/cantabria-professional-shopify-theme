@@ -717,10 +717,41 @@ endif
                             {%- assign money_price_min = min_price | money -%}
                               
                             {%- if price_varies -%}
-                                <p>
+                             {% comment %}
+                              <p>
                                 <span class="product-price__price">{{ from_label }} </span>
                                 <span class="money min_price">{{ money_price_min }}</span>
-                                </p>
+                              </p>
+                              {% endcomment %}
+                               
+                                
+                              
+                               <p>
+                               <span class="product-price__price single-price money"
+                                  ><b>{{ product.selected_or_first_available_variant.price | money }}</b></span
+                                >
+                                    <span class="money compare_price" style="text-decoration:line-through;"
+                                      ><b>{{ product.selected_or_first_available_variant.compare_at_price | money }}</b></span
+                                    >
+                                  </p>
+                                  
+                                  {% if compare_at_price %}
+                                   {% unless product.selected_or_first_available_variant.title contains "Sample" %}
+                                  <p>
+                                    <span class="label savings">
+                                      {{- save_text_label }}
+                                      {{
+                                        product.selected_or_first_available_variant.compare_at_price
+                                        | minus: product.selected_or_first_available_variant.price
+                                        | times: 100.0
+                                        | divided_by: product.selected_or_first_available_variant.compare_at_price
+                                        | round
+                                      -}}
+                                      %</span
+                                    >
+                                  </p>
+                                  {% endunless %}
+                                  {% endif %}
                             {%- else -%}
                                 <p>
                                 <span class="product-price__price single-price money"><b>{{ money_price }}</b></span>
