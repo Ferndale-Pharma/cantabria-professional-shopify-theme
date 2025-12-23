@@ -127,13 +127,24 @@
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
-        "padding_top": 36,
-        "padding_bottom": 28
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "custom_liquid_6pHE7f": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"rich-text content-container color-scheme-1 gradient rich-text--full-width content-container--full-width\">\n<div class=\"rich-text__wrapper rich-text__wrapper--center page-width\"><p style=\"font-size:0.7em; text-align:left; padding-bottom: 64px;\">{{ product.metafields.custom.references.value }}</p>\n</div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "custom_liquid_6pHE7f"
   ]
 }
