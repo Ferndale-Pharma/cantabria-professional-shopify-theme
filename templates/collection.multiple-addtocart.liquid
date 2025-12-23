@@ -690,9 +690,9 @@ endif
                                 <div class="list-view-item__title">
                                   <a href="{{ product.url }}" class="var_title_{{ variant.id }}">{{ product.title }}</a>
                                   {% if product.metafields.custom.special_message %}
-                                <div class="tooltipContainer" id="tooltipContainer">
+                                <div class="tooltipContainer js-tooltip">
                                   {% render 'icon-information' %}
-                                  <div class="tooltipText" id="tooltipText">{{ product.metafields.custom.special_message }}</div>
+                                  <div class="tooltipText js-tooltipText">{{ product.metafields.custom.special_message }}</div>
                                 </div>
                               {% endif %}
                                   <a href="{{ product.url }}" class="descBtn" data-toggle="tooltip" data-placement="left"><i class="icon" aria-hidden="true"></i> <span class="tooltip">{{ description_label }}</span></a>
@@ -1048,39 +1048,41 @@ endif
  {% comment %}script to show/hide tooltip for mobile{% endcomment %}
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  const tooltipContainer = document.getElementById('tooltipContainer');
-  const tooltipText = document.getElementById('tooltipText');
+  const tooltipContainers = document.querySelectorAll('.js-tooltip');
 
-  // Function to toggle the tooltip's visibility
-  function toggleVisibility(event) {
+  // If there are no tooltips on this page, do nothing (prevents JS errors)
+  if (!tooltipContainers.length) return;
+
+  function toggleVisibility(container, tooltipText, event) {
     // If clicking an <a>, let it behave normally
-    if (event.target.tagName.toLowerCase() === 'a') {
-      return; // Do NOT preventDefault or stopPropagation
-    }
+    if (event.target && event.target.tagName && event.target.tagName.toLowerCase() === 'a') return;
 
-    // Prevent the event from bubbling up so that the document listener doesn't also fire
     event.preventDefault();
     event.stopPropagation();
 
-    // Check current visibility and toggle
     const currentVisibility = window.getComputedStyle(tooltipText).visibility;
     tooltipText.style.visibility = currentVisibility === 'visible' ? 'hidden' : 'visible';
   }
 
-  // Attach event listeners for both click and touchend on the tooltip container
-  tooltipContainer.addEventListener('click', toggleVisibility);
-  tooltipContainer.addEventListener('touchend', toggleVisibility);
+  tooltipContainers.forEach((container) => {
+    const tooltipText = container.querySelector('.js-tooltipText');
+    if (!tooltipText) return;
 
-  // Function to hide the tooltip when clicking or touching anywhere outside the container
-  function hideTooltip(event) {
-    // If the event target is not inside the tooltip container, hide the tooltip
-    if (!tooltipContainer.contains(event.target)) {
-      tooltipText.style.visibility = 'hidden';
-    }
+    container.addEventListener('click', (e) => toggleVisibility(container, tooltipText, e));
+    container.addEventListener('touchend', (e) => toggleVisibility(container, tooltipText, e));
+  });
+
+  // Hide any open tooltip when clicking outside
+  function hideAllTooltips(event) {
+    tooltipContainers.forEach((container) => {
+      if (!container.contains(event.target)) {
+        const tooltipText = container.querySelector('.js-tooltipText');
+        if (tooltipText) tooltipText.style.visibility = 'hidden';
+      }
+    });
   }
 
-  // Attach document-level event listeners for click and touchend
-  document.addEventListener('click', hideTooltip);
-  document.addEventListener('touchend', hideTooltip);
+  document.addEventListener('click', hideAllTooltips);
+  document.addEventListener('touchend', hideAllTooltips);
 });
 </script>
