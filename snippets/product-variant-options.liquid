@@ -80,24 +80,8 @@
       additional_props: input_dataset
     %}
   {%- elsif picker_type == 'button' -%}
-    <input
-      type="radio"
-      id="{{ input_id }}"
-      name="{{ input_name | escape }}"
-      value="{{ escaped_value }}"
-      form="{{ product_form_id }}"
-      {% if value.selected %}
-        checked
-      {% endif %}
-      {% if option_disabled %}
-        class="disabled"
-      {% endif %}
-      {{ input_dataset }}
-    >
-{%- elsif picker_type == 'button' -%}
-  {%- assign hide_type_single = option.name contains 'Type' and option.values.size == 1 -%}
 
-  {%- if hide_type_single -%}
+  {%- if option.name contains 'Type' and option.values.size == 1 -%}
     {%- if forloop.first -%}
       <input
         type="hidden"
@@ -113,12 +97,8 @@
       name="{{ input_name | escape }}"
       value="{{ escaped_value }}"
       form="{{ product_form_id }}"
-      {% if value.selected %}
-        checked
-      {% endif %}
-      {% if option_disabled %}
-        class="disabled"
-      {% endif %}
+      {% if value.selected %}checked{% endif %}
+      {% if option_disabled %}class="disabled"{% endif %}
       {{ input_dataset }}
     >
     <label for="{{ input_id }}">
