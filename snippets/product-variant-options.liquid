@@ -79,6 +79,7 @@
       help_text: help_text,
       additional_props: input_dataset
     %}
+  {% comment %} Changed to hide type variant if only 1 {% endcomment %}
   {%- elsif picker_type == 'button' -%}
 
   {%- if option.name contains 'Type' and option.values.size == 1 -%}
