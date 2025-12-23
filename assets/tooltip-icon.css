@@ -1,0 +1,29 @@
+.tooltipContainer {
+  padding-left: 5px;
+}
+.tooltipText {
+  visibility: hidden;
+  position: absolute;
+  width: 300px;
+  background-color: #525151;
+  z-index: 99;
+  padding: 1em;
+  right: 0;
+  border-radius: 4px;
+}
+.tooltipText p,
+.tooltipText p a,
+.tooltipText p a span {
+  color: #fff!important;
+  margin-bottom: 0;
+}
+.tooltipContainer:hover .tooltipText{
+  visibility: visible;
+}
+@media screen and (min-width: 768px) {
+  .tooltipText {
+    max-width: 400px;
+    left: 0;
+    right: initial;
+  }
+}
