@@ -50,7 +50,7 @@
     <div class="price__regular">
       <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
       <span class="price-item price-item--regular">
-        {{ money_price }} <span class="text-lg">ex VAT</span>
+        {{ money_price }} <span class="text-lg">excl. VAT</span>
       </span>
       
     </div>
@@ -69,7 +69,7 @@
       {%- endunless -%}
       <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
       <span class="price-item price-item--sale price-item--last">
-        {{ money_price }} <span class="text-lg">ex VAT</span>
+        {{ money_price }} <span class="text-lg">excl. VAT</span>
       </span>
     </div>
     <small class="unit-price caption{% if target.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
@@ -98,3 +98,8 @@
     </span>
   {%- endif -%}
 </div>
+<style>
+    .text-lg {
+        font-size: 0.75em
+    }
+</style>
