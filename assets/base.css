@@ -3219,11 +3219,13 @@ details-disclosure > details {
 .rte ol {
   list-style-position: outside;
   padding-left: 2rem;
+  padding-bottom: 1rem;
 }
 
 .rte li {
   list-style: inherit;
   margin-bottom: 1rem;
+  color: #000;
 }
 
 .rte li:last-child {
