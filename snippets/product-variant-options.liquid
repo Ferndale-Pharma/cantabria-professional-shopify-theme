@@ -80,15 +80,18 @@
       additional_props: input_dataset
     %}
   {% comment %} Changed to hide type variant if only 1 {% endcomment %}
-  {%- elsif picker_type == 'button' -%}
-
+ {%- elsif picker_type == 'button' -%}
   {%- if option.name contains 'Type' and option.values.size == 1 -%}
     {%- if forloop.first -%}
       <input
-        type="hidden"
-        name="options[{{ option.name | escape }}]"
-        value="{{ option.selected_value | escape }}"
+        type="radio"
+        id="{{ input_id }}"
+        name="{{ input_name | escape }}"
+        value="{{ escaped_value }}"
         form="{{ product_form_id }}"
+        checked
+        class="visually-hidden"
+        {{ input_dataset }}
       >
     {%- endif -%}
   {%- else -%}
@@ -107,6 +110,7 @@
       {{ label_unavailable }}
     </label>
   {%- endif -%}
+
 
   {%- elsif picker_type == 'dropdown' or picker_type == 'swatch_dropdown' -%}
     <option
