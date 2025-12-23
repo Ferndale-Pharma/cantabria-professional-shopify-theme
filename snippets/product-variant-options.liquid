@@ -94,10 +94,12 @@
       {% endif %}
       {{ input_dataset }}
     >
+    {% unless name contains 'Type' and value.size == 1 %}
     <label for="{{ input_id }}">
       {{ value -}}
       {{ label_unavailable }}
     </label>
+    {%endunless %}
   {%- elsif picker_type == 'dropdown' or picker_type == 'swatch_dropdown' -%}
     <option
       id="{{ input_id }}"
