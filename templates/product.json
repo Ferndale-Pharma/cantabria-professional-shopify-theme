@@ -27,7 +27,7 @@
         "custom_liquid_ckXVzi": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<span style=\"color: #666; display: block; font-size: 0.9em;\">{{product.metafields.custom.size}} - SRP: {{product.metafields.custom.srp}} </span>"
+            "custom_liquid": "<span style=\"color: #666; display: block; font-size: 0.9em;\">{{product.metafields.custom.size}} - SRP: £{{product.metafields.custom.srp | metafield_text}} </span>"
           }
         },
         "price": {
