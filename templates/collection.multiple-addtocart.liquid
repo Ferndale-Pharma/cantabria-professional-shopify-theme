@@ -1045,7 +1045,7 @@ endif
    </div>
 </div>
 {%- endif -%}
- {% comment %}script to show/hide tooltip for mobile
+ {% comment %}script to show/hide tooltip for mobile{% endcomment %}
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   const tooltipContainers = document.querySelectorAll('.js-tooltip');
@@ -1078,4 +1078,8 @@ document.addEventListener('DOMContentLoaded', function () {
   document.addEventListener('touchend', closeAllTooltips);
 });
 </script>
-{% endcomment %}
+<style>
+#bulk_cart_theme_app_extension.multicart-container {
+  display: block !important;
+}
+</style>
