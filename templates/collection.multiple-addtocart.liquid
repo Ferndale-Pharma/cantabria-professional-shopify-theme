@@ -1,3 +1,4 @@
+{{ 'tooltip-icon.css' | asset_url | stylesheet_tag }}
 {%- if shop.metafields.multicartapp.button_text == blank -%}
 {%- assign button_text = 'Add to Cart' -%}
 {%- else -%}
