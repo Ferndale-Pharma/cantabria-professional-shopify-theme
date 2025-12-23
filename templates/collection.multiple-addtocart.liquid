@@ -1047,42 +1047,35 @@ endif
 {%- endif -%}
  {% comment %}script to show/hide tooltip for mobile{% endcomment %}
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const tooltipContainers = document.querySelectorAll('.js-tooltip');
-
-  // If there are no tooltips on this page, do nothing (prevents JS errors)
   if (!tooltipContainers.length) return;
 
-  function toggleVisibility(container, tooltipText, event) {
-    // If clicking an <a>, let it behave normally
-    if (event.target && event.target.tagName && event.target.tagName.toLowerCase() === 'a') return;
+  function toggleTooltip(container, event) {
+    // allow links inside tooltip to work normally
+    if (event.target && event.target.closest && event.target.closest('a')) return;
 
     event.preventDefault();
     event.stopPropagation();
 
-    const currentVisibility = window.getComputedStyle(tooltipText).visibility;
-    tooltipText.style.visibility = currentVisibility === 'visible' ? 'hidden' : 'visible';
+    container.classList.toggle('is-open');
   }
 
   tooltipContainers.forEach((container) => {
-    const tooltipText = container.querySelector('.js-tooltipText');
-    if (!tooltipText) return;
-
-    container.addEventListener('click', (e) => toggleVisibility(container, tooltipText, e));
-    container.addEventListener('touchend', (e) => toggleVisibility(container, tooltipText, e));
+    container.addEventListener('click', (e) => toggleTooltip(container, e));
+    container.addEventListener('touchend', (e) => toggleTooltip(container, e), { passive: false });
   });
 
-  // Hide any open tooltip when clicking outside
-  function hideAllTooltips(event) {
+  function closeAllTooltips(event) {
     tooltipContainers.forEach((container) => {
       if (!container.contains(event.target)) {
-        const tooltipText = container.querySelector('.js-tooltipText');
-        if (tooltipText) tooltipText.style.visibility = 'hidden';
+        container.classList.remove('is-open');
       }
     });
   }
 
-  document.addEventListener('click', hideAllTooltips);
-  document.addEventListener('touchend', hideAllTooltips);
+  document.addEventListener('click', closeAllTooltips);
+  document.addEventListener('touchend', closeAllTooltips);
 });
 </script>
+
