@@ -27,3 +27,4 @@
     right: initial;
   }
 }
+.tooltipContainer.is-open .tooltipText { visibility: visible; }
