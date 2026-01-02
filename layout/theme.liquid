@@ -326,6 +326,19 @@
       <li id='a11y-new-window-message'>{{ 'accessibility.link_messages.new_window' | t }}</li>
     </ul>
 
+    {%- comment -%} Opening Package Restriction - Customer Tags {%- endcomment -%}
+    <script>
+      window.customerTags = [
+        {%- if customer -%}
+          {%- for tag in customer.tags -%}
+            "{{ tag | escape }}"{%- unless forloop.last -%},{%- endunless -%}
+          {%- endfor -%}
+        {%- endif -%}
+      ];
+    </script>
+    {{ 'opening-package-restriction.css' | asset_url | stylesheet_tag }}
+    <script src='{{ 'opening-package-restriction.js' | asset_url }}' defer='defer'></script>
+
     <script>
       window.shopUrl = '{{ request.origin }}';
       window.routes = {

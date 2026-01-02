@@ -1,0 +1,18 @@
+/**
+ * Opening Package Restriction Styles
+ */
+
+/* Disabled inputs in restricted rows on collection pages */
+.opening-package-restricted .list-product-qty:disabled,
+.opening-package-restricted .singleCart:disabled,
+.opening-package-restricted .qtyminus:disabled,
+.opening-package-restricted .qtyplus:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Restricted button styling */
+.opening-package-restricted .singleCart:disabled {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
