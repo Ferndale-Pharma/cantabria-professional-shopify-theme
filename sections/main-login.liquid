@@ -81,6 +81,17 @@
       </h3>
     {%- endif -%}
     {%- form 'customer_login', novalidate: 'novalidate' -%}
+      {%- comment -%}Hidden field to redirect user back to original URL after login{%- endcomment -%}
+      <input type="hidden" name="return_to" id="return_to_field" value="">
+      <script>
+        (function() {
+          var urlParams = new URLSearchParams(window.location.search);
+          var returnUrl = urlParams.get('return_url');
+          if (returnUrl) {
+            document.getElementById('return_to_field').value = returnUrl;
+          }
+        })();
+      </script>
       {%- if form.errors -%}
         <h2 class="form__message" tabindex="-1" autofocus>
           <span class="visually-hidden">{{ 'accessibility.error' | t }} </span>

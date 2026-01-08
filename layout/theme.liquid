@@ -14,7 +14,12 @@
     {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
       <link rel='preconnect' href='https://fonts.shopifycdn.com' crossorigin>
     {%- endunless -%}
-    <link rel='stylesheet' href='https://use.typekit.net/dwh5exi.css' media="print" onload="this.onload=null;this.removeAttribute('media');">
+    <link
+      rel='stylesheet'
+      href='https://use.typekit.net/dwh5exi.css'
+      media='print'
+      onload="this.onload=null;this.removeAttribute('media');"
+    >
 
     <title>
       {{ page_title }}
@@ -27,9 +32,8 @@
       <meta name='description' content='{{ page_description | escape }}'>
     {% endif %}
 
-    {% if template contains 'noindexnofollow' %}
-      <meta name='robots' content='noindex,nofollow'>
-    {% endif %}
+    {%- comment -%}Hide entire site from search engines{%- endcomment -%}
+    <meta name='robots' content='noindex,nofollow'>
 
     {% render 'meta-tags' %}
 
@@ -303,6 +307,33 @@
       }
     </script>
   </head>
+
+  {%- liquid
+    # Login wall: redirect non-logged-in users to login page (except on login/register/password pages)
+    assign is_auth_page = false
+    if template == 'customers/login' or template == 'customers/register' or template == 'customers/reset_password' or template == 'customers/activate_account' or template == 'password'
+      assign is_auth_page = true
+    endif
+  -%}
+
+  {%- if customer == null and is_auth_page == false -%}
+    {%- comment -%}Redirect to login page, preserving full URL with query parameters{%- endcomment -%}
+    {%- assign fallback_url = request.path | url_encode -%}
+    <script>
+      (function () {
+        var currentPath = window.location.pathname + window.location.search;
+        window.location.href = '{{ routes.account_login_url }}?return_url=' + encodeURIComponent(currentPath);
+      })();
+    </script>
+    <noscript>
+      <meta http-equiv='refresh' content='0; url={{ routes.account_login_url }}?return_url={{ fallback_url }}'>
+    </noscript>
+    <style>
+      body {
+        display: none !important;
+      }
+    </style>
+  {%- endif -%}
 
   <body class='gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}'>
     <a class='skip-to-content-link button visually-hidden' href='#MainContent'>
