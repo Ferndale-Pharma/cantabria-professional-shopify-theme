@@ -24,12 +24,6 @@
           "type": "title",
           "settings": {}
         },
-        "custom_liquid_ckXVzi": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<span style=\"color: #666; display: block; font-size: 0.9em;\">{{product.metafields.custom.size}} - SRP: £{{product.metafields.custom.srp | metafield_text}} </span>"
-          }
-        },
         "price": {
           "type": "price",
           "settings": {}
@@ -55,47 +49,16 @@
         "description": {
           "type": "description",
           "settings": {}
-        },
-        "collapsible-row-0": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Key Ingredients & Technologies",
-            "icon": "plant",
-            "content": "{{ product.metafields.custom.key_ingredients | metafield_tag }}",
-            "page": ""
-          }
-        },
-        "collapsible-row-1": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "How To Use",
-            "icon": "question_mark",
-            "content": "{{ product.metafields.custom.how_to_use | metafield_tag }}",
-            "page": ""
-          }
-        },
-        "collapsible-row-2": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Ingredients List",
-            "icon": "clipboard",
-            "content": "<p>{{ product.metafields.custom.ingredients_list | metafield_tag }}</p>",
-            "page": ""
-          }
         }
       },
       "block_order": [
         "vendor",
         "title",
-        "custom_liquid_ckXVzi",
         "price",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "description",
-        "collapsible-row-0",
-        "collapsible-row-1",
-        "collapsible-row-2"
+        "description"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -130,21 +93,10 @@
         "padding_top": 64,
         "padding_bottom": 64
       }
-    },
-    "custom_liquid_6pHE7f": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<div class=\"rich-text content-container color-scheme-1 gradient rich-text--full-width content-container--full-width\">\n<div class=\"rich-text__wrapper rich-text__wrapper--center page-width\"><p style=\"font-size:0.7em; text-align:left; padding-bottom: 64px;\">{{ product.metafields.custom.references.value }}</p>\n</div>",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
     }
   },
   "order": [
     "main",
-    "related-products",
-    "custom_liquid_6pHE7f"
+    "related-products"
   ]
 }
