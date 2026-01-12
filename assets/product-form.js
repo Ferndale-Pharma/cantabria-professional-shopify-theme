@@ -84,6 +84,66 @@ if (!customElements.get('product-form')) {
                   startMarker,
                 );
               });
+
+            // === GA4 add_to_cart (works for PDP / quick-add / modal if they use <product-form>) ===
+            if (typeof window.pushEcommerceEvent === 'function') {
+              try {
+                const variantId = formData.get('id');
+                const qty = parseInt(formData.get('quantity') || '1', 10);
+
+                let items =
+                  (Array.isArray(response.items) && response.items) ||
+                  (response.cart && Array.isArray(response.cart.items) && response.cart.items) ||
+                  [];
+
+                let lineItem = null;
+
+                if (items.length) {
+                  lineItem = items.find((item) => String(item.id) === String(variantId)) || items[0];
+                } else if (
+                  response &&
+                  typeof response === 'object' &&
+                  response.id &&
+                  (response.product_id || response.product_title)
+                ) {
+                  // Some themes return a single line-item object
+                  lineItem = response;
+                }
+
+                if (lineItem) {
+                  let unitPrice = 0;
+                  if (lineItem.final_line_price && lineItem.quantity) {
+                    unitPrice = lineItem.final_line_price / lineItem.quantity / 100;
+                  } else if (lineItem.final_price) {
+                    unitPrice = lineItem.final_price / 100;
+                  } else if (lineItem.price) {
+                    unitPrice = lineItem.price / 100;
+                  }
+
+                  const currency =
+                    (response.currency && String(response.currency).toUpperCase()) ||
+                    (window.Shopify && Shopify.currency && Shopify.currency.active) ||
+                    'GBP';
+
+                  window.pushEcommerceEvent('add_to_cart', {
+                    currency: currency,
+                    value: unitPrice * qty,
+                    items: [{
+                      id: lineItem.product_id,
+                      name: lineItem.product_title,
+                      brand: lineItem.vendor,
+                      category: lineItem.product_type,
+                      variant_name: lineItem.variant_title || lineItem.title,
+                      price: unitPrice,
+                      quantity: qty
+                    }],
+                    event_source: 'product_form'
+                  });
+                }
+              } catch (e) {}
+            }
+            // === END GA4 add_to_cart ===
+
             this.error = false;
             const quickAddModal = this.closest('quick-add-modal');
             if (quickAddModal) {
