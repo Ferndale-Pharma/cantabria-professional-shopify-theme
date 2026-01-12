@@ -1743,6 +1743,83 @@
   })();
 </script>
 
+<script>
+(function () {
+  window.dataLayer = window.dataLayer || [];
+
+  var DEFAULT_CURRENCY =
+    (window.Shopify && window.Shopify.currency && (window.Shopify.currency.active || window.Shopify.currency.iso_code)) ||
+    null;
+
+  async function getCart() {
+    var res = await fetch('/cart.js', { credentials: 'same-origin' });
+    if (!res.ok) throw new Error('Could not fetch /cart.js');
+    return res.json();
+  }
+
+  function centsToNumber(cents) {
+    var n = Number(cents);
+    if (!Number.isFinite(n)) return 0;
+    return n / 100;
+  }
+
+  function cartToItems(cart) {
+    if (!cart || !Array.isArray(cart.items)) return [];
+    return cart.items.map(function (it) {
+      return {
+        item_id: String(it.variant_id || it.id || ''),
+        item_name: String(it.product_title || it.title || ''),
+        item_variant: String(it.variant_title || ''),
+        quantity: Number(it.quantity) || 0,
+        price: centsToNumber(it.final_price != null ? it.final_price : it.price)
+      };
+    }).filter(function (it) { return it.item_id && it.quantity > 0; });
+  }
+
+  function pushEvent(eventName, cart) {
+    var currency = cart.currency || DEFAULT_CURRENCY || undefined;
+    var items = cartToItems(cart);
+    var value = items.reduce(function (sum, it) {
+      return sum + ((Number(it.price) || 0) * (Number(it.quantity) || 0));
+    }, 0);
+
+    window.dataLayer.push({ ecommerce: null });
+    window.dataLayer.push({
+      event: eventName,
+      ecommerce: {
+        currency: currency,
+        value: Number(value.toFixed(2)),
+        items: items
+      }
+    });
+  }
+
+  // BEGIN_CHECKOUT from the injected modal checkout button
+  document.addEventListener('click', async function (e) {
+    var checkoutBtn = e.target.closest && e.target.closest('a.bulk_cart_checkout[href="/checkout"]');
+    if (!checkoutBtn) return;
+
+    try {
+      var cart = await getCart();
+      pushEvent('begin_checkout', cart);
+    } catch (err) {
+      // silent fail
+    }
+  });
+
+  // VIEW_CART from modal "View Cart" button
+  document.addEventListener('click', function (e) {
+    var viewCartBtn = e.target.closest && e.target.closest('a.view_cart[href="/cart"]');
+    if (!viewCartBtn) return;
+
+    window.dataLayer.push({ ecommerce: null });
+    /window.dataLayer.push({ event: 'view_cart' });
+  });
+
+})();
+</script>
+
+
 <style>
   #bulk_cart_theme_app_extension.multicart-container {
     display: block !important;
