@@ -457,6 +457,35 @@
   </div>
 </cart-items>
 
+{% if cart != empty %}
+  <script>
+    (function() {
+      if (typeof window.pushEcommerceEvent !== 'function') return;
+
+      var items = [
+        {% for item in cart.items %}
+          {
+            id: {{ item.product_id | json }},
+            name: {{ item.product.title | json }},
+            brand: {{ item.product.vendor | json }},
+            category: {{ item.product.type | json }},
+            variant_name: {{ item.variant_title | json }},
+            price: {{ item.final_price | divided_by: 100.0 }},
+            quantity: {{ item.quantity }}
+          }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ];
+
+      window.pushEcommerceEvent('view_cart', {
+        currency: '{{ cart.currency.iso_code }}',
+        value: {{ cart.total_price | divided_by: 100.0 }},
+        items: items,
+        event_source: 'cart_page'
+      });
+    })();
+  </script>
+{% endif %}
+
 {% schema %}
 {
   "name": "t:sections.main-cart-items.name",
