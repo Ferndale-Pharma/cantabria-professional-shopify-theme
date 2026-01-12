@@ -349,6 +349,48 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N57PM6VP"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    <!-- UTM Tracking Script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        function getUTMParam(name) {
+          const urlParams = new URLSearchParams(window.location.search);
+          let value = urlParams.get(name);
+          if (value) {
+            sessionStorage.setItem(name, value);
+          } else {
+            value = sessionStorage.getItem(name);
+          }
+          return value || '';
+        }
+      
+        const utmSource = getUTMParam('utm_source');
+        const utmMedium = getUTMParam('utm_medium');
+        const utmCampaign = getUTMParam('utm_campaign');
+        const utmContent = getUTMParam('utm_content');
+      
+        // If no UTM at all, don't bother
+        if (utmSource || utmMedium || utmCampaign || utmContent) {
+          fetch('/cart/update.js', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              attributes: {
+                'utm_source': utmSource,
+                'utm_medium': utmMedium,
+                'utm_campaign': utmCampaign,
+                'utm_content': utmContent
+              }
+            })
+          }).then(function(response) {
+            if (!response.ok) {
+              console.error('UTM capture failed:', response.statusText);
+            }
+          });
+        }
+      });
+    </script>
     <a class='skip-to-content-link button visually-hidden' href='#MainContent'>
       {{ 'accessibility.skip_to_text' | t }}
     </a>
