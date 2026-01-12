@@ -133,6 +133,41 @@
   </div>
 </div>
 
+<script>
+  (function() {
+    if (typeof window.pushEcommerceEvent !== 'function') return;
+
+    var cartForm = document.getElementById('cart');
+    if (!cartForm) return;
+
+    cartForm.addEventListener('submit', function(event) {
+      var submitter = event.submitter || document.activeElement;
+      if (!submitter || submitter.name !== 'checkout') return;
+
+      var items = [
+        {% for item in cart.items %}
+          {
+            id: {{ item.product_id | json }},
+            name: {{ item.product.title | json }},
+            brand: {{ item.product.vendor | json }},
+            category: {{ item.product.type | json }},
+            variant_name: {{ item.variant_title | json }},
+            price: {{ item.final_price | divided_by: 100.0 }},
+            quantity: {{ item.quantity }}
+          }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ];
+
+      window.pushEcommerceEvent('begin_checkout', {
+        currency: '{{ cart.currency.iso_code }}',
+        value: {{ cart.total_price | divided_by: 100.0 }},
+        items: items,
+        event_source: 'cart_form_submit'
+      });
+    });
+  })();
+</script>
+
 {% schema %}
 {
   "name": "t:sections.main-cart-footer.name",
