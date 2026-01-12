@@ -1794,10 +1794,24 @@
     });
   }
 
-  // BEGIN_CHECKOUT from the injected modal checkout button
+  // BEGIN_CHECKOUT (robust for app modal)
   document.addEventListener('click', async function (e) {
-    var checkoutBtn = e.target.closest && e.target.closest('a.bulk_cart_checkout[href="/checkout"]');
-    if (!checkoutBtn) return;
+    var a = e.target && e.target.closest ? e.target.closest('a') : null;
+    if (!a) return;
+
+    // only when clicking inside the injected modal container
+    var inModal = !!(a.closest && a.closest('#bulk_cart_theme_app_extension'));
+    if (!inModal) return;
+
+    var href = (a.getAttribute('href') || '').trim();
+
+    // your original selector was too strict; keep class support but also allow /checkout variations
+    var isCheckout =
+      (a.classList && a.classList.contains('bulk_cart_checkout')) ||
+      href === '/checkout' ||
+      href.indexOf('/checkout') === 0;
+
+    if (!isCheckout) return;
 
     try {
       var cart = await getCart();
@@ -1805,20 +1819,30 @@
     } catch (err) {
       // silent fail
     }
-  });
+  }, true); // <-- capture phase is important
 
-  // VIEW_CART from modal "View Cart" button
+  // VIEW_CART (leave behaviour the same, just ensure the JS line is valid)
   document.addEventListener('click', function (e) {
-    var viewCartBtn = e.target.closest && e.target.closest('a.view_cart[href="/cart"]');
-    if (!viewCartBtn) return;
+    var a = e.target && e.target.closest ? e.target.closest('a') : null;
+    if (!a) return;
+
+    var inModal = !!(a.closest && a.closest('#bulk_cart_theme_app_extension'));
+    if (!inModal) return;
+
+    var href = (a.getAttribute('href') || '').trim();
+    var isViewCart =
+      (a.classList && a.classList.contains('view_cart')) ||
+      href === '/cart' ||
+      href.indexOf('/cart') === 0;
+
+    if (!isViewCart) return;
 
     window.dataLayer.push({ ecommerce: null });
-    /window.dataLayer.push({ event: 'view_cart' });
-  });
+    window.dataLayer.push({ event: 'view_cart' });
+  }, true);
 
 })();
 </script>
-
 
 <style>
   #bulk_cart_theme_app_extension.multicart-container {
