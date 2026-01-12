@@ -1515,6 +1515,234 @@
     document.addEventListener('touchend', closeAllTooltips);
   });
 </script>
+
+<script>
+  (function () {
+    window.dataLayer = window.dataLayer || [];
+
+    // --- helpers ---
+    function moneyToNumber(text) {
+      if (!text) return 0;
+      // Remove currency symbols and spaces, keep digits, dot, comma, minus
+      var cleaned = String(text).replace(/[^\d.,-]/g, '').trim();
+      if (!cleaned) return 0;
+
+      // If both comma and dot exist, assume comma is thousands separator: "1,234.56"
+      if (cleaned.indexOf(',') > -1 && cleaned.indexOf('.') > -1) {
+        cleaned = cleaned.replace(/,/g, '');
+      } else {
+        // If only comma exists, assume it's decimal: "12,34" -> "12.34"
+        cleaned = cleaned.replace(',', '.');
+      }
+
+      var n = Number(cleaned);
+      return Number.isFinite(n) ? n : 0;
+    }
+
+    function getText(el, selector) {
+      var node = el && selector ? el.querySelector(selector) : null;
+      return node ? (node.textContent || '').trim() : '';
+    }
+
+    function getVariantTitleFromRow(row) {
+      // present on <tr ... data-opening-package-product-title="...">
+      var title = row ? row.getAttribute('data-opening-package-product-title') : '';
+      if (title) return title;
+
+      // fallback: link text
+      var link = row ? row.querySelector('.list-view-item__title a') : null;
+      return link ? (link.textContent || '').trim() : '';
+    }
+
+    function getItemFromVariantRow(variantRow) {
+      // variant rows have: <tr class="resp-table-row prd_variant" data-variant-id="...">
+      var variantId = variantRow ? variantRow.getAttribute('data-variant-id') : null;
+      if (!variantId) return null;
+
+      var qtyInput = document.getElementById('updates_' + variantId);
+      var qty = qtyInput ? parseInt(qtyInput.value, 10) : 0;
+      if (!Number.isFinite(qty) || qty <= 0) return null;
+
+      // price is in the same row under td.product-price; grab the first ".money"
+      var priceText = getText(variantRow, '.product-price .money') || getText(variantRow, '.cws_price .money');
+      var price = moneyToNumber(priceText);
+
+      // product title is best taken from closest parent product row (has data-opening-package-product-title)
+      var productRow = variantRow.closest('tbody') ? variantRow.closest('tbody').querySelector('tr.multicart') : null;
+      // But the structure is: product row, then variant table inside another <tr>; safest:
+      // Walk backwards until we find a row with data-opening-package-product-title
+      var walker = variantRow.previousElementSibling;
+      while (walker && !walker.getAttribute('data-opening-package-product-title')) {
+        walker = walker.previousElementSibling;
+      }
+      if (walker && walker.getAttribute('data-opening-package-product-title')) {
+        productRow = walker;
+      }
+
+      var itemName = getVariantTitleFromRow(productRow || variantRow);
+
+      return {
+        item_id: String(variantId),
+        item_name: itemName,
+        quantity: qty,
+        price: price
+      };
+    }
+
+    function getSingleProductRowFromButton(btn) {
+      // For single-variant products (no options), the button is inside the product row
+      // For multi-variant products, the button is inside the variant row
+      return btn ? btn.closest('tr') : null;
+    }
+
+    function collectBulkItems() {
+      // Bulk button adds all variants with qty > 0
+      var variantRows = document.querySelectorAll('tr.prd_variant[data-variant-id]');
+      var items = [];
+      variantRows.forEach(function (row) {
+        var item = getItemFromVariantRow(row);
+        if (item) items.push(item);
+      });
+
+      // Also handle single-variant products (no "prd_variant" rows) by reading the main table qty inputs
+      // Those qty inputs use id="updates_{{ product.variants.first.id }}"
+      var mainQtyInputs = document.querySelectorAll('table#multi-addToCart input[id^="updates_"].list-product-qty');
+      mainQtyInputs.forEach(function (input) {
+        // skip ones that belong to variant tables (already handled), but those are in nested table.prd_variants
+        if (input.closest('table.prd_variants')) return;
+
+        var variantId = input.id.replace('updates_', '');
+        var qty = parseInt(input.value, 10);
+        if (!Number.isFinite(qty) || qty <= 0) return;
+
+        var productRow = input.closest('tr.multicart');
+        var priceText = getText(productRow, '.product-price .money') || getText(productRow, '.cws_price .money');
+        var price = moneyToNumber(priceText);
+        var itemName = getVariantTitleFromRow(productRow);
+
+        items.push({
+          item_id: String(variantId),
+          item_name: itemName,
+          quantity: qty,
+          price: price
+        });
+      });
+
+      return items;
+    }
+
+    async function getCart() {
+      var res = await fetch('/cart.js', { credentials: 'same-origin' });
+      if (!res.ok) throw new Error('Could not fetch cart.js');
+      return res.json();
+    }
+
+    function pushAddToCart(items, currencyCode) {
+      var value = items.reduce(function (sum, it) {
+        var p = Number(it.price) || 0;
+        var q = Number(it.quantity) || 0;
+        return sum + p * q;
+      }, 0);
+
+      // Recommended GA4 pattern: clear previous ecommerce object
+      window.dataLayer.push({ ecommerce: null });
+
+      window.dataLayer.push({
+        event: 'add_to_cart',
+        ecommerce: {
+          currency: currencyCode || undefined,
+          value: Number(value.toFixed(2)),
+          items: items
+        }
+      });
+    }
+
+    // --- main click listeners ---
+    document.addEventListener('click', async function (e) {
+      var singleBtn = e.target.closest && e.target.closest('button.singleCart');
+      var bulkBtn = e.target.closest && e.target.closest('button.current_list-add-to-cart');
+
+      if (!singleBtn && !bulkBtn) return;
+
+      // Grab currency from Shopify (best effort)
+      var currencyCode =
+        (window.Shopify && window.Shopify.currency && window.Shopify.currency.active) ||
+        (window.Shopify && window.Shopify.currency && window.Shopify.currency.iso_code) ||
+        (window.Shopify && window.Shopify.currency) ||
+        null;
+
+      try {
+        // wait a tick so whatever existing app JS does can start
+        // then poll cart change a few times
+        var before = await getCart();
+
+        // Collect intended items from DOM
+        var intendedItems = [];
+        if (bulkBtn) {
+          intendedItems = collectBulkItems();
+        } else if (singleBtn) {
+          var row = getSingleProductRowFromButton(singleBtn);
+
+          // If it's a variant row (prd_variant)
+          if (row && row.matches('tr.prd_variant[data-variant-id]')) {
+            var item = getItemFromVariantRow(row);
+            if (item) intendedItems.push(item);
+          } else {
+            // single-variant product row
+            // variant id is used in hidden input name='id' in the form
+            var form = singleBtn.closest('form.AddToCart');
+            var idInput = form ? form.querySelector('input[name="id"]') : null;
+            var variantId = idInput ? idInput.value : null;
+
+            // qty input is "updates_{{ product.variants.first.id }}"
+            var qtyInput = variantId ? document.getElementById('updates_' + variantId) : null;
+            var qty = qtyInput ? parseInt(qtyInput.value, 10) : 1;
+            if (!Number.isFinite(qty) || qty <= 0) qty = 1;
+
+            var productRow = singleBtn.closest('tr.multicart') || row;
+            var itemName = getVariantTitleFromRow(productRow);
+            var priceText = getText(productRow, '.product-price .money') || getText(productRow, '.cws_price .money');
+            var price = moneyToNumber(priceText);
+
+            if (variantId) {
+              intendedItems.push({
+                item_id: String(variantId),
+                item_name: itemName,
+                quantity: qty,
+                price: price
+              });
+            }
+          }
+        }
+
+        // If no intended items, don't push anything (prevents junk events)
+        if (!intendedItems.length) return;
+
+        // Poll for cart change (your app may add async)
+        var attempts = 8;
+        var changed = false;
+        var after = before;
+
+        while (attempts-- > 0) {
+          await new Promise(function (r) { setTimeout(r, 250); });
+          after = await getCart();
+          if ((after && after.item_count) !== (before && before.item_count)) {
+            changed = true;
+            break;
+          }
+        }
+
+        // Even if item_count didn't change (e.g., quantity updated), still push based on intended items
+        // But we do prefer to confirm cart updated at least once.
+        pushAddToCart(intendedItems, currencyCode);
+      } catch (err) {
+        // Fail silently to avoid breaking UX, but you can console.log if you want
+        // console.warn('add_to_cart tracking error', err);
+      }
+    });
+  })();
+</script>
+
 <style>
   #bulk_cart_theme_app_extension.multicart-container {
     display: block !important;
