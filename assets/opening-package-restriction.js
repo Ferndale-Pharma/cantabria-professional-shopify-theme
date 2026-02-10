@@ -36,7 +36,7 @@
 
   const RESTRICTION_MESSAGE =
     'Sorry, you have already purchased this introductory package. Please choose a different product to order.';
-  const BUTTON_TEXT_RESTRICTED = 'Already Purchased';
+  const BUTTON_TEXT_RESTRICTED = 'Already purchased';
   const PROCESSED_ATTRIBUTE = 'data-restriction-processed';
 
   // Flag to prevent re-entrancy during DOM modifications
