@@ -35,7 +35,7 @@
   ];
 
   const RESTRICTION_MESSAGE =
-    'Sorry, you have already purchased this opening package. Please choose a different product to order.';
+    'Sorry, you have already purchased this introductory package. Please choose a different product to order.';
   const BUTTON_TEXT_RESTRICTED = 'Already Purchased';
   const PROCESSED_ATTRIBUTE = 'data-restriction-processed';
 
