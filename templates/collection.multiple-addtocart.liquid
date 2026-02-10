@@ -804,7 +804,8 @@
               <h3 class='sub-title'>{{ categories_text_label }}</h3>
               <div class='block-content' style='display:none;'>
                 <ul class='sidebar-collections'>
-                  {%- for collection in collections -%}
+                  {%- assign sorted_collections = collections | sort: 'metafields.custom.sidebar_order' -%}
+                  {%- for collection in sorted_collections -%}
                     {%- if colls_list contains collection.handle
                       and collection.handle != curr_coll
                       and collection.template_suffix == 'multiple-addtocart'
