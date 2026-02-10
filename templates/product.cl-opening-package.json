@@ -60,9 +60,36 @@
         "collapsible-row-1": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "What's included?",
+            "heading": "Included HELIOCARE Products",
             "icon": "question_mark",
-            "content": "{{ product.metafields.custom.package_contents | metafield_tag }}",
+            "content": "<ul><li>3 x HELIOCARE 360° Water Gel SPF50+ 50ml</li><li>3 x HELIOCARE 360° Gel Oil-Free SPF50 50ml</li><li>3 x HELIOCARE 360° Sensation SPF50+ 50ml</li><li>3 x HELIOCARE 360° Mineral Tolerance Fluid SPF50 50ml</li><li>3 x HELIOCARE 360° Pigment Solution SPF50+ 50ml</li><li>3 x HELIOCARE 360° A-R Emulsion SPF50+ 50ml</li><li>3 x HELIOCARE 360° Age Active Fluid SPF50 50ml</li><li>3 x HELIOCARE 360° AK Fluid SPF100+ 50ml</li><li>3 x HELIOCARE 360° Acnimat SPF50 50ml</li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_TLBPfk": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Included ENDOCARE Products",
+            "icon": "question_mark",
+            "content": "<ul><li>3 x ENDOCARE AGE BARRIER Hyaluboost Serum 30ml</li><li>3 x ENDOCARE AGE BARRIER Niacinal Serum Gel 30ml</li><li>3 x ENDOCARE RADIANCE C Ferulic EDAFENCE Serum 30ml</li><li>3 x ENDOCARE RENEWAL Retinol Serum 30ml</li><li>3 x ENDOCARE RENEWAL Glycoperfect [Az] Intensive Serum 50ml</li><li>3 x ENDOCARE Glycoperfect [Az] Creamy Cleanser 150ml</li><li>3 x ENDOCARE RADIANCE Vit C20 Serum 30ml</li><li>3 x ENDOCARE RENEWAL Intensive Retinol Serum 30ml </li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_Vexe7V": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Included BIRETIX Products",
+            "icon": "question_mark",
+            "content": "<ul><li>3 x BIRETIX Cleanser 400ml</li><li>3 x BIRETIX Cleanser Refill 400ml</li><li>3 x BIRETIX Duo Anti-Blemish Gel 30ml</li><li>3 x BIRETIX Tri-Active Anti-Blemish Gel 50ml</li><li>3 x BIRETIX Oil-Control Solution 100ml</li><li>3 x BIRETIX Double Correction Serum 30ml</li><li>3 x BIRETIX Hydramat Fluid 50ml</li><li>3 x Biretix Isorepair Cream 50ml</li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_pnGEDi": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Additional Value",
+            "icon": "question_mark",
+            "content": "<ul><li>1 x Full size tester of each product</li><li>10 x Sample size of each product</li><li>2 x Shelf talkers per brand</li><li>30 x Patient information leaflets per brand</li><li>1 x Poster per brand</li><li>2 x Vinyl logos</li><li>3 x Leaflet holder</li><li>3 x Leaflet dispenser</li><li>Price list</li><li>Full digital assets</li><li>Training </li><li>20 x Cantabria Labs Tote Bags</li></ul>",
             "page": ""
           }
         }
@@ -76,7 +103,10 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "collapsible-row-1"
+        "collapsible-row-1",
+        "collapsible_tab_TLBPfk",
+        "collapsible_tab_Vexe7V",
+        "collapsible_tab_pnGEDi"
       ],
       "settings": {
         "enable_sticky_info": true,
