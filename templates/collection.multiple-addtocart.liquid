@@ -803,19 +803,50 @@
             <div class='block multicart-categories'>
               <h3 class='sub-title'>{{ categories_text_label }}</h3>
               <div class='block-content' style='display:none;'>
-                <ul class='sidebar-collections'>
-                  {%- assign sorted_collections = collections | sort: 'metafields.custom.sidebar_order' -%}
-                  {%- for collection in sorted_collections -%}
+                <ul class="sidebar-collections">
+                  {%- assign items = "" -%}
+
+                  {%- for collection in collections -%}
                     {%- if colls_list contains collection.handle
-                      and collection.handle != curr_coll
                       and collection.template_suffix == 'multiple-addtocart'
+                      and collection.handle != curr_coll
                     -%}
-                      <li>
-                        <a href='{{ collection.url }}'>{{ collection.title }}</a>
-                      </li>
+
+                      {%- assign order_val = collection.metafields.custom.sidebar_order.value | default: 999 -%}
+                      {%- assign order_num = order_val | plus: 0 -%}
+
+                      {%- comment -%}
+                        Pad order to 3 digits so string sort behaves like numeric sort:
+                        1 -> 001, 12 -> 012, 120 -> 120
+                      {%- endcomment -%}
+                      {%- if order_num < 10 -%}
+                        {%- assign order_key = "00" | append: order_num -%}
+                      {%- elsif order_num < 100 -%}
+                        {%- assign order_key = "0" | append: order_num -%}
+                      {%- else -%}
+                        {%- assign order_key = order_num -%}
+                      {%- endif -%}
+
+                      {%- capture items -%}{{ items }}{{ order_key }}|{{ collection.handle }},{%- endcapture -%}
+                    {%- endif -%}
+                  {%- endfor -%}
+
+                  {%- assign items_array = items | split: "," | sort -%}
+
+                  {%- for item in items_array -%}
+                    {%- if item != blank -%}
+                      {%- assign parts = item | split: "|" -%}
+                      {%- assign handle = parts[1] -%}
+                      {%- assign c = collections[handle] -%}
+                      {%- if c != blank -%}
+                        <li>
+                          <a href="{{ c.url }}">{{ c.title }}</a>
+                        </li>
+                      {%- endif -%}
                     {%- endif -%}
                   {%- endfor -%}
                 </ul>
+
               </div>
             </div>
           </div>
