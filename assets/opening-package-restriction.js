@@ -13,12 +13,24 @@
   // Configuration: mapping of customer tags to restricted product title keywords
   const OPENING_PACKAGE_RESTRICTIONS = [
     {
-      tag: 'HELIOCARE Opening Package',
-      productKeyword: 'HELIOCARE Opening Package',
+      tag: 'HELIOCARE Introductory Package',
+      productKeyword: 'HELIOCARE Introductory Package',
     },
     {
-      tag: 'BIRETIX Opening Package',
-      productKeyword: 'BIRETIX Opening Package',
+      tag: 'BIRETIX Introductory Package',
+      productKeyword: 'BIRETIX Introductory Package',
+    },
+    {
+      tag: 'ENDOCARE Introductory Package',
+      productKeyword: 'ENDOCARE Introductory Package',
+    },
+    {
+      tag: 'ENDOCARE Core Package',
+      productKeyword: 'ENDOCARE Core Package',
+    },
+    {
+      tag: 'Cantabria Labs Introductory Package',
+      productKeyword: 'Cantabria Labs Introductory Package',
     },
   ];
 
