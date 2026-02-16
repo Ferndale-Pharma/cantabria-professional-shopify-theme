@@ -9,6 +9,19 @@
  */
 {
   "sections": {
+    "cl_single_image_ci8QrG": {
+      "type": "cl-single-image",
+      "name": "Single Image",
+      "settings": {
+        "image": "shopify://shop_images/Logo.png",
+        "image_width_value": 180,
+        "image_width_unit": "px",
+        "padding_top": 64,
+        "padding_bottom": 0,
+        "full_width": true,
+        "container_id": ""
+      }
+    },
     "main": {
       "type": "main-login",
       "settings": {
@@ -19,6 +32,7 @@
     }
   },
   "order": [
+    "cl_single_image_ci8QrG",
     "main"
   ]
 }
