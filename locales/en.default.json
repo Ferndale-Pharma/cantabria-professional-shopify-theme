@@ -49,9 +49,9 @@
       "reset": "Clear search term"
     },
     "cart": {
-      "view": "View cart ({{ count }})",
-      "view_empty_cart": "View cart",
-      "item_added": "Item added to your cart"
+      "view": "View bag ({{ count }})",
+      "view_empty_cart": "View bag",
+      "item_added": "Item added to your bag"
     },
     "share": {
       "close": "Close share",
