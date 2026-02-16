@@ -347,6 +347,37 @@
       }
     </style>
   {%- endif -%}
+  <script>
+    (function () {
+      try {
+        var url = new URL(window.location.href);
+        var params = url.searchParams;
+
+        var utmKeys = [
+          'utm_source',
+          'utm_medium',
+          'utm_campaign',
+          'utm_content',
+          'utm_term'
+        ];
+
+        var foundAny = false;
+
+        utmKeys.forEach(function (key) {
+          var value = params.get(key);
+          if (value) {
+            foundAny = true;
+            window.localStorage.setItem('clb2b_' + key, value);
+          }
+        });
+
+        if (foundAny) {
+          window.localStorage.setItem('clb2b_utm_landing_url', window.location.href);
+        }
+      } catch (e) {
+      }
+    })();
+  </script>
 
   <body class='gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}'>
     <!-- Google Tag Manager (noscript) -->
