@@ -57,12 +57,30 @@
           "type": "description",
           "settings": {}
         },
+        "collapsible_tab_wamVdM": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Commercial Overview",
+            "icon": "question_mark",
+            "content": "{{ product.metafields.custom.commercial_overview | metafield_tag }}",
+            "page": ""
+          }
+        },
         "collapsible-row-1": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "What's included?",
+            "heading": "Core Package Contents",
             "icon": "question_mark",
             "content": "{{ product.metafields.custom.package_contents | metafield_tag }}",
+            "page": ""
+          }
+        },
+        "collapsible_tab_NbVpqm": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Included to Support Launch",
+            "icon": "question_mark",
+            "content": "{{ product.metafields.custom.launch_support | metafield_tag }}",
             "page": ""
           }
         }
@@ -76,7 +94,9 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "collapsible-row-1"
+        "collapsible_tab_wamVdM",
+        "collapsible-row-1",
+        "collapsible_tab_NbVpqm"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -92,6 +112,38 @@
         "enable_video_looping": false,
         "padding_top": 32,
         "padding_bottom": 32
+      }
+    },
+    "rich_text_ep4LXm": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_7md7XM": {
+          "type": "heading",
+          "settings": {
+            "heading": "A Strategic Long-Term Partnership",
+            "heading_size": "h2"
+          }
+        },
+        "text_9QYGbQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>HELIOCARE 360° offers retailers a clinically advanced, dermatologist-endorsed sun protection range supported by structured education and commercial expertise.</p><p><strong>A science-led brand. A supported launch. A sustainable category opportunity.</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_7md7XM",
+        "text_9QYGbQ"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "is_heading": false,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "related-products": {
@@ -125,6 +177,7 @@
   },
   "order": [
     "main",
+    "rich_text_ep4LXm",
     "related-products",
     "custom_liquid_6pHE7f"
   ]
