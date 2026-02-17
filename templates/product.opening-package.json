@@ -114,6 +114,42 @@
         "padding_bottom": 32
       }
     },
+    "image_banner_eYYHxb": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_8PVAE3": {
+          "type": "heading",
+          "settings": {
+            "heading": "A Strategic Long-Term Partnership",
+            "heading_size": "h2"
+          }
+        },
+        "richtext_wJU8YE": {
+          "type": "richtext",
+          "settings": {
+            "richtext": "<p>HELIOCARE 360° offers retailers a clinically advanced, dermatologist-endorsed sun protection range supported by structured education and commercial expertise.</p><p><strong>A science-led brand. A supported launch. A sustainable category opportunity.</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_8PVAE3",
+        "richtext_wJU8YE"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/FERN-IMG-00174_CantabriaLabs_TheBeautyTriangleGiveaway_Banner_Jan26_1.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
     "rich_text_ep4LXm": {
       "type": "rich-text",
       "blocks": {
@@ -135,6 +171,7 @@
         "heading_7md7XM",
         "text_9QYGbQ"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
@@ -173,49 +210,13 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
-    },
-    "image_banner_eYYHxb": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_8PVAE3": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image banner",
-            "heading_size": "h1"
-          }
-        },
-        "text_aEkAYa": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading_8PVAE3",
-        "text_aEkAYa"
-      ],
-      "name": "t:sections.image-banner.presets.name",
-      "settings": {
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "image_behavior": "none",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": true,
-        "color_scheme": "",
-        "stack_images_on_mobile": true,
-        "mobile_content_alignment": "center",
-        "show_text_below": true
-      }
     }
   },
   "order": [
     "main",
+    "image_banner_eYYHxb",
     "rich_text_ep4LXm",
     "related-products",
-    "custom_liquid_6pHE7f",
-    "image_banner_eYYHxb"
+    "custom_liquid_6pHE7f"
   ]
 }
