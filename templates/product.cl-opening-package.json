@@ -134,6 +134,38 @@
         "padding_bottom": 32
       }
     },
+    "rich_text_CTBbGa": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_6GVh4e": {
+          "type": "heading",
+          "settings": {
+            "heading": "The #1 Choice for a Complete Dermatology-Led Skincare Offering",
+            "heading_size": "h2"
+          }
+        },
+        "text_xrMUHB": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Cantabria Labs Complete Portfolio Package is the ideal solution for retailers seeking to establish a credible, consultation-led and commercially strong skincare category from day one.</p><p><strong>Three complementary brands.<br/>Multiple revenue streams.<br/>One trusted dermatology partner.</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_6GVh4e",
+        "text_xrMUHB"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "is_heading": false,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -165,6 +197,7 @@
   },
   "order": [
     "main",
+    "rich_text_CTBbGa",
     "related-products",
     "custom_liquid_6pHE7f"
   ]
