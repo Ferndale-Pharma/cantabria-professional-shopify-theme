@@ -173,12 +173,49 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "image_banner_eYYHxb": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_8PVAE3": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_aEkAYa": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_8PVAE3",
+        "text_aEkAYa"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
     }
   },
   "order": [
     "main",
     "rich_text_ep4LXm",
     "related-products",
-    "custom_liquid_6pHE7f"
+    "custom_liquid_6pHE7f",
+    "image_banner_eYYHxb"
   ]
 }
