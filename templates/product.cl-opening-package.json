@@ -134,6 +134,145 @@
         "padding_bottom": 32
       }
     },
+    "rich_text_UzMPwK": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_zR46wY": {
+          "type": "heading",
+          "settings": {
+            "heading": "Three Dermatology-Led Brands. One Cohesive Offering.",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_zR46wY"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "is_heading": false,
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "image_with_text_cQNp8k": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_ky97pz": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>HELIOCARE 360°</strong>",
+            "heading_size": "h2"
+          }
+        },
+        "text_TPcV9i": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Expert, very high-level, full-spectrum sun protection delivering advanced defence against UVA, UVB, visible light and infrared-A. A clinically proven daily protection range with strong seasonal and year-round demand.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_ky97pz",
+        "text_TPcV9i"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "image_with_text_NBeXz7": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_rbnjEb": {
+          "type": "heading",
+          "settings": {
+            "heading": "ENDOCARE",
+            "heading_size": "h2"
+          }
+        },
+        "text_3zTMGG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Science-led skincare formulated to deliver visible anti-ageing results across Age Barrier, Radiance and Renewal. Designed to support prevention, correction and long-term skin maintenance.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rbnjEb",
+        "text_3zTMGG"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_ai4RAf": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_nYEJrr": {
+          "type": "heading",
+          "settings": {
+            "heading": "BIRETIX",
+            "heading_size": "h2"
+          }
+        },
+        "text_jdcdpJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Dermatologist-proven skincare for every stage of acne-prone skin. A structured, regime-based approach supporting adolescent and adult acne concerns.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_nYEJrr",
+        "text_jdcdpJ"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
     "rich_text_CTBbGa": {
       "type": "rich-text",
       "blocks": {
@@ -162,8 +301,8 @@
         "color_scheme": "",
         "full_width": true,
         "is_heading": false,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 64,
+        "padding_bottom": 64
       }
     },
     "related-products": {
@@ -197,6 +336,10 @@
   },
   "order": [
     "main",
+    "rich_text_UzMPwK",
+    "image_with_text_cQNp8k",
+    "image_with_text_NBeXz7",
+    "image_with_text_ai4RAf",
     "rich_text_CTBbGa",
     "related-products",
     "custom_liquid_6pHE7f"
