@@ -63,14 +63,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Dermatological skincare expertly researched and developed to deliver proven results",
+            "heading": "Clinically Proven & Scientifically Advanced Dermatological Skincare",
             "heading_size": "h1"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+            "text": "<p>Developed alongside leading dermatologists, Cantabria Labs delivers high-performance skincare brands trusted by professionals and in-demand by consumers.</p><p>From daily sun protection to targeted anti-ageing and acne management, our portfolio is built to drive authority, consumer confidence and strong repeat purchase.</p>"
           }
         },
         "button_MyxLz3": {
@@ -95,7 +95,65 @@
         "content_alignment": "center",
         "color_scheme": "scheme-1",
         "full_width": true,
+        "is_heading": false,
         "padding_top": 32,
+        "padding_bottom": 64
+      }
+    },
+    "multicolumn_iYWdVq": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_y7qA6m": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_XEcKB7": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_4rgB3K": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_y7qA6m",
+        "column_XEcKB7",
+        "column_4rgB3K"
+      ],
+      "custom_css": [
+        "h2 {text-align:center!important;}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Three Expert Brands. One Strategic Partner.",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 64,
         "padding_bottom": 64
       }
     },
@@ -165,6 +223,7 @@
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
+        "is_heading": false,
         "padding_top": 64,
         "padding_bottom": 32
       }
@@ -302,6 +361,7 @@
         "content_alignment": "center",
         "color_scheme": "scheme-c825638c-5bf0-4bb5-9234-31d13a5a56f2",
         "full_width": false,
+        "is_heading": false,
         "padding_top": 64,
         "padding_bottom": 64
       }
@@ -310,6 +370,7 @@
   "order": [
     "image_banner",
     "rich_text",
+    "multicolumn_iYWdVq",
     "multicolumn_jCEWW8",
     "rich_text_3yTUgT",
     "image_with_text_tGbCQg",
