@@ -62,7 +62,7 @@
           "settings": {
             "heading": "Commercial Overview",
             "icon": "question_mark",
-            "content": "<p><strong>Total Package Price: </strong>£1,300.00 (ex VAT)<br/><strong>Retail Value:</strong> £2,730.00 (inc VAT)</p><p>A strategically structured investment delivering strong retail value and significant margin opportunity across multiple skincare categories.</p>",
+            "content": "<p><strong>Total Package Price: £1,300.00 (ex VAT)</strong><br/><strong>Retail Value:</strong> <strong>£2,730.00 (inc VAT)</strong></p><p>A strategically structured investment delivering strong retail value and significant margin opportunity across multiple skincare categories.</p>",
             "page": ""
           }
         },
