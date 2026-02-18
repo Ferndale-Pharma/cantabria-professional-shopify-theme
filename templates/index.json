@@ -70,7 +70,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Developed alongside leading dermatologists, Cantabria Labs delivers high-performance skincare brands trusted by professionals and in-demand by consumers.</p><p>From daily sun protection to targeted anti-ageing and acne management, our portfolio is built to drive authority, consumer confidence and strong repeat purchase.</p>"
+            "text": "<p>Developed alongside leading dermatologists, Cantabria Labs delivers high-performance skincare brands trusted by professionals and in-demand by consumers. From daily sun protection to targeted anti-ageing and acne management, our portfolio is built to drive authority, consumer confidence and strong repeat purchase.</p>"
           }
         },
         "button_MyxLz3": {
@@ -106,28 +106,31 @@
         "column_y7qA6m": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
+            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "title": "HELIOCARE 360°",
+            "text": "<p>Very high-level, full-spectrum sun protection with patented antioxidant technology. Trusted daily defence with strong year-round demand.</p>",
+            "link_label": "Shop Now",
+            "link": "shopify://collections/heliocare"
           }
         },
         "column_XEcKB7": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
+            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "title": "ENDOCARE",
+            "text": "<p>Science-led anti-ageing skincare across Age Barrier, Radiance and Renewal. Structured, regime-driven solutions with premium positioning.</p>",
+            "link_label": "Shop Now",
+            "link": "shopify://collections/endocare"
           }
         },
         "column_4rgB3K": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
+            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "title": "BIRETIX",
+            "text": "<p>Dermatologist-proven skincare range for every stage of blemish-prone skin. Results-driven formulations that support long term management and focused on repeat-purchase.</p>",
+            "link_label": "Shop Now",
+            "link": "shopify://collections/biretix"
           }
         }
       },
@@ -137,17 +140,347 @@
         "column_4rgB3K"
       ],
       "custom_css": [
-        "h2 {text-align:center!important;}"
+        ".title-wrapper-with-link {text-align: center; display: block; margin-bottom: 32px;}"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "Three Expert Brands. One Strategic Partner.",
         "heading_size": "h2",
-        "image_width": "full",
+        "image_width": "half",
         "image_ratio": "adapt",
         "button_label": "",
         "button_link": "",
         "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "rich_text_3yTUgT": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_K3wkQD": {
+          "type": "heading",
+          "settings": {
+            "heading": "Choose Your Launch Package",
+            "heading_size": "h2"
+          }
+        },
+        "text_T8DTpV": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Whether you’re building a complete skincare destination or introducing a focused category, we offer structured solutions to match your retail space and commercial strategy.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_K3wkQD",
+        "text_T8DTpV"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "is_heading": false,
+        "padding_top": 64,
+        "padding_bottom": 32
+      }
+    },
+    "image_with_text_tGbCQg": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_wDjWAH": {
+          "type": "heading",
+          "settings": {
+            "heading": "Cantabria Labs Complete Portfolio Package",
+            "heading_size": "h2"
+          }
+        },
+        "text_haLd96": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>A curated selection of hero SKUs across all three brands. </strong></p><p>Designed for retailers ready to establish a comprehensive dermatological skincare category with confidence.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_QJtBHU": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "shopify://products/cantabria-labs-introductory-package",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_wDjWAH",
+        "text_haLd96",
+        "button_QJtBHU"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 32,
+        "padding_bottom": 16
+      }
+    },
+    "multicolumn_dMkWYE": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_fVydDn": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "title": "HELIOCARE 360°",
+            "text": "<p>Very high-level, full-spectrum sun protection with patented antioxidant technology. Trusted daily defence with strong year-round demand.</p>",
+            "link_label": "Shop Now",
+            "link": "shopify://collections/heliocare"
+          }
+        },
+        "column_iW8HM9": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "title": "ENDOCARE",
+            "text": "<p>Science-led anti-ageing skincare across Age Barrier, Radiance and Renewal. Structured, regime-driven solutions with premium positioning.</p>",
+            "link_label": "Shop Now",
+            "link": "shopify://collections/endocare"
+          }
+        },
+        "column_bcUTap": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "title": "BIRETIX",
+            "text": "<p>Dermatologist-proven skincare range for every stage of blemish-prone skin. Results-driven formulations that support long term management and focused on repeat-purchase.</p>",
+            "link_label": "Shop Now",
+            "link": "shopify://collections/biretix"
+          }
+        }
+      },
+      "block_order": [
+        "column_fVydDn",
+        "column_iW8HM9",
+        "column_bcUTap"
+      ],
+      "custom_css": [
+        ".title-wrapper-with-link {text-align: center; display: block; margin-bottom: 32px;}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Brand-Specific Launch Solutions",
+        "heading_size": "h2",
+        "image_width": "half",
+        "image_ratio": "adapt",
+        "button_label": "Shop All Packages",
+        "button_link": "shopify://collections/all-packages",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "multicolumn_Wqcaqx": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_fBzHWF": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_4NXWwV": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_dkjhTe": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_iXTxXx": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_NzqJPz": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_VgFXjk": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_fBzHWF",
+        "column_4NXWwV",
+        "column_dkjhTe",
+        "column_iXTxXx",
+        "column_NzqJPz",
+        "column_VgFXjk"
+      ],
+      "custom_css": [],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "As Seen In",
+        "heading_size": "h2",
+        "image_width": "half",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 6,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "scheme-c825638c-5bf0-4bb5-9234-31d13a5a56f2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "rich_text_hwzFrb": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_kFhnaL": {
+          "type": "heading",
+          "settings": {
+            "heading": "Built for Retail Success",
+            "heading_size": "h2"
+          }
+        },
+        "text_aE8Pwj": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Cantabria Labs provides the expertise, training and retail activation tools required to build clinically credible, commercially successful skincare categories.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_kFhnaL",
+        "text_aE8Pwj"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "is_heading": false,
+        "padding_top": 64,
+        "padding_bottom": 16
+      }
+    },
+    "multicolumn_3JpA7a": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_6EbVFz": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "title": "Dedicated Account Management",
+            "text": "<p>Tailored launch planning and ongoing commercial support.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_znVmy3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "title": "Retailer Training",
+            "text": "<p>Online education to ensure confident, consultation-led selling.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_MtB3CY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "title": "Marketing & Merchandising Support",
+            "text": "<p>In-store POS, customer leaflets, digital assets and campaign alignment.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_PcANCb": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "title": "Long-Term Partnership",
+            "text": "<p>Exclusive partner promotions, store finder listing and structure growth planning.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_6EbVFz",
+        "column_znVmy3",
+        "column_MtB3CY",
+        "column_PcANCb"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "half",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
         "column_alignment": "center",
         "background_style": "none",
         "color_scheme": "",
@@ -185,10 +518,13 @@
         "column_qygNt4",
         "column_iK7kwf"
       ],
+      "custom_css": [
+        ".title-wrapper-with-link {text-align: center; display: block; margin-bottom: 32px;}"
+      ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "",
-        "heading_size": "h1",
+        "title": "Marketing & Training",
+        "heading_size": "h2",
         "image_width": "full",
         "image_ratio": "adapt",
         "button_label": "",
@@ -199,80 +535,8 @@
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "rich_text_3yTUgT": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_K3wkQD": {
-          "type": "heading",
-          "settings": {
-            "heading": "Latest promotions",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading_K3wkQD"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "is_heading": false,
         "padding_top": 64,
-        "padding_bottom": 32
-      }
-    },
-    "image_with_text_tGbCQg": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_wDjWAH": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image with text",
-            "heading_size": "h2"
-          }
-        },
-        "text_haLd96": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_QJtBHU": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_wDjWAH",
-        "text_haLd96",
-        "button_QJtBHU"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "center",
-        "mobile_content_alignment": "center",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "padding_top": 32,
-        "padding_bottom": 32
+        "padding_bottom": 64
       }
     },
     "image_with_text_xNJjEm": {
@@ -306,6 +570,7 @@
         "text_mNpLtf",
         "button_7QNWQH"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "height": "adapt",
@@ -355,6 +620,7 @@
         "text_zdzFmW",
         "button_k74EzM"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
@@ -365,16 +631,92 @@
         "padding_top": 64,
         "padding_bottom": 64
       }
+    },
+    "multicolumn_4JqrP7": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_RNHJH8": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "title": "Dermatologist-developed, science-backed brands",
+            "text": "<p><br/></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_PBpr6U": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "title": "Structured, low-risk launch solutions",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_MkWJiJ": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "title": "Designed for consultation-led retail selling",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_6waBLi": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "title": "Strong repeat purchase and category growth potential",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_RNHJH8",
+        "column_PBpr6U",
+        "column_MkWJiJ",
+        "column_6waBLi"
+      ],
+      "custom_css": [
+        ".title-wrapper-with-link {text-align: center; display: block; margin-bottom: 32px;}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Why Cantabria Labs?",
+        "heading_size": "h2",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "button_label": "Shop Now",
+        "button_link": "shopify://collections/all",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "none",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
     }
   },
   "order": [
     "image_banner",
     "rich_text",
     "multicolumn_iYWdVq",
-    "multicolumn_jCEWW8",
     "rich_text_3yTUgT",
     "image_with_text_tGbCQg",
+    "multicolumn_dMkWYE",
+    "multicolumn_Wqcaqx",
+    "rich_text_hwzFrb",
+    "multicolumn_3JpA7a",
+    "multicolumn_jCEWW8",
     "image_with_text_xNJjEm",
-    "rich_text_aRibXg"
+    "rich_text_aRibXg",
+    "multicolumn_4JqrP7"
   ]
 }
