@@ -74,15 +74,6 @@
             "content": "{{ product.metafields.custom.package_contents | metafield_tag }}",
             "page": ""
           }
-        },
-        "collapsible_tab_NbVpqm": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Included to Support Launch",
-            "icon": "question_mark",
-            "content": "{{ product.metafields.custom.launch_support | metafield_tag }}",
-            "page": ""
-          }
         }
       },
       "block_order": [
@@ -95,8 +86,7 @@
         "buy_buttons",
         "description",
         "collapsible_tab_wamVdM",
-        "collapsible-row-1",
-        "collapsible_tab_NbVpqm"
+        "collapsible-row-1"
       ],
       "settings": {
         "enable_sticky_info": true,
