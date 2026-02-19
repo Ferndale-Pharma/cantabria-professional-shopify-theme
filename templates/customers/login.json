@@ -22,6 +22,39 @@
         "container_id": ""
       }
     },
+    "rich_text_wVq9nL": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_WBbVdh": {
+          "type": "heading",
+          "settings": {
+            "heading": "Cantabria Labs Trade Hub",
+            "heading_size": "h1"
+          }
+        },
+        "text_m9JMHY": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_WBbVdh",
+        "text_m9JMHY"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "is_heading": false,
+        "padding_top": 32,
+        "padding_bottom": 0
+      }
+    },
     "main": {
       "type": "main-login",
       "settings": {
@@ -29,10 +62,61 @@
         "padding_top": 32,
         "padding_bottom": 64
       }
+    },
+    "rich_text_PFBURJ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_d488Jd": {
+          "type": "heading",
+          "settings": {
+            "heading": "Don't have an account?",
+            "heading_size": "h2"
+          }
+        },
+        "text_fbjDTe": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p><em>This is intended for Skin Professionals only.</em></p>"
+          }
+        },
+        "button_y8CnFq": {
+          "type": "button",
+          "settings": {
+            "button_label": "Apply now",
+            "button_link": "https://cantabrialabs.co.uk/pages/become-a-heliocare-360-stockist#contact",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_d488Jd",
+        "text_fbjDTe",
+        "button_y8CnFq"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "h2 {font-size: 2rem;}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "is_heading": false,
+        "padding_top": 0,
+        "padding_bottom": 64
+      }
     }
   },
   "order": [
     "cl_single_image_ci8QrG",
-    "main"
+    "rich_text_wVq9nL",
+    "main",
+    "rich_text_PFBURJ"
   ]
 }
