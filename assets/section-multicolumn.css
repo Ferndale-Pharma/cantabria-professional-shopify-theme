@@ -237,6 +237,7 @@
   text-decoration: none;
   font-size: inherit;
   margin-top: 1.5rem;
+  font-weight: 600;
 }
 
 .multicolumn-card__info .icon-wrap {
