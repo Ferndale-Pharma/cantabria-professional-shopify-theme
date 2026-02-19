@@ -28,6 +28,13 @@
           "type": "price",
           "settings": {}
         },
+        "text_wg9ndW": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.custom.special_message.value }}",
+            "text_style": "body"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -55,6 +62,7 @@
         "vendor",
         "title",
         "price",
+        "text_wg9ndW",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
