@@ -639,8 +639,8 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/pandectes-reopen-logo.png",
-            "title": "Dermatologist-developed, science-backed brands",
-            "text": "<p><br/></p>",
+            "title": "",
+            "text": "<p><strong>Dermatologist-developed, science-backed brands</strong><br/></p>",
             "link_label": "",
             "link": ""
           }
@@ -649,8 +649,8 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/pandectes-reopen-logo.png",
-            "title": "Structured, low-risk launch solutions",
-            "text": "",
+            "title": "",
+            "text": "<p><strong>Structured, low-risk launch solutions</strong></p>",
             "link_label": "",
             "link": ""
           }
@@ -659,8 +659,8 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/pandectes-reopen-logo.png",
-            "title": "Designed for consultation-led retail selling",
-            "text": "",
+            "title": "",
+            "text": "<p><strong>Designed for consultation-led retail selling</strong></p>",
             "link_label": "",
             "link": ""
           }
@@ -669,8 +669,8 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/pandectes-reopen-logo.png",
-            "title": "Strong repeat purchase and category growth potential",
-            "text": "",
+            "title": "",
+            "text": "<p><strong>Strong repeat purchase and category growth potential</strong></p>",
             "link_label": "",
             "link": ""
           }
