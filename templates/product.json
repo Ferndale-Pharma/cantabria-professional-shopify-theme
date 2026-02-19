@@ -34,6 +34,13 @@
           "type": "price",
           "settings": {}
         },
+        "text_jhPfRC": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.custom.special_message.value }}",
+            "text_style": "body"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -89,6 +96,7 @@
         "title",
         "custom_liquid_ckXVzi",
         "price",
+        "text_jhPfRC",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
