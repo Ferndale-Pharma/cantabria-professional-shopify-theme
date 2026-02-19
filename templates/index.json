@@ -15,21 +15,21 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
-            "heading_size": "h0"
+            "heading": "Clinically Proven & Scientifically Advanced Dermatological Skincare",
+            "heading_size": "h2"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text": "From daily sun protection to targeted anti-ageing and acne management, our portfolio is built to drive authority, consumer confidence and strong repeat purchase.",
             "text_style": "body"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop all",
+            "button_label_1": "Shop All Products",
             "button_link_1": "shopify://collections/all",
             "button_style_secondary_1": false,
             "button_label_2": "",
@@ -43,18 +43,17 @@
         "text",
         "button"
       ],
-      "disabled": true,
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
+        "image_overlay_opacity": 10,
+        "image_height": "small",
         "image_behavior": "none",
-        "desktop_content_position": "middle-left",
-        "desktop_content_alignment": "left",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
         "show_text_box": true,
         "color_scheme": "scheme-1",
         "stack_images_on_mobile": false,
         "mobile_content_alignment": "center",
-        "show_text_below": false
+        "show_text_below": true
       }
     },
     "rich_text": {
@@ -90,6 +89,7 @@
         "text",
         "button_MyxLz3"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -523,7 +523,7 @@
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "Marketing & Training",
+        "title": "Digital Marketing & Online Training",
         "heading_size": "h2",
         "image_width": "full",
         "image_ratio": "adapt",
@@ -702,6 +702,50 @@
         "padding_top": 64,
         "padding_bottom": 64
       }
+    },
+    "rich_text_Mpkq3q": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_MBEkGg": {
+          "type": "heading",
+          "settings": {
+            "heading": "Build Your Dermatology-Led Skincare Category Today",
+            "heading_size": "h2"
+          }
+        },
+        "text_YRDP3p": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Partner with Cantabria Labs to introduce clinically proven brands supported by structured launch packages, training and long-term commercial guidance.</p>"
+          }
+        },
+        "button_tb4cxN": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact Us",
+            "button_link": "shopify://pages/contact",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_MBEkGg",
+        "text_YRDP3p",
+        "button_tb4cxN"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-c825638c-5bf0-4bb5-9234-31d13a5a56f2",
+        "full_width": true,
+        "is_heading": false,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -717,6 +761,7 @@
     "multicolumn_jCEWW8",
     "image_with_text_xNJjEm",
     "rich_text_aRibXg",
-    "multicolumn_4JqrP7"
+    "multicolumn_4JqrP7",
+    "rich_text_Mpkq3q"
   ]
 }
