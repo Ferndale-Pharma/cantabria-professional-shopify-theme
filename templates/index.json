@@ -44,6 +44,7 @@
         "button"
       ],
       "settings": {
+        "image": "shopify://shop_images/FERN-IMG-00185_-_Banner.jpg",
         "image_overlay_opacity": 10,
         "image_height": "medium",
         "image_behavior": "none",
@@ -106,7 +107,7 @@
         "column_y7qA6m": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "image": "shopify://shop_images/Heliocare_Swatches_Test.jpg",
             "title": "HELIOCARE 360°",
             "text": "<p>Very high-level, full-spectrum sun protection with patented antioxidant technology. Trusted daily defence with strong year-round demand.</p>",
             "link_label": "Shop Now",
@@ -116,7 +117,7 @@
         "column_XEcKB7": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "image": "shopify://shop_images/Biretix_Swatches.jpg",
             "title": "ENDOCARE",
             "text": "<p>Science-led anti-ageing skincare across Age Barrier, Radiance and Renewal. Structured, regime-driven solutions with premium positioning.</p>",
             "link_label": "Shop Now",
@@ -126,7 +127,7 @@
         "column_4rgB3K": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "image": "shopify://shop_images/Biretix_Swatches.jpg",
             "title": "BIRETIX",
             "text": "<p>Dermatologist-proven skincare range for every stage of blemish-prone skin. Results-driven formulations that support long term management and focused on repeat-purchase.</p>",
             "link_label": "Shop Now",
@@ -146,7 +147,7 @@
       "settings": {
         "title": "Three Expert Brands. One Strategic Partner.",
         "heading_size": "h2",
-        "image_width": "half",
+        "image_width": "full",
         "image_ratio": "adapt",
         "button_label": "",
         "button_link": "",
@@ -225,6 +226,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
+        "image": "shopify://shop_images/CL_Mixed_Package.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -245,7 +247,7 @@
         "column_fVydDn": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "image": "shopify://shop_images/Heliocare_Standing.jpg",
             "title": "HELIOCARE 360°",
             "text": "<p>Very high-level, full-spectrum sun protection with patented antioxidant technology. Trusted daily defence with strong year-round demand.</p>",
             "link_label": "Shop Now",
@@ -255,7 +257,7 @@
         "column_iW8HM9": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "image": "shopify://shop_images/Endocare_Standing.jpg",
             "title": "ENDOCARE",
             "text": "<p>Science-led anti-ageing skincare across Age Barrier, Radiance and Renewal. Structured, regime-driven solutions with premium positioning.</p>",
             "link_label": "Shop Now",
@@ -265,7 +267,7 @@
         "column_bcUTap": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "image": "shopify://shop_images/Biretix_Standing.jpg",
             "title": "BIRETIX",
             "text": "<p>Dermatologist-proven skincare range for every stage of blemish-prone skin. Results-driven formulations that support long term management and focused on repeat-purchase.</p>",
             "link_label": "Shop Now",
@@ -285,7 +287,7 @@
       "settings": {
         "title": "Brand-Specific Launch Solutions",
         "heading_size": "h2",
-        "image_width": "half",
+        "image_width": "full",
         "image_ratio": "adapt",
         "button_label": "Shop All Packages",
         "button_link": "shopify://collections/all-packages",
@@ -305,7 +307,7 @@
         "column_fBzHWF": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "image": "shopify://shop_images/Vogue_c8020cc2-e829-4e3d-973c-0880e01d903d.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -315,7 +317,7 @@
         "column_4NXWwV": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "image": "shopify://shop_images/Tatler.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -325,7 +327,7 @@
         "column_dkjhTe": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "image": "shopify://shop_images/Stylist.svg",
             "title": "",
             "text": "",
             "link_label": "",
@@ -335,7 +337,7 @@
         "column_iXTxXx": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "image": "shopify://shop_images/Forbes.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -345,7 +347,7 @@
         "column_NzqJPz": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "image": "shopify://shop_images/Eve_Std.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -354,6 +356,7 @@
         },
         "column_VgFXjk": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/pandectes-reopen-logo.png",
             "title": "",
@@ -376,11 +379,11 @@
       "settings": {
         "title": "As Seen In",
         "heading_size": "h2",
-        "image_width": "half",
+        "image_width": "full",
         "image_ratio": "adapt",
         "button_label": "",
         "button_link": "",
-        "columns_desktop": 6,
+        "columns_desktop": 5,
         "column_alignment": "left",
         "background_style": "none",
         "color_scheme": "scheme-c825638c-5bf0-4bb5-9234-31d13a5a56f2",
@@ -428,7 +431,7 @@
         "column_6EbVFz": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "image": "shopify://shop_images/Account_Management.png",
             "title": "Dedicated Account Management",
             "text": "<p>Tailored launch planning and ongoing commercial support.</p>",
             "link_label": "",
@@ -438,7 +441,7 @@
         "column_znVmy3": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "image": "shopify://shop_images/Training.png",
             "title": "Retailer Training",
             "text": "<p>Online education to ensure confident, consultation-led selling.</p>",
             "link_label": "",
@@ -448,7 +451,7 @@
         "column_MtB3CY": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "image": "shopify://shop_images/Marketing.png",
             "title": "Marketing & Merchandising Support",
             "text": "<p>In-store POS, customer leaflets, digital assets and campaign alignment.</p>",
             "link_label": "",
@@ -458,7 +461,7 @@
         "column_PcANCb": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "image": "shopify://shop_images/Partnership.png",
             "title": "Long-Term Partnership",
             "text": "<p>Exclusive partner promotions, store finder listing and structure growth planning.</p>",
             "link_label": "",
@@ -476,7 +479,7 @@
       "settings": {
         "title": "",
         "heading_size": "h2",
-        "image_width": "half",
+        "image_width": "third",
         "image_ratio": "adapt",
         "button_label": "",
         "button_link": "",
@@ -638,7 +641,7 @@
         "column_RNHJH8": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "image": "shopify://shop_images/Account_Management.png",
             "title": "",
             "text": "<p><strong>Dermatologist-developed, science-backed brands</strong><br/></p>",
             "link_label": "",
@@ -648,7 +651,7 @@
         "column_PBpr6U": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "image": "shopify://shop_images/Launch_Solutions.png",
             "title": "",
             "text": "<p><strong>Structured, low-risk launch solutions</strong></p>",
             "link_label": "",
@@ -658,7 +661,7 @@
         "column_MkWJiJ": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "image": "shopify://shop_images/Consultation_led.png",
             "title": "",
             "text": "<p><strong>Designed for consultation-led retail selling</strong></p>",
             "link_label": "",
@@ -668,7 +671,7 @@
         "column_6waBLi": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "image": "shopify://shop_images/Repeat_purchase.png",
             "title": "",
             "text": "<p><strong>Strong repeat purchase and category growth potential</strong></p>",
             "link_label": "",
