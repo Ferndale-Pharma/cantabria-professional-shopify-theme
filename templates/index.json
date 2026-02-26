@@ -107,7 +107,7 @@
         "column_y7qA6m": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Heliocare_Swatches_Test.jpg",
+            "image": "shopify://shop_images/Heliocare_Layflats_-_FERN-CL-EM-00204.jpg",
             "title": "HELIOCARE 360°",
             "text": "<p>Very high-level, full-spectrum sun protection with patented antioxidant technology. Trusted daily defence with strong year-round demand.</p>",
             "link_label": "Shop Now",
@@ -117,7 +117,7 @@
         "column_XEcKB7": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Biretix_Swatches.jpg",
+            "image": "shopify://shop_images/Endocare_Layflats_-_FERN-CL-EM-00204.jpg",
             "title": "ENDOCARE",
             "text": "<p>Science-led anti-ageing skincare across Age Barrier, Radiance and Renewal. Structured, regime-driven solutions with premium positioning.</p>",
             "link_label": "Shop Now",
@@ -127,7 +127,7 @@
         "column_4rgB3K": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Biretix_Swatches.jpg",
+            "image": "shopify://shop_images/Biretix_Layflats_-_FERN-CL-EM-00204.jpg",
             "title": "BIRETIX",
             "text": "<p>Dermatologist-proven skincare range for every stage of blemish-prone skin. Results-driven formulations that support long term management and focused on repeat-purchase.</p>",
             "link_label": "Shop Now",
@@ -641,7 +641,7 @@
         "column_RNHJH8": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Account_Management.png",
+            "image": "shopify://shop_images/Science_Backed.png",
             "title": "",
             "text": "<p><strong>Dermatologist-developed, science-backed brands</strong><br/></p>",
             "link_label": "",
