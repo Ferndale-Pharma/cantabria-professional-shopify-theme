@@ -159,6 +159,15 @@
         "type": "shopify://apps/powerful-form-builder/blocks/app-embed/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
         "disabled": false,
         "settings": {}
+      },
+      "17931662404830155662": {
+        "type": "shopify://apps/mincart-order-limits/blocks/mincart-embed-block/e578f44f-3eec-4b0b-ac83-c7dbb9686592",
+        "disabled": false,
+        "settings": {
+          "quick_load": false,
+          "loading_text": "Loading",
+          "custom_checkout_selector": ""
+        }
       }
     },
     "color_schemes": {
