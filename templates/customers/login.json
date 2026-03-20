@@ -82,6 +82,7 @@
         },
         "button_y8CnFq": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button_label": "Apply now",
             "button_link": "https://cantabrialabs.co.uk/pages/become-a-heliocare-360-stockist#contact",
@@ -97,7 +98,6 @@
         "text_fbjDTe",
         "button_y8CnFq"
       ],
-      "disabled": true,
       "custom_css": [
         "h2 {font-size: 2rem;}"
       ],
@@ -111,12 +111,30 @@
         "padding_top": 0,
         "padding_bottom": 64
       }
+    },
+    "1774007416e68162cb": {
+      "type": "apps",
+      "blocks": {
+        "powerful_form_builder_app_block_RxqhDx": {
+          "type": "shopify://apps/powerful-form-builder/blocks/app-block/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+          "settings": {
+            "shortcode": "<div class=\"globo-formbuilder\" data-id=\"MTM4MjM4\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "powerful_form_builder_app_block_RxqhDx"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "cl_single_image_ci8QrG",
     "rich_text_wVq9nL",
     "main",
-    "rich_text_PFBURJ"
+    "rich_text_PFBURJ",
+    "1774007416e68162cb"
   ]
 }
