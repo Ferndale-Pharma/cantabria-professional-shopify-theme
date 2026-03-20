@@ -67,7 +67,7 @@
         "collapsible_tab_wamVdM": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Commercial Overview",
+            "heading": "Pricing & Margin Opportunity",
             "icon": "question_mark",
             "content": "{{ product.metafields.custom.commercial_overview | metafield_tag }}",
             "page": ""
