@@ -191,6 +191,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
+        "image": "shopify://shop_images/Heliocare_Layflats_-_FERN-CL-EM-00204.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -229,6 +230,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
+        "image": "shopify://shop_images/Endocare_Layflats_-_FERN-CL-EM-00204.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -267,6 +269,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
+        "image": "shopify://shop_images/Biretix_Layflats_-_FERN-CL-EM-00204.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
