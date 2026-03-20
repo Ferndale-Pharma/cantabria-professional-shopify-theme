@@ -109,7 +109,7 @@
         "full_width": true,
         "is_heading": false,
         "padding_top": 0,
-        "padding_bottom": 64
+        "padding_bottom": 16
       }
     },
     "1774007416e68162cb": {
@@ -118,12 +118,16 @@
         "powerful_form_builder_app_block_RxqhDx": {
           "type": "shopify://apps/powerful-form-builder/blocks/app-block/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
           "settings": {
-            "shortcode": "<div class=\"globo-formbuilder globo-formbuilder-open\" data-id=\"MTM4MjM4\"></div>"
+            "shortcode": "<button class=\"button button--secondary globo-formbuilder-open\" data-id=\"MTM4MjM4\">Register your interest</button>"
           }
         }
       },
       "block_order": [
         "powerful_form_builder_app_block_RxqhDx"
+      ],
+      "custom_css": [
+        ".globo-app-extension {text-align: center;}",
+        ".shopify-block {margin-bottom: 64px;}"
       ],
       "settings": {
         "include_margins": true
