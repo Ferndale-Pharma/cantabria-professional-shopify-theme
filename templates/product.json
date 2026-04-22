@@ -20,6 +20,12 @@
             "text_style": "uppercase"
           }
         },
+        "custom_liquid_8xpbdd": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% if product.metafields.custom.bestseller %}\n                             <span style=\"font-size: 0.9em;\">★ Bestseller</span>\n                              {% endif %}"
+          }
+        },
         "title": {
           "type": "title",
           "settings": {}
@@ -93,6 +99,7 @@
       },
       "block_order": [
         "vendor",
+        "custom_liquid_8xpbdd",
         "title",
         "custom_liquid_ckXVzi",
         "price",
