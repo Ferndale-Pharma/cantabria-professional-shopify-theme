@@ -1108,7 +1108,7 @@
                                   ><b>{{ money_price }}</b></span
                                 >
                               </p>
-                              {%- if product.has_only_default_variant -%}
+                              {%- if product -%}
                                 {%- if product.compare_at_price and product.compare_at_price > product.price -%}
                                   <p>
                                     <span class='money compare_price' style='text-decoration:line-through;'
