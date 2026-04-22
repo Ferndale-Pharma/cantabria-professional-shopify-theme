@@ -1019,6 +1019,9 @@
                           <td class='table-body-cell product-name cws_prd_name'>
                             <div class='pr_hndl' style='display:none;'>{{ product.handle }}</div>
                             <div class='list-view-item__title'>
+                              {% if product.metafields.custom.bestseller %}
+                              <span class='product-label product-label-bestseller'><span class='badge-sale badge-sale-bestseller'>★ Bestseller</span></span>
+                              {% endif %}
                               <a href='{{ product.url }}' class='var_title_{{ variant.id }}'>{{ product.title }}</a>
                               {% if product.metafields.custom.special_message %}
                                 <div class='tooltipContainer js-tooltip'>
@@ -1889,5 +1892,13 @@
 .multicart-container .image-description .coll-desc {
     width: 100% !important;
     padding-left: 0px !important;
+}
+.product-label-bestseller {
+	top: 10px;
+	color: #165C7D;
+}
+.badge-sale-bestseller {
+	background-color: transparent;
+	color: #165C7D;
 }
 </style>
