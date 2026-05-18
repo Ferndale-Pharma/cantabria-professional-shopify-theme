@@ -32,7 +32,7 @@
               >
                 {%- assign item_count = link.links.size -%}
                 <ul
-                  class='mega-menu__list{% if item_count == 4 %} is-4{% endif %} page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}'
+                  class='mega-menu__list{% if item_count == 4 %} is-4{% endif %}{% if item_count == 3 %} is-3{% endif %} page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}'
                   role='list'
                 >
                   {%- for childlink in link.links -%}
