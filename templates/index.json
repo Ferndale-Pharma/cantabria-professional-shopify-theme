@@ -57,6 +57,63 @@
         "show_text_below": true
       }
     },
+    "multicolumn_with_buttons_AG94ec": {
+      "type": "multicolumn-with-buttons",
+      "blocks": {
+        "column_FzfDXc": {
+          "type": "column",
+          "settings": {
+            "title": "HELIOCARE 360°",
+            "text": "<p>Very high-level, full-spectrum sun protection with patented antioxidant technology. Trusted daily defence with strong year-round demand.</p>",
+            "link_label": "Shop Now",
+            "link": "shopify://collections/heliocare"
+          }
+        },
+        "column_Y9BBRM": {
+          "type": "column",
+          "settings": {
+            "title": "ENDOCARE",
+            "text": "<p>Science-led anti-ageing skincare across Age Barrier, Radiance and Renewal. Structured, regime-driven solutions with premium positioning.</p>",
+            "link_label": "Shop Now",
+            "link": "shopify://collections/endocare"
+          }
+        },
+        "column_7MNFB4": {
+          "type": "column",
+          "settings": {
+            "title": "BIRETIX",
+            "text": "<p>Dermatologist-proven skincare range for every stage of blemish-prone skin. Results-driven formulations that support long term management and focused on repeat-purchase.</p>",
+            "link_label": "Shop Now",
+            "link": "shopify://collections/biretix"
+          }
+        }
+      },
+      "block_order": [
+        "column_FzfDXc",
+        "column_Y9BBRM",
+        "column_7MNFB4"
+      ],
+      "custom_css": [
+        ".title-wrapper-with-link {text-align: center; display: block; margin-bottom: 32px;}"
+      ],
+      "name": "Multicolumn with Buttons",
+      "settings": {
+        "title": "Three Expert Ranges. One Strategic Partner.",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
     "multicolumn_iYWdVq": {
       "type": "multicolumn",
       "blocks": {
@@ -96,6 +153,7 @@
         "column_XEcKB7",
         "column_4rgB3K"
       ],
+      "disabled": true,
       "custom_css": [
         ".title-wrapper-with-link {text-align: center; display: block; margin-bottom: 32px;}"
       ],
@@ -117,52 +175,20 @@
         "padding_bottom": 64
       }
     },
-    "rich_text_3yTUgT": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_K3wkQD": {
-          "type": "heading",
-          "settings": {
-            "heading": "Choose Your Launch Package",
-            "heading_size": "h2"
-          }
-        },
-        "text_T8DTpV": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Whether you’re building a complete skincare destination or introducing a focused category, we offer structured solutions to match your retail space and commercial strategy.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_K3wkQD",
-        "text_T8DTpV"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "is_heading": false,
-        "padding_top": 64,
-        "padding_bottom": 32
-      }
-    },
     "image_with_text_tGbCQg": {
       "type": "image-with-text",
       "blocks": {
         "heading_wDjWAH": {
           "type": "heading",
           "settings": {
-            "heading": "Cantabria Labs Complete Portfolio Package",
+            "heading": "Discover the Complete Cantabria Labs Portfolio",
             "heading_size": "h2"
           }
         },
         "text_haLd96": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>A curated selection of hero SKUs across all three brands. </strong></p><p>Designed for retailers ready to establish a comprehensive dermatological skincare category with confidence.</p>",
+            "text": "<p>Explore the full Cantabria Labs portfolio across HELIOCARE, ENDOCARE and BIRETIX. Scientifically developed skincare solutions designed to support everyday dermatological needs.</p>",
             "text_style": "body"
           }
         },
@@ -170,7 +196,7 @@
           "type": "button",
           "settings": {
             "button_label": "Shop Now",
-            "button_link": "shopify://products/cantabria-labs-introductory-package",
+            "button_link": "shopify://collections/all",
             "button_style_secondary": false
           }
         }
@@ -194,157 +220,49 @@
         "section_color_scheme": "",
         "color_scheme": "",
         "padding_top": 32,
-        "padding_bottom": 16
-      }
-    },
-    "multicolumn_dMkWYE": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_fVydDn": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Heliocare_Standing.jpg",
-            "title": "HELIOCARE 360°",
-            "text": "<p>Very high-level, full-spectrum sun protection with patented antioxidant technology. Trusted daily defence with strong year-round demand.</p>",
-            "link_label": "Shop Now",
-            "link": "shopify://products/heliocare-introductory-package"
-          }
-        },
-        "column_iW8HM9": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Endocare_Standing.jpg",
-            "title": "ENDOCARE",
-            "text": "<p>Science-led anti-ageing skincare across Age Barrier, Radiance and Renewal. Structured, regime-driven solutions with premium positioning.</p>",
-            "link_label": "Shop Now",
-            "link": "shopify://products/endocare-introductory-package"
-          }
-        },
-        "column_bcUTap": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Biretix_Standing.jpg",
-            "title": "BIRETIX",
-            "text": "<p>Dermatologist-proven skincare range for every stage of blemish-prone skin. Results-driven formulations that support long term management and focused on repeat-purchase.</p>",
-            "link_label": "Shop Now",
-            "link": "shopify://products/biretix-introductory-package"
-          }
-        }
-      },
-      "block_order": [
-        "column_fVydDn",
-        "column_iW8HM9",
-        "column_bcUTap"
-      ],
-      "custom_css": [
-        ".title-wrapper-with-link {text-align: center; display: block; margin-bottom: 32px;}"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "Brand-Specific Launch Solutions",
-        "heading_size": "h2",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "Shop All Packages",
-        "button_link": "shopify://collections/all-packages",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 64,
         "padding_bottom": 64
       }
     },
-    "multicolumn_Wqcaqx": {
-      "type": "multicolumn",
+    "rich_text_Mpkq3q": {
+      "type": "rich-text",
       "blocks": {
-        "column_fBzHWF": {
-          "type": "column",
+        "heading_MBEkGg": {
+          "type": "heading",
           "settings": {
-            "image": "shopify://shop_images/Vogue_c8020cc2-e829-4e3d-973c-0880e01d903d.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
+            "heading": "Build Your Dermatology-Led Skincare Category Today",
+            "heading_size": "h2"
           }
         },
-        "column_4NXWwV": {
-          "type": "column",
+        "text_YRDP3p": {
+          "type": "text",
           "settings": {
-            "image": "shopify://shop_images/Tatler.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
+            "text": "<p>Partner with Cantabria Labs to introduce clinically proven brands supported by structured launch packages, training and long-term commercial guidance. If you need any support, don't hesitate to get in touch.</p>"
           }
         },
-        "column_dkjhTe": {
-          "type": "column",
+        "button_tb4cxN": {
+          "type": "button",
           "settings": {
-            "image": "shopify://shop_images/Stylist.svg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_iXTxXx": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Forbes.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_NzqJPz": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Eve_Std.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_VgFXjk": {
-          "type": "column",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/pandectes-reopen-logo.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
+            "button_label": "Contact Us",
+            "button_link": "shopify://pages/contact",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
-        "column_fBzHWF",
-        "column_4NXWwV",
-        "column_dkjhTe",
-        "column_iXTxXx",
-        "column_NzqJPz",
-        "column_VgFXjk"
+        "heading_MBEkGg",
+        "text_YRDP3p",
+        "button_tb4cxN"
       ],
-      "custom_css": [],
-      "name": "t:sections.multicolumn.presets.name",
+      "name": "t:sections.rich-text.presets.name",
       "settings": {
-        "title": "As Seen In",
-        "heading_size": "h2",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 5,
-        "column_alignment": "left",
-        "background_style": "none",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "scheme-c825638c-5bf0-4bb5-9234-31d13a5a56f2",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
+        "full_width": true,
+        "is_heading": false,
         "padding_top": 64,
         "padding_bottom": 64
       }
@@ -597,9 +515,9 @@
         "column_RNHJH8": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Science_Backed.png",
+            "image": "shopify://shop_images/CL-WEB-0001_-_Homepage_-_Skincare_Experts_-_Dr_EW.webp",
             "title": "",
-            "text": "<p><strong>Dermatologist-developed, science-backed brands</strong><br/></p>",
+            "text": "<p><em>“I’m a huge fan of Heliocare and will often recommend it to my patients…With so many great products for different skin types there really is something for everyone!”<br/><br/></em><strong>Dr Emma Wedgeworth</strong></p><p>Consultant Dermatologist</p>",
             "link_label": "",
             "link": ""
           }
@@ -607,9 +525,9 @@
         "column_PBpr6U": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Launch_Solutions.png",
+            "image": "shopify://shop_images/CL-WEB-0001_-_Homepage_-_Skincare_Experts_-_Dr_MM.webp",
             "title": "",
-            "text": "<p><strong>Structured, low-risk launch solutions</strong></p>",
+            "text": "<p><em>“Biretix is created by dermatologists, led by science and backed by clinical data. It has been developed to be the most effective complementary dermocosmetic skincare solution for acne-prone skin.”<br/><br/></em><strong>Dr Massimo Milani</strong></p><p>Medical Director, Cantabria Labs Italy </p>",
             "link_label": "",
             "link": ""
           }
@@ -617,19 +535,9 @@
         "column_MkWJiJ": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Consultation_led.png",
+            "image": "shopify://shop_images/dr-amy-perkins.webp",
             "title": "",
-            "text": "<p><strong>Designed for consultation-led retail selling</strong></p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_6waBLi": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Repeat_purchase.png",
-            "title": "",
-            "text": "<p><strong>Strong repeat purchase and category growth potential</strong></p>",
+            "text": "<p><em>“As a dermatologist, I'm passionate about helping people protect and care for their skin long-term. Heliocare's science-led approach and proven formulations make daily sun protection something people can genuinely trust.”<br/><br/></em><strong>Dr. Amy Perkins</strong></p><p>Consultant Dermatologist<br/><br/></p>",
             "link_label": "",
             "link": ""
           }
@@ -638,21 +546,20 @@
       "block_order": [
         "column_RNHJH8",
         "column_PBpr6U",
-        "column_MkWJiJ",
-        "column_6waBLi"
+        "column_MkWJiJ"
       ],
       "custom_css": [
         ".title-wrapper-with-link {text-align: center; display: block; margin-bottom: 32px;}"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "Why Cantabria Labs?",
+        "title": "Researched and recommended by experts around the world",
         "heading_size": "h2",
-        "image_width": "third",
+        "image_width": "full",
         "image_ratio": "adapt",
         "button_label": "Shop Now",
         "button_link": "shopify://collections/all",
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "column_alignment": "center",
         "background_style": "none",
         "color_scheme": "scheme-1",
@@ -662,64 +569,111 @@
         "padding_bottom": 64
       }
     },
-    "rich_text_Mpkq3q": {
-      "type": "rich-text",
+    "multicolumn_Wqcaqx": {
+      "type": "multicolumn",
       "blocks": {
-        "heading_MBEkGg": {
-          "type": "heading",
+        "column_fBzHWF": {
+          "type": "column",
           "settings": {
-            "heading": "Build Your Dermatology-Led Skincare Category Today",
-            "heading_size": "h2"
+            "image": "shopify://shop_images/Vogue_c8020cc2-e829-4e3d-973c-0880e01d903d.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
           }
         },
-        "text_YRDP3p": {
-          "type": "text",
+        "column_4NXWwV": {
+          "type": "column",
           "settings": {
-            "text": "<p>Partner with Cantabria Labs to introduce clinically proven brands supported by structured launch packages, training and long-term commercial guidance. If you need any support, don't hesitate to get in touch.</p>"
+            "image": "shopify://shop_images/Tatler.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
           }
         },
-        "button_tb4cxN": {
-          "type": "button",
+        "column_dkjhTe": {
+          "type": "column",
           "settings": {
-            "button_label": "Contact Us",
-            "button_link": "shopify://pages/contact",
-            "button_style_secondary": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "image": "shopify://shop_images/Stylist.svg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_iXTxXx": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Forbes.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_NzqJPz": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Eve_Std.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_VgFXjk": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/pandectes-reopen-logo.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "heading_MBEkGg",
-        "text_YRDP3p",
-        "button_tb4cxN"
+        "column_fBzHWF",
+        "column_4NXWwV",
+        "column_dkjhTe",
+        "column_iXTxXx",
+        "column_NzqJPz",
+        "column_VgFXjk"
       ],
-      "name": "t:sections.rich-text.presets.name",
+      "custom_css": [],
+      "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
+        "title": "As Seen In",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 5,
+        "column_alignment": "left",
+        "background_style": "none",
         "color_scheme": "scheme-c825638c-5bf0-4bb5-9234-31d13a5a56f2",
-        "full_width": true,
-        "is_heading": false,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 64,
+        "padding_bottom": 64
       }
     }
   },
   "order": [
     "image_banner",
+    "multicolumn_with_buttons_AG94ec",
     "multicolumn_iYWdVq",
-    "rich_text_3yTUgT",
     "image_with_text_tGbCQg",
-    "multicolumn_dMkWYE",
-    "multicolumn_Wqcaqx",
+    "rich_text_Mpkq3q",
     "rich_text_hwzFrb",
     "multicolumn_3JpA7a",
     "multicolumn_jCEWW8",
     "image_with_text_xNJjEm",
     "rich_text_aRibXg",
     "multicolumn_4JqrP7",
-    "rich_text_Mpkq3q"
+    "multicolumn_Wqcaqx"
   ]
 }
