@@ -48,57 +48,13 @@
         "image_overlay_opacity": 10,
         "image_height": "medium",
         "image_behavior": "none",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": true,
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
+        "show_text_box": false,
         "color_scheme": "scheme-1",
         "stack_images_on_mobile": false,
         "mobile_content_alignment": "center",
         "show_text_below": true
-      }
-    },
-    "rich_text": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Clinically Proven & Scientifically Advanced Dermatological Skincare",
-            "heading_size": "h1"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Developed alongside leading dermatologists, Cantabria Labs delivers high-performance skincare brands trusted by professionals and in-demand by consumers. From daily sun protection to targeted anti-ageing and acne management, our portfolio is built to drive authority, consumer confidence and strong repeat purchase.</p>"
-          }
-        },
-        "button_MyxLz3": {
-          "type": "button",
-          "settings": {
-            "button_label": "Shop All Products",
-            "button_link": "shopify://collections/all",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text",
-        "button_MyxLz3"
-      ],
-      "disabled": true,
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-1",
-        "full_width": true,
-        "is_heading": false,
-        "padding_top": 32,
-        "padding_bottom": 64
       }
     },
     "multicolumn_iYWdVq": {
@@ -145,7 +101,7 @@
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "Three Expert Brands. One Strategic Partner.",
+        "title": "Three Expert Ranges. One Strategic Partner.",
         "heading_size": "h2",
         "image_width": "full",
         "image_ratio": "adapt",
@@ -753,7 +709,6 @@
   },
   "order": [
     "image_banner",
-    "rich_text",
     "multicolumn_iYWdVq",
     "rich_text_3yTUgT",
     "image_with_text_tGbCQg",
