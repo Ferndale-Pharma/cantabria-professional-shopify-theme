@@ -41,7 +41,12 @@
   list-style: none;
 }
 
-.mega-menu__list.is-4 > *:first-child {
+.mega-menu__list.is-3 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.mega-menu__list.is-4 > *:first-child,
+.mega-menu__list.is-3 > *:first-child {
   grid-column-start: 2;
 }
 
