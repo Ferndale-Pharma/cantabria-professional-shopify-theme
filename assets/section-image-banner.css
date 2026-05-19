@@ -151,6 +151,17 @@
   }
 }
 
+@media screen and (min-width: 1920px) {
+  .banner--medium:not(.banner--adapt) {
+    min-height: 75rem;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .banner--medium:not(.banner--adapt) {
+    min-height: 100rem;
+  }
+}
+
 @media screen and (max-width: 749px) {
   .banner:not(.banner--stacked) {
     flex-direction: row;
