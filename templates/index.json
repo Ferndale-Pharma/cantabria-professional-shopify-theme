@@ -9,24 +9,24 @@
  */
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "image_banner_separate_3Xc9p7": {
+      "type": "image-banner-separate",
       "blocks": {
-        "heading": {
+        "heading_gwtxgK": {
           "type": "heading",
           "settings": {
             "heading": "Clinically Proven & Scientifically Advanced Dermatological Skincare",
-            "heading_size": "h2"
+            "heading_size": "h1"
           }
         },
-        "text": {
+        "text_BqBJKn": {
           "type": "text",
           "settings": {
             "text": "From daily sun protection to targeted anti-ageing and acne management, our portfolio is built to drive authority, consumer confidence and strong repeat purchase.",
             "text_style": "body"
           }
         },
-        "button": {
+        "buttons_i9wJi8": {
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop All Products",
@@ -39,22 +39,24 @@
         }
       },
       "block_order": [
-        "heading",
-        "text",
-        "button"
+        "heading_gwtxgK",
+        "text_BqBJKn",
+        "buttons_i9wJi8"
       ],
+      "name": "Image Banner v2",
       "settings": {
-        "image": "shopify://shop_images/FERN-IMG-00185_-_Banner.jpg",
-        "image_overlay_opacity": 10,
+        "image": "shopify://shop_images/FERN-IMG-00243_CantabriaLabs_PharmAssets_RangeImage_2560x960px.jpg",
+        "mobile_image": "shopify://shop_images/FERN-IMG-00243_CantabriaLabs_PharmAssets_RangeImage_1080x1080px.jpg",
+        "image_overlay_opacity": 0,
         "image_height": "medium",
-        "image_behavior": "none",
         "desktop_content_position": "middle-left",
-        "desktop_content_alignment": "left",
         "show_text_box": false,
-        "color_scheme": "scheme-1",
-        "stack_images_on_mobile": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "",
+        "image_behavior": "none",
         "mobile_content_alignment": "center",
-        "show_text_below": true
+        "show_text_below": true,
+        "is_heading": false
       }
     },
     "multicolumn_with_buttons_AG94ec": {
@@ -63,6 +65,7 @@
         "column_FzfDXc": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/FERN-IMG-00244_CantabriaLabs_PharmAssets_HeliocareModelImages_1080x900px.jpg",
             "title": "HELIOCARE 360°",
             "text": "<p>Very high-level, full-spectrum sun protection with patented antioxidant technology. Trusted daily defence with strong year-round demand.</p>",
             "link_label": "Shop Now",
@@ -72,6 +75,7 @@
         "column_Y9BBRM": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/FERN-IMG-00244_CantabriaLabs_PharmAssets_EndocareModelImage_1080x900px.jpg",
             "title": "ENDOCARE",
             "text": "<p>Science-led anti-ageing skincare across Age Barrier, Radiance and Renewal. Structured, regime-driven solutions with premium positioning.</p>",
             "link_label": "Shop Now",
@@ -81,6 +85,7 @@
         "column_7MNFB4": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/FERN-IMG-00244_CantabriaLabs_PharmAssets_BiretixModelImage_1080x900px.jpg",
             "title": "BIRETIX",
             "text": "<p>Clinically proven range for every stage of blemish-prone skin. Results-driven formulas that support long term management of acne-prone skin.</p>",
             "link_label": "Shop Now",
@@ -208,7 +213,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/CL_Mixed_Package.jpg",
+        "image": "shopify://shop_images/FERN-IMG-00245_CantabriaLabs_PharmAssets_RangeImage_1440x1440px.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -663,7 +668,7 @@
     }
   },
   "order": [
-    "image_banner",
+    "image_banner_separate_3Xc9p7",
     "multicolumn_with_buttons_AG94ec",
     "multicolumn_iYWdVq",
     "image_with_text_tGbCQg",
