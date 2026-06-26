@@ -13,11 +13,121 @@
       "type": "main-page",
       "settings": {
         "padding_top": 32,
-        "padding_bottom": 32
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_fCkgfV": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_cg8gVd": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Helping You Drive Awareness, Recommendation and Sales</strong>",
+            "heading_size": "h2"
+          }
+        },
+        "text_9MH3cB": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Welcome to the Cantabria Labs Pharmacy Shop Marketing Toolkit - your dedicated resource for bringing our brands to life in pharmacy. </strong><br/><br/>Designed to support your in-store and digital marketing activity, this toolkit provides a range of ready-to-use materials to help engage customers, highlight key product benefits and create impactful campaigns throughout the year. </p>"
+          }
+        },
+        "button_A37VJa": {
+          "type": "button",
+          "settings": {
+            "button_label": "Explore Marketing Toolkit",
+            "button_link": "https://ferndalepharma.sharepoint.com/:f:/s/StockistTrainingMarketing/EhJAhOnwF6NMsQ31LOwT9Z0BfkvMI3SbwAWxT8yM3Aa2qA?e=3YQwF4",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_cg8gVd",
+        "text_9MH3cB",
+        "button_A37VJa"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "is_heading": false,
+        "padding_top": 0,
+        "padding_bottom": 64
+      }
+    },
+    "multicolumn_with_buttons_JUcxqq": {
+      "type": "multicolumn-with-buttons",
+      "blocks": {
+        "column_EtiYTt": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_P4fKN9": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_cDcjqy": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_cw7chb": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_EtiYTt",
+        "column_P4fKN9",
+        "column_cDcjqy",
+        "column_cw7chb"
+      ],
+      "name": "Multicolumn with Buttons",
+      "settings": {
+        "title": "What's Available?",
+        "heading_size": "h2",
+        "image_width": "half",
+        "image_ratio": "adapt",
+        "button_label": "Button label",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 32,
+        "padding_bottom": 64
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text_fCkgfV",
+    "multicolumn_with_buttons_JUcxqq"
   ]
 }
