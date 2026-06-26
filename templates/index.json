@@ -69,7 +69,8 @@
             "title": "HELIOCARE 360°",
             "text": "<p>Very high-level, full-spectrum sun protection with patented antioxidant technology. Trusted daily defence with strong year-round demand.</p>",
             "link_label": "Shop Now",
-            "link": "shopify://collections/heliocare"
+            "link": "shopify://collections/heliocare",
+            "link_new_tab": false
           }
         },
         "column_Y9BBRM": {
@@ -79,7 +80,8 @@
             "title": "ENDOCARE",
             "text": "<p>Science-led anti-ageing skincare across Age Barrier, Radiance and Renewal. Structured, regime-driven solutions with premium positioning.</p>",
             "link_label": "Shop Now",
-            "link": "shopify://collections/endocare"
+            "link": "shopify://collections/endocare",
+            "link_new_tab": false
           }
         },
         "column_7MNFB4": {
@@ -89,7 +91,8 @@
             "title": "BIRETIX",
             "text": "<p>Clinically proven range for every stage of blemish-prone skin. Results-driven formulas that support long term management of acne-prone skin.</p>",
             "link_label": "Shop Now",
-            "link": "shopify://collections/biretix"
+            "link": "shopify://collections/biretix",
+            "link_new_tab": false
           }
         }
       },
@@ -105,10 +108,12 @@
       "settings": {
         "title": "Three Expert Ranges. One Strategic Partner.",
         "heading_size": "h2",
+        "heading_align": "center",
         "image_width": "full",
         "image_ratio": "adapt",
         "button_label": "",
         "button_link": "",
+        "button_link_new_tab": false,
         "columns_desktop": 3,
         "column_alignment": "center",
         "background_style": "none",
@@ -249,9 +254,11 @@
           "settings": {
             "button_label": "Contact Us",
             "button_link": "shopify://pages/contact",
+            "button_link_new_tab": false,
             "button_style_secondary": true,
             "button_label_2": "",
             "button_link_2": "",
+            "button_link_2_new_tab": false,
             "button_style_secondary_2": false
           }
         }
@@ -382,7 +389,7 @@
             "title": "Digital Marketing Toolkit",
             "text": "<p>Promote Cantabria Labs easily with ready-made marketing materials.</p>",
             "link_label": "View Marketing Toolkit",
-            "link": "https://ferndalepharma.sharepoint.com/:f:/s/StockistTrainingMarketing/EhJAhOnwF6NMsQ31LOwT9Z0BfkvMI3SbwAWxT8yM3Aa2qA?e=3YQwF4"
+            "link": "shopify://pages/cantabria-labs-marketing-toolkit"
           }
         },
         "column_iK7kwf": {
@@ -392,7 +399,7 @@
             "title": "Online Training",
             "text": "<p>Boost your brand knowledge with downloadable clinical resources.</p>",
             "link_label": "View Training Resources",
-            "link": "https://ferndalepharma.sharepoint.com/:f:/s/StockistTrainingMarketing/EgISUFzX8VpArWEyYzvgQuIBZRimpOJMG1pPuuYq2gX_gA?e=wa1EIj"
+            "link": "shopify://pages/cantabria-labs-training-toolkit"
           }
         }
       },
@@ -490,9 +497,11 @@
           "settings": {
             "button_label": "Order now",
             "button_link": "",
+            "button_link_new_tab": false,
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
+            "button_link_2_new_tab": false,
             "button_style_secondary_2": false
           }
         }
