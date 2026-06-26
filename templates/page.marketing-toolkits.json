@@ -38,9 +38,11 @@
           "settings": {
             "button_label": "Explore Marketing Toolkit",
             "button_link": "https://ferndalepharma.sharepoint.com/:f:/s/StockistTrainingMarketing/EhJAhOnwF6NMsQ31LOwT9Z0BfkvMI3SbwAWxT8yM3Aa2qA?e=3YQwF4",
+            "button_link_new_tab": true,
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
+            "button_link_2_new_tab": false,
             "button_style_secondary_2": false
           }
         }
@@ -70,7 +72,8 @@
             "title": "Point of Sale Materials",
             "text": "<p>Access a wide range of point of sale materials to help increase product visibility, attract customer attention and support meaningful conversations at the pharmacy counter. <br/></p>",
             "link_label": "",
-            "link": ""
+            "link": "",
+            "link_new_tab": false
           }
         },
         "column_P4fKN9": {
@@ -79,7 +82,8 @@
             "title": "Planograms & Merchandising Guides",
             "text": "<p>Download pharmacy planograms to help maximise shelf impact, improve product visibility and ensure Cantabria Labs brands are displayed consistently across your pharmacy. </p>",
             "link_label": "",
-            "link": ""
+            "link": "",
+            "link_new_tab": false
           }
         },
         "column_cDcjqy": {
@@ -88,7 +92,8 @@
             "title": "Social Media & Digital Content",
             "text": "<p>Browse a selection of social & digital content assets, including website banners and brand page templates, designed to help you promote Cantabria Labs consistently across your digital channels.</p>",
             "link_label": "",
-            "link": ""
+            "link": "",
+            "link_new_tab": false
           }
         },
         "column_cw7chb": {
@@ -97,7 +102,8 @@
             "title": "Seasonal Campaign Resources",
             "text": "<p>Discover seasonal campaign resources designed to support key trading periods throughout the year, including website banners, digital screen graphics, and promotional assets. </p>",
             "link_label": "",
-            "link": ""
+            "link": "",
+            "link_new_tab": false
           }
         }
       },
@@ -119,6 +125,7 @@
         "image_ratio": "adapt",
         "button_label": "",
         "button_link": "",
+        "button_link_new_tab": false,
         "columns_desktop": 4,
         "column_alignment": "center",
         "background_style": "primary",
