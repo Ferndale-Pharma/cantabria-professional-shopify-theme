@@ -72,7 +72,8 @@
             "title": "HELIOCARE",
             "text": "",
             "link_label": "Access Training",
-            "link": "https://ferndalepharma.sharepoint.com/:f:/s/StockistTrainingMarketing/IgCG5LNB7YZER7Mh_wzdFd0rAdNoFp6sROmog8wCd_6ZDaw?e=oeGIzM"
+            "link": "https://ferndalepharma.sharepoint.com/:f:/s/StockistTrainingMarketing/IgCG5LNB7YZER7Mh_wzdFd0rAdNoFp6sROmog8wCd_6ZDaw?e=oeGIzM",
+            "link_new_tab": true
           }
         },
         "column_P4fKN9": {
@@ -82,7 +83,8 @@
             "title": "BIRETIX",
             "text": "",
             "link_label": "Access Training",
-            "link": "https://ferndalepharma.sharepoint.com/:f:/s/StockistTrainingMarketing/IgC_Cua7rZALT5t3OmtnXvbUAQrmGPFqLK2dMZyTUIGD_FA?e=jxPcJx"
+            "link": "https://ferndalepharma.sharepoint.com/:f:/s/StockistTrainingMarketing/IgC_Cua7rZALT5t3OmtnXvbUAQrmGPFqLK2dMZyTUIGD_FA?e=jxPcJx",
+            "link_new_tab": true
           }
         },
         "column_cDcjqy": {
@@ -92,7 +94,8 @@
             "title": "ENDOCARE",
             "text": "",
             "link_label": "Access Training",
-            "link": "https://ferndalepharma.sharepoint.com/:f:/s/StockistTrainingMarketing/IgC1FBBoYTVOT74VU_5ZHfgQAdNzcLOphIZFgO_PHnOsyn4?e=l0jYHf"
+            "link": "https://ferndalepharma.sharepoint.com/:f:/s/StockistTrainingMarketing/IgC1FBBoYTVOT74VU_5ZHfgQAdNzcLOphIZFgO_PHnOsyn4?e=l0jYHf",
+            "link_new_tab": true
           }
         }
       },
@@ -113,6 +116,7 @@
         "image_ratio": "adapt",
         "button_label": "",
         "button_link": "",
+        "button_link_new_tab": false,
         "columns_desktop": 3,
         "column_alignment": "center",
         "background_style": "none",
