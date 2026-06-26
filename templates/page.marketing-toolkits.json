@@ -11,6 +11,7 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 32,
         "padding_bottom": 0
@@ -23,7 +24,7 @@
           "type": "heading",
           "settings": {
             "heading": "<strong>Helping You Drive Awareness, Recommendation and Sales</strong>",
-            "heading_size": "h2"
+            "heading_size": "h1"
           }
         },
         "text_9MH3cB": {
@@ -56,7 +57,7 @@
         "color_scheme": "",
         "full_width": true,
         "is_heading": false,
-        "padding_top": 0,
+        "padding_top": 32,
         "padding_bottom": 64
       }
     },
