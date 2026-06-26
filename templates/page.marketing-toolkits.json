@@ -106,6 +106,9 @@
         "column_cDcjqy",
         "column_cw7chb"
       ],
+      "custom_css": [
+        ".title-wrapper-with-link {text-align: center; display: block; margin-bottom: 32px;}"
+      ],
       "name": "Multicolumn with Buttons",
       "settings": {
         "title": "What's Available?",
