@@ -110,9 +110,10 @@
       "settings": {
         "title": "What's Available?",
         "heading_size": "h2",
+        "heading_align": "center",
         "image_width": "half",
         "image_ratio": "adapt",
-        "button_label": "Button label",
+        "button_label": "",
         "button_link": "",
         "columns_desktop": 4,
         "column_alignment": "center",
