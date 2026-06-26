@@ -66,8 +66,8 @@
         "column_EtiYTt": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "title": "Point of Sale Materials",
+            "text": "<p>Access a wide range of point of sale materials to help increase product visibility, attract customer attention and support meaningful conversations at the pharmacy counter. <br/></p>",
             "link_label": "",
             "link": ""
           }
@@ -75,8 +75,8 @@
         "column_P4fKN9": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "title": "Planograms & Merchandising Guides",
+            "text": "<p>Download pharmacy planograms to help maximise shelf impact, improve product visibility and ensure Cantabria Labs brands are displayed consistently across your pharmacy. </p>",
             "link_label": "",
             "link": ""
           }
@@ -84,8 +84,8 @@
         "column_cDcjqy": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "title": "Social Media & Digital Content",
+            "text": "<p>Browse a selection of social & digital content assets, including website banners and brand page templates, designed to help you promote Cantabria Labs consistently across your digital channels.</p>",
             "link_label": "",
             "link": ""
           }
@@ -93,8 +93,8 @@
         "column_cw7chb": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "title": "Seasonal Campaign Resources",
+            "text": "<p>Discover seasonal campaign resources designed to support key trading periods throughout the year, including website banners, digital screen graphics, and promotional assets. </p>",
             "link_label": "",
             "link": ""
           }
