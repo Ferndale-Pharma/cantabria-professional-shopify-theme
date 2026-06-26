@@ -1,0 +1,138 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 32,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_fCkgfV": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_cg8gVd": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Helping You Drive Awareness, Recommendation and Sales</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_9MH3cB": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Welcome to the Cantabria Labs Pharmacy Shop Marketing Toolkit - your dedicated resource for bringing our brands to life in pharmacy. </strong><br/><br/>Designed to support your in-store and digital marketing activity, this toolkit provides a range of ready-to-use materials to help engage customers, highlight key product benefits and create impactful campaigns throughout the year. </p>"
+          }
+        },
+        "button_A37VJa": {
+          "type": "button",
+          "settings": {
+            "button_label": "Explore Marketing Toolkit",
+            "button_link": "https://ferndalepharma.sharepoint.com/:f:/s/StockistTrainingMarketing/EhJAhOnwF6NMsQ31LOwT9Z0BfkvMI3SbwAWxT8yM3Aa2qA?e=3YQwF4",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_cg8gVd",
+        "text_9MH3cB",
+        "button_A37VJa"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "is_heading": false,
+        "padding_top": 32,
+        "padding_bottom": 64
+      }
+    },
+    "multicolumn_with_buttons_JUcxqq": {
+      "type": "multicolumn-with-buttons",
+      "blocks": {
+        "column_EtiYTt": {
+          "type": "column",
+          "settings": {
+            "title": "Point of Sale Materials",
+            "text": "<p>Access a wide range of point of sale materials to help increase product visibility, attract customer attention and support meaningful conversations at the pharmacy counter. <br/></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_P4fKN9": {
+          "type": "column",
+          "settings": {
+            "title": "Planograms & Merchandising Guides",
+            "text": "<p>Download pharmacy planograms to help maximise shelf impact, improve product visibility and ensure Cantabria Labs brands are displayed consistently across your pharmacy. </p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_cDcjqy": {
+          "type": "column",
+          "settings": {
+            "title": "Social Media & Digital Content",
+            "text": "<p>Browse a selection of social & digital content assets, including website banners and brand page templates, designed to help you promote Cantabria Labs consistently across your digital channels.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_cw7chb": {
+          "type": "column",
+          "settings": {
+            "title": "Seasonal Campaign Resources",
+            "text": "<p>Discover seasonal campaign resources designed to support key trading periods throughout the year, including website banners, digital screen graphics, and promotional assets. </p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_EtiYTt",
+        "column_P4fKN9",
+        "column_cDcjqy",
+        "column_cw7chb"
+      ],
+      "custom_css": [
+        ".title-wrapper-with-link {text-align: center; display: block; margin-bottom: 32px;}"
+      ],
+      "name": "Multicolumn with Buttons",
+      "settings": {
+        "title": "What's Available?",
+        "heading_size": "h2",
+        "heading_align": "center",
+        "image_width": "half",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 32,
+        "padding_bottom": 64
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_fCkgfV",
+    "multicolumn_with_buttons_JUcxqq"
+  ]
+}
