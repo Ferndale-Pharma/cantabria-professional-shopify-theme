@@ -69,6 +69,7 @@
         "column_EtiYTt": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/FERN-IMG-00264_CantabriaLabs_MarketingToolkit_Icons_200x200_Jul26_01.png",
             "title": "Point of Sale Materials",
             "text": "<p>Access a wide range of point of sale materials to help increase product visibility, attract customer attention and support meaningful conversations at the pharmacy counter. <br/></p>",
             "link_label": "",
@@ -79,6 +80,7 @@
         "column_P4fKN9": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/FERN-IMG-00264_CantabriaLabs_MarketingToolkit_Icons_200x200_Jul26_04.png",
             "title": "Planograms & Merchandising Guides",
             "text": "<p>Download pharmacy planograms to help maximise shelf impact, improve product visibility and ensure Cantabria Labs brands are displayed consistently across your pharmacy. </p>",
             "link_label": "",
@@ -89,6 +91,7 @@
         "column_cDcjqy": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/FERN-IMG-00264_CantabriaLabs_MarketingToolkit_Icons_200x200_Jul26_03.png",
             "title": "Social Media & Digital Content",
             "text": "<p>Browse a selection of social & digital content assets, including website banners and brand page templates, designed to help you promote Cantabria Labs consistently across your digital channels.</p>",
             "link_label": "",
@@ -99,6 +102,7 @@
         "column_cw7chb": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/FERN-IMG-00264_CantabriaLabs_MarketingToolkit_Icons_200x200_Jul26_02.png",
             "title": "Seasonal Campaign Resources",
             "text": "<p>Discover seasonal campaign resources designed to support key trading periods throughout the year, including website banners, digital screen graphics, and promotional assets. </p>",
             "link_label": "",
@@ -121,7 +125,7 @@
         "title": "What's Available?",
         "heading_size": "h2",
         "heading_align": "center",
-        "image_width": "half",
+        "image_width": "third",
         "image_ratio": "adapt",
         "button_label": "",
         "button_link": "",
