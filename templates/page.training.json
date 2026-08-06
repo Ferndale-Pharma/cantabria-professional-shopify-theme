@@ -23,14 +23,14 @@
         "heading_cg8gVd": {
           "type": "heading",
           "settings": {
-            "heading": "Empowering Pharmacy Teams Through Education",
+            "heading": "Coming Soon...",
             "heading_size": "h1"
           }
         },
         "text_9MH3cB": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Welcome to the Cantabria Labs Training Toolkit - your central resource for developing product knowledge and building confidence across our dermatology portfolio.</strong> <br/><br/>Whether you're onboarding new team members, refreshing your knowledge or exploring a specific brand in more detail, you'll find a range of resources to support learning and professional development. <br/><br/>Browse the brand training materials below and start building your expertise with Cantabria Labs. </p>"
+            "text": "<p><strong>The Cantabria Labs Training Toolkit - your central resource for developing product knowledge and building confidence across our dermatology portfolio.</strong> <br/><br/>Whether you're onboarding new team members, refreshing your knowledge or exploring a specific brand in more detail, you'll find a range of resources to support learning and professional development. </p>"
           }
         },
         "button_A37VJa": {
@@ -39,9 +39,11 @@
           "settings": {
             "button_label": "Explore Marketing Toolkit",
             "button_link": "https://ferndalepharma.sharepoint.com/:f:/s/StockistTrainingMarketing/EhJAhOnwF6NMsQ31LOwT9Z0BfkvMI3SbwAWxT8yM3Aa2qA?e=3YQwF4",
+            "button_link_new_tab": false,
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
+            "button_link_2_new_tab": false,
             "button_style_secondary_2": false
           }
         }
@@ -51,6 +53,54 @@
         "text_9MH3cB",
         "button_A37VJa"
       ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "is_heading": false,
+        "padding_top": 32,
+        "padding_bottom": 64
+      }
+    },
+    "rich_text_LXe3Df": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Wy4dcj": {
+          "type": "heading",
+          "settings": {
+            "heading": "Empowering Pharmacy Teams Through Education",
+            "heading_size": "h1"
+          }
+        },
+        "text_4JiBMf": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Welcome to the Cantabria Labs Training Toolkit - your central resource for developing product knowledge and building confidence across our dermatology portfolio.</strong> <br/><br/>Whether you're onboarding new team members, refreshing your knowledge or exploring a specific brand in more detail, you'll find a range of resources to support learning and professional development. <br/><br/>Browse the brand training materials below and start building your expertise with Cantabria Labs. </p>"
+          }
+        },
+        "button_D4qk3R": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Explore Marketing Toolkit",
+            "button_link": "https://ferndalepharma.sharepoint.com/:f:/s/StockistTrainingMarketing/EhJAhOnwF6NMsQ31LOwT9Z0BfkvMI3SbwAWxT8yM3Aa2qA?e=3YQwF4",
+            "button_link_new_tab": false,
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_link_2_new_tab": false,
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_Wy4dcj",
+        "text_4JiBMf",
+        "button_D4qk3R"
+      ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
@@ -104,6 +154,61 @@
         "column_P4fKN9",
         "column_cDcjqy"
       ],
+      "disabled": true,
+      "custom_css": [
+        ".title-wrapper-with-link {text-align: center; display: block; margin-bottom: 32px;}"
+      ],
+      "name": "Multicolumn with Buttons",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "heading_align": "center",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "button_link_new_tab": false,
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 64
+      }
+    },
+    "multicolumn_with_buttons_VXEEC7": {
+      "type": "multicolumn-with-buttons",
+      "blocks": {
+        "column_Mr3dUj": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Biretix_Layflats_-_FERN-CL-EM-00204.jpg",
+            "title": "BIRETIX",
+            "text": "",
+            "link_label": "Access Training",
+            "link": "https://ferndalepharma.sharepoint.com/:f:/s/StockistTrainingMarketing/IgC_Cua7rZALT5t3OmtnXvbUAQrmGPFqLK2dMZyTUIGD_FA?e=jxPcJx",
+            "link_new_tab": true
+          }
+        },
+        "column_tHLrGX": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Endocare_Layflats_-_FERN-CL-EM-00204.jpg",
+            "title": "ENDOCARE",
+            "text": "",
+            "link_label": "Access Training",
+            "link": "https://ferndalepharma.sharepoint.com/:f:/s/StockistTrainingMarketing/IgC1FBBoYTVOT74VU_5ZHfgQAdNzcLOphIZFgO_PHnOsyn4?e=l0jYHf",
+            "link_new_tab": true
+          }
+        }
+      },
+      "block_order": [
+        "column_Mr3dUj",
+        "column_tHLrGX"
+      ],
+      "disabled": true,
       "custom_css": [
         ".title-wrapper-with-link {text-align: center; display: block; margin-bottom: 32px;}"
       ],
@@ -131,6 +236,8 @@
   "order": [
     "main",
     "rich_text_fCkgfV",
-    "multicolumn_with_buttons_JUcxqq"
+    "rich_text_LXe3Df",
+    "multicolumn_with_buttons_JUcxqq",
+    "multicolumn_with_buttons_VXEEC7"
   ]
 }
