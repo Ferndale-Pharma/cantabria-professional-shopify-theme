@@ -177,67 +177,12 @@
         "padding_top": 0,
         "padding_bottom": 64
       }
-    },
-    "multicolumn_with_buttons_VXEEC7": {
-      "type": "multicolumn-with-buttons",
-      "blocks": {
-        "column_Mr3dUj": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Biretix_Layflats_-_FERN-CL-EM-00204.jpg",
-            "title": "BIRETIX",
-            "text": "",
-            "link_label": "Access Training",
-            "link": "https://ferndalepharma.sharepoint.com/:f:/s/StockistTrainingMarketing/IgC_Cua7rZALT5t3OmtnXvbUAQrmGPFqLK2dMZyTUIGD_FA?e=jxPcJx",
-            "link_new_tab": true
-          }
-        },
-        "column_tHLrGX": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Endocare_Layflats_-_FERN-CL-EM-00204.jpg",
-            "title": "ENDOCARE",
-            "text": "",
-            "link_label": "Access Training",
-            "link": "https://ferndalepharma.sharepoint.com/:f:/s/StockistTrainingMarketing/IgC1FBBoYTVOT74VU_5ZHfgQAdNzcLOphIZFgO_PHnOsyn4?e=l0jYHf",
-            "link_new_tab": true
-          }
-        }
-      },
-      "block_order": [
-        "column_Mr3dUj",
-        "column_tHLrGX"
-      ],
-      "disabled": true,
-      "custom_css": [
-        ".title-wrapper-with-link {text-align: center; display: block; margin-bottom: 32px;}"
-      ],
-      "name": "Multicolumn with Buttons",
-      "settings": {
-        "title": "",
-        "heading_size": "h2",
-        "heading_align": "center",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "button_link_new_tab": false,
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 0,
-        "padding_bottom": 64
-      }
     }
   },
   "order": [
     "main",
     "rich_text_fCkgfV",
     "rich_text_LXe3Df",
-    "multicolumn_with_buttons_JUcxqq",
-    "multicolumn_with_buttons_VXEEC7"
+    "multicolumn_with_buttons_JUcxqq"
   ]
 }
