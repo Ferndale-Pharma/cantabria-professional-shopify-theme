@@ -325,7 +325,7 @@
   {%- liquid
     # Login wall: redirect non-logged-in users to login page (except on login/register/password pages)
     assign is_auth_page = false
-    if template == 'customers/login' or template == 'customers/register' or template == 'customers/reset_password' or template == 'customers/activate_account' or template == 'password'
+    if template == 'customers/login' or template == 'customers/register' or template == 'customers/reset_password' or template == 'customers/activate_account' or template == 'password' or request.design_mode 
       assign is_auth_page = true
     endif
   -%}
