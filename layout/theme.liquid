@@ -435,7 +435,7 @@
       {%- render 'cart-drawer' -%}
     {%- endif -%}
 
-    {% if customer %}
+    {% if customer or request.design_mode %}
       {% sections 'header-group' %}
     {% endif %}
 
@@ -443,7 +443,7 @@
       {{ content_for_layout }}
     </main>
 
-    {% if customer %}
+    {% if customer or request.design_mode %}
       {% sections 'footer-group' %}
     {% endif %}
     <ul hidden>
