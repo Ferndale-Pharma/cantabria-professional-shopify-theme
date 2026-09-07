@@ -128,6 +128,16 @@
         "padding_bottom": 32
       }
     },
+    "custom_liquid_F6HcFU": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{% assign regime_table = product.metafields.custom.regime_table.value %}\n\n{% if regime_table != blank and regime_table.rows.value != blank %}\n\n  <div class=\"regime-table-wrapper\">\n   {% if regime_table.name.value != blank %}\n      <h2 class=\"regime-table-heading\">\n        {{ regime_table.name.value }}\n      </h2>\n    {% endif %}\n    <table class=\"regime-table\">\n\n      <thead>\n        <tr>\n          <th scope=\"col\" class=\"regime-table__step\">Step</th>\n          <th scope=\"col\" class=\"regime-table__phase\">Phase</th>\n          <th scope=\"col\" class=\"regime-table__range\">Range</th>\n          <th scope=\"col\" class=\"regime-table__product\">Product</th>\n          <th scope=\"col\" class=\"regime-table__timing\">AM</th>\n          <th scope=\"col\" class=\"regime-table__timing\">PM</th>\n        </tr>\n      </thead>\n\n      <tbody>\n\n        {% for row in regime_table.rows.value %}\n\n          <tr>\n\n            <td class=\"regime-table__step\">\n              {{ row.step.value }}\n            </td>\n\n            <td class=\"regime-table__phase\">\n              {{ row.phase.value }}\n            </td>\n\n            <td class=\"regime-table__range\">\n              {{ row.range.value }}\n            </td>\n\n            <td class=\"regime-table__product\">\n              {{ row.product.value | newline_to_br }}\n            </td>\n\n            {% case row.timing.value %}\n\n              {% when 'AM + PM' %}\n                <td class=\"regime-table__timing regime-table__tick\">\n                  <span aria-label=\"AM\">✓</span>\n                </td>\n                <td class=\"regime-table__timing regime-table__tick\">\n                  <span aria-label=\"PM\">✓</span>\n                </td>\n\n              {% when 'AM only' %}\n                <td class=\"regime-table__timing regime-table__tick\">\n                  <span aria-label=\"AM\">✓</span>\n                </td>\n                <td class=\"regime-table__timing regime-table__dash\">\n                  <span aria-hidden=\"true\">–</span>\n                </td>\n\n              {% when 'PM only' %}\n                <td class=\"regime-table__timing regime-table__dash\">\n                  <span aria-hidden=\"true\">–</span>\n                </td>\n                <td class=\"regime-table__timing regime-table__tick\">\n                  <span aria-label=\"PM\">✓</span>\n                </td>\n\n              {% when 'AM or PM' %}\n                <td\n                  colspan=\"2\"\n                  class=\"regime-table__timing regime-table__either\"\n                >\n                  AM or PM\n                </td>\n\n              {% else %}\n                <td class=\"regime-table__timing\">–</td>\n                <td class=\"regime-table__timing\">–</td>\n\n            {% endcase %}\n\n          </tr>\n\n        {% endfor %}\n\n      </tbody>\n\n    </table>\n\n  </div>\n\n{% endif %}",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -159,6 +169,7 @@
   },
   "order": [
     "main",
+    "custom_liquid_F6HcFU",
     "related-products",
     "custom_liquid_6pHE7f"
   ]
