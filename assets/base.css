@@ -3712,3 +3712,97 @@ details-disclosure > details {
 	    margin-bottom: 4rem;
     }
 }
+/* ================================
+   Product Regime Table
+================================ */
+
+.regime-table-wrapper {
+  width: 100%;
+  max-width: 100%;
+  padding: 4rem 10rem;
+  overflow-x: visible;
+}
+
+.regime-table {
+  width: 100%;
+  max-width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+.regime-table th,
+.regime-table td {
+  box-sizing: border-box;
+  padding: 1.2rem;
+  border: 1px solid rgba(var(--color-foreground), 0.15);
+  text-align: left;
+  vertical-align: middle;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+.regime-table thead th {
+  font-weight: 600;
+  background: rgba(var(--color-foreground), 0.08);
+}
+
+.regime-table__step {
+  width: 7%;
+}
+
+.regime-table__phase {
+  width: 18%;
+  font-weight: 600;
+}
+
+.regime-table__range {
+  width: 18%;
+}
+
+.regime-table__product {
+  width: 39%;
+}
+
+.regime-table__timing {
+  width: 9%;
+  text-align: center !important;
+}
+
+.regime-table__tick,
+.regime-table__dash,
+.regime-table__either {
+  text-align: center !important;
+}
+
+.regime-table__either {
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 749px) {
+  .regime-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 1.5rem 1rem;
+  }
+
+  .regime-table {
+    min-width: 700px;
+    table-layout: auto;
+    font-size: 1.3rem;
+  }
+
+  .regime-table th,
+  .regime-table td {
+    padding: 1rem;
+  }
+
+  .regime-table__timing {
+    white-space: nowrap;
+  }
+  .regime-table__step {
+    white-space: nowrap;
+  }
+}
