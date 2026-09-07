@@ -3723,6 +3723,10 @@ details-disclosure > details {
   overflow-x: visible;
 }
 
+.regime-table-heading {
+  margin-bottom: 
+}
+
 .regime-table {
   width: 100%;
   max-width: 100%;
@@ -3742,6 +3746,7 @@ details-disclosure > details {
   vertical-align: middle;
   overflow-wrap: anywhere;
   word-break: normal;
+  color: #000;
 }
 
 .regime-table thead th {
