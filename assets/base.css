@@ -3785,7 +3785,10 @@ details-disclosure > details {
 .regime-table__either {
   white-space: nowrap;
 }
-
+.regime-table__custom {
+  text-align: center !important;
+  white-space: normal;
+}
 @media screen and (max-width: 749px) {
   .regime-table-wrapper {
     overflow-x: auto;
