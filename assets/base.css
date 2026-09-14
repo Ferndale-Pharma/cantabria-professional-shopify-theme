@@ -3789,6 +3789,9 @@ details-disclosure > details {
   text-align: center !important;
   white-space: normal;
 }
+.regime-table-description {
+  margin-bottom: 16px;
+}
 @media screen and (max-width: 749px) {
   .regime-table-wrapper {
     overflow-x: auto;
