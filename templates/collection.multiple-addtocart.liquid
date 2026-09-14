@@ -590,7 +590,7 @@
     %}
 
     {%- capture too_many_items_in_cart_error -%}{{ 'translation missing:' | append: ' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.too_many_items_in_cart' }}{%- endcapture -%}
-    {% assign too_many_items_in_cart_label = 'cws_bulk_add_to_cart.too_many_items_in_cart' | t | downcase | replace: too_many_items_in_cart_error, 'You can't add more %product_name to the cart.' | strip_newlines %}
+    {% assign too_many_items_in_cart_label = 'cws_bulk_add_to_cart.too_many_items_in_cart' | t | downcase | replace: too_many_items_in_cart_error, 'You can' | strip_newlines %}
 
     {%- capture all_items_in_cart_error -%}{{ 'translation missing:' | append: ' ' | append: shop.locale | append: '.cws_bulk_add_to_cart.all_items_in_cart' }}{%- endcapture -%}
     {% assign all_items_in_cart_label = 'cws_bulk_add_to_cart.all_items_in_cart'
@@ -1912,3 +1912,17 @@
   text-transform: initial;
 }
 </style>
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% assign too_many_items_in_cart_label = 'cws_bulk_add_to_cart.too_many_items_in_cart'
+    | t | downcase | replace: too_many_items_in_cart_error, 'You can't add more %product_name
+    to the cart.' | strip_newlines %}"
+  to: "{% assign too_many_items_in_cart_label = 'cws_bulk_add_to_cart.too_many_items_in_cart'
+    | t | downcase | replace: too_many_items_in_cart_error, 'You can' | strip_newlines
+    %}"
+  position: 30342..30514
+{% endcomment %}
