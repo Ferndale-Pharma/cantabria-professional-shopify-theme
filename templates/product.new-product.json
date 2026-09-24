@@ -1,0 +1,176 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "custom_liquid_8xpbdd": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% if product.metafields.custom.bestseller %}\n                             <span style=\"font-size: 0.9em;\">★ Bestseller</span>\n                              {% endif %}"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "custom_liquid_ckXVzi": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<span style=\"color: #666; display: block; font-size: 0.9em;\">{{product.metafields.custom.size}} - SRP: £{{product.metafields.custom.srp | metafield_text}} </span>"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "text_jhPfRC": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.custom.special_message.value }}",
+            "text_style": "body"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "collapsible-row-0": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Key Ingredients & Technologies",
+            "icon": "plant",
+            "content": "{{ product.metafields.custom.key_ingredients | metafield_tag }}",
+            "page": ""
+          }
+        },
+        "collapsible-row-1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How To Use",
+            "icon": "question_mark",
+            "content": "{{ product.metafields.custom.how_to_use | metafield_tag }}",
+            "page": ""
+          }
+        },
+        "collapsible-row-2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Ingredients List",
+            "icon": "clipboard",
+            "content": "<p>{{ product.metafields.custom.ingredients_list | metafield_tag }}</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "custom_liquid_8xpbdd",
+        "title",
+        "custom_liquid_ckXVzi",
+        "price",
+        "text_jhPfRC",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "description",
+        "collapsible-row-0",
+        "collapsible-row-1",
+        "collapsible-row-2"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "",
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "mobile_thumbnails": "hide",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "custom_liquid_F6HcFU": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{% assign regime_tables = product.metafields.custom.regime_table.value %}\n\n{% if regime_tables != blank %}\n\n  {% for regime_table in regime_tables %}\n\n    {% if regime_table.rows.value != blank %}\n\n      <div class=\"regime-table-wrapper\">\n\n        {% if regime_table.name.value != blank %}\n          <h2 class=\"regime-table-heading\">\n            {{ regime_table.name.value }}\n          </h2>\n        {% endif %}\n\n        {% if regime_table.description.value != blank %}\n          <p class=\"regime-table-description\">\n            {{ regime_table.description.value }}\n          </p>\n        {% endif %}\n\n        <table class=\"regime-table\">\n\n          <thead>\n            <tr>\n              <th scope=\"col\" class=\"regime-table__step\">Step</th>\n              <th scope=\"col\" class=\"regime-table__phase\">Phase</th>\n              <th scope=\"col\" class=\"regime-table__range\">Range</th>\n              <th scope=\"col\" class=\"regime-table__product\">Product</th>\n              <th scope=\"col\" class=\"regime-table__timing\">AM</th>\n              <th scope=\"col\" class=\"regime-table__timing\">PM</th>\n            </tr>\n          </thead>\n\n          <tbody>\n\n            {% for row in regime_table.rows.value %}\n\n              <tr>\n\n                <td class=\"regime-table__step\">\n                  {{ row.step.value }}\n                </td>\n\n                <td class=\"regime-table__phase\">\n                  {{ row.phase.value }}\n                </td>\n\n                <td class=\"regime-table__range\">\n  {{ row.ranges.value | join: ' / ' }}\n</td>\n\n                <td class=\"regime-table__product\">\n                  {{ row.product.value | newline_to_br }}\n                </td>\n\n                {% case row.timing.value %}\n\n                  {% when 'AM + PM' %}\n                    <td class=\"regime-table__timing regime-table__tick\">\n                      <span aria-label=\"AM\">✓</span>\n                    </td>\n                    <td class=\"regime-table__timing regime-table__tick\">\n                      <span aria-label=\"PM\">✓</span>\n                    </td>\n\n                  {% when 'AM only' %}\n                    <td class=\"regime-table__timing regime-table__tick\">\n                      <span aria-label=\"AM\">✓</span>\n                    </td>\n                    <td class=\"regime-table__timing regime-table__dash\">\n                      <span aria-hidden=\"true\">–</span>\n                    </td>\n\n                  {% when 'PM only' %}\n                    <td class=\"regime-table__timing regime-table__dash\">\n                      <span aria-hidden=\"true\">–</span>\n                    </td>\n                    <td class=\"regime-table__timing regime-table__tick\">\n                      <span aria-label=\"PM\">✓</span>\n                    </td>\n\n                  {% when 'AM or PM' %}\n                    <td\n                      colspan=\"2\"\n                      class=\"regime-table__timing regime-table__either\"\n                    >\n                      AM or PM\n                    </td>\n\n                  {% when 'Custom' %}\n                    <td\n                      colspan=\"2\"\n                      class=\"regime-table__timing regime-table__custom\"\n                    >\n                      {{ row.timing_text.value }}\n                    </td>\n\n                  {% else %}\n                    <td class=\"regime-table__timing\">–</td>\n                    <td class=\"regime-table__timing\">–</td>\n\n                {% endcase %}\n\n              </tr>\n\n            {% endfor %}\n\n          </tbody>\n\n        </table>\n\n      </div>\n\n    {% endif %}\n\n  {% endfor %}\n\n{% endif %}",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-000a5669-da48-4952-a65d-ec875774de63",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "custom_liquid_6pHE7f": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"rich-text content-container color-scheme-1 gradient rich-text--full-width content-container--full-width\">\n<div class=\"rich-text__wrapper rich-text__wrapper--center page-width\"><p style=\"font-size:0.7em; text-align:left; padding-bottom: 64px;\">{{ product.metafields.custom.references.value }}</p>\n</div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_F6HcFU",
+    "related-products",
+    "custom_liquid_6pHE7f"
+  ]
+}
