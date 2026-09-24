@@ -72,9 +72,9 @@
         "collapsible_tab_8aaeBx": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "content": "",
+            "heading": "Key Information",
+            "icon": "information",
+            "content": "{{ product.metafields.custom.key_information | metafield_tag }}",
             "page": ""
           }
         },
@@ -101,7 +101,7 @@
           "settings": {
             "heading": "Ingredients List",
             "icon": "clipboard",
-            "content": "<p>{{ product.metafields.custom.ingredients_list | metafield_tag }}</p>",
+            "content": "<p><em>{{ product.metafields.custom.ingredients_list | metafield_tag }}</em></p>",
             "page": ""
           }
         }
