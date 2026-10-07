@@ -101,6 +101,7 @@
         "column_Y9BBRM",
         "column_7MNFB4"
       ],
+      "disabled": true,
       "custom_css": [
         ".title-wrapper-with-link {text-align: center; display: block; margin-bottom: 32px;}"
       ],
@@ -216,6 +217,7 @@
         "text_haLd96",
         "button_QJtBHU"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/FERN-IMG-00245_CantabriaLabs_PharmAssets_RangeImage_1440x1440px.jpg",
@@ -681,10 +683,10 @@
     "multicolumn_with_buttons_AG94ec",
     "multicolumn_iYWdVq",
     "image_with_text_tGbCQg",
+    "multicolumn_jCEWW8",
     "rich_text_Mpkq3q",
     "rich_text_hwzFrb",
     "multicolumn_3JpA7a",
-    "multicolumn_jCEWW8",
     "image_with_text_xNJjEm",
     "rich_text_aRibXg",
     "multicolumn_4JqrP7",
