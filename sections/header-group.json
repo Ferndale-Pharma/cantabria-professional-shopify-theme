@@ -14,8 +14,16 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_VraXmW": {
+          "type": "announcement",
+          "settings": {
+            "text": "Spend £350 ex VAT across Cantabria Labs Dermatological Skincare & Supplements and receive 5 complimentary ENDOCARE C Ferulic Serums",
+            "link": "shopify://collections/all"
+          }
+        },
         "announcement-bar-0": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Welcome to the Cantabria Labs Trade Hub - Your Trusted Dermatological Skincare Business Partner",
             "link": ""
@@ -23,6 +31,7 @@
         }
       },
       "block_order": [
+        "announcement_VraXmW",
         "announcement-bar-0"
       ],
       "custom_css": [
