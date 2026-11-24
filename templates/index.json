@@ -43,6 +43,7 @@
         "text_BqBJKn",
         "buttons_i9wJi8"
       ],
+      "disabled": true,
       "name": "Image Banner v2",
       "settings": {
         "image": "shopify://shop_images/FERN-IMG-00243_CantabriaLabs_PharmAssets_RangeImage_2560x960px.jpg",
@@ -53,6 +54,67 @@
         "show_text_box": false,
         "desktop_content_alignment": "left",
         "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "show_text_below": true,
+        "is_heading": false
+      }
+    },
+    "image_banner_separate_HCGHnL": {
+      "type": "image-banner-separate",
+      "blocks": {
+        "text_V9UYKx": {
+          "type": "text",
+          "settings": {
+            "text": "BLACK FRIDAY PROFESSIONAL OFFERS&nbsp;",
+            "text_style": "subtitle"
+          }
+        },
+        "heading_8YhBPy": {
+          "type": "heading",
+          "settings": {
+            "heading": "UP TO 50% OFF",
+            "heading_size": "h1"
+          }
+        },
+        "text_L8t3hV": {
+          "type": "text",
+          "settings": {
+            "text": "Stock up on your skincare favourites with our exclusive Black Friday offers.&nbsp;",
+            "text_style": "body"
+          }
+        },
+        "buttons_4iTiTd": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Black Friday Offers",
+            "button_link_1": "shopify://collections/promotions",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "text_V9UYKx",
+        "heading_8YhBPy",
+        "text_L8t3hV",
+        "buttons_4iTiTd"
+      ],
+      "custom_css": [
+        "p {color: #fff;}"
+      ],
+      "name": "Image Banner v2",
+      "settings": {
+        "image": "shopify://shop_images/FERN-IMG-00313_CL_BlackFriday_WebsiteBanners_2560x1280px_Nov26.jpg",
+        "mobile_image": "shopify://shop_images/FERN-IMG-00313_CL_BlackFriday_WebsiteBanners_1080x1080px_Nov26.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-50ebc2db-8bff-4df8-93f9-bd7eba3db7f2",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "show_text_below": true,
@@ -235,6 +297,55 @@
         "padding_bottom": 64
       }
     },
+    "multicolumn_jCEWW8": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_qygNt4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/marketing_toolkit.png",
+            "title": "Digital Marketing Toolkit",
+            "text": "<p>Promote Cantabria Labs easily with ready-made marketing materials.</p>",
+            "link_label": "View Marketing Toolkit",
+            "link": "shopify://pages/marketing-toolkit"
+          }
+        },
+        "column_iK7kwf": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/online_training.png",
+            "title": "Online Training",
+            "text": "<p>Boost your brand knowledge with downloadable clinical resources.</p>",
+            "link_label": "View Training Resources",
+            "link": "shopify://pages/training-toolkit"
+          }
+        }
+      },
+      "block_order": [
+        "column_qygNt4",
+        "column_iK7kwf"
+      ],
+      "custom_css": [
+        ".title-wrapper-with-link {text-align: center; display: block; margin-bottom: 32px;}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Digital Marketing & Online Training",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
     "rich_text_Mpkq3q": {
       "type": "rich-text",
       "blocks": {
@@ -374,55 +485,6 @@
         "columns_desktop": 4,
         "column_alignment": "center",
         "background_style": "none",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 64,
-        "padding_bottom": 64
-      }
-    },
-    "multicolumn_jCEWW8": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_qygNt4": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/marketing_toolkit.png",
-            "title": "Digital Marketing Toolkit",
-            "text": "<p>Promote Cantabria Labs easily with ready-made marketing materials.</p>",
-            "link_label": "View Marketing Toolkit",
-            "link": "shopify://pages/marketing-toolkit"
-          }
-        },
-        "column_iK7kwf": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/online_training.png",
-            "title": "Online Training",
-            "text": "<p>Boost your brand knowledge with downloadable clinical resources.</p>",
-            "link_label": "View Training Resources",
-            "link": "shopify://pages/training-toolkit"
-          }
-        }
-      },
-      "block_order": [
-        "column_qygNt4",
-        "column_iK7kwf"
-      ],
-      "custom_css": [
-        ".title-wrapper-with-link {text-align: center; display: block; margin-bottom: 32px;}"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "Digital Marketing & Online Training",
-        "heading_size": "h2",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 2,
-        "column_alignment": "center",
-        "background_style": "primary",
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
@@ -680,6 +742,7 @@
   },
   "order": [
     "image_banner_separate_3Xc9p7",
+    "image_banner_separate_HCGHnL",
     "multicolumn_with_buttons_AG94ec",
     "multicolumn_iYWdVq",
     "image_with_text_tGbCQg",
